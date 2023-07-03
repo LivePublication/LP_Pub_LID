@@ -1,0 +1,3711 @@
+
+
+<html>
+<head>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+  <title>RO-Crate</title>
+
+<script type="application/ld+json"> 
+  {
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "datePublished": "2023-06-16T06:09:37+00:00",
+      "name": "Example RO-Crate",
+      "description": "This RO-Crate was generated as a result of executing a globus flow with the LivePublication archietcture.",
+      "license": {"@id": "https://creativecommons.org/licenses/by-nc-sa/3.0/au/"},
+      "hasPart": [
+        {
+          "@id": "WEP.json"
+        },
+        {
+          "@id": "WEP_input.json"
+        },
+        {
+          "@id": "DS_fastText_Transfer.py"
+        },
+        {
+          "@id": "fastText.py"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/ro-crate-preview.html"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/.DS_Store"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/input/"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/input/input_data.txt"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/output/"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/output/fastText_predictions.txt"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/method_resources/"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/main.py"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/ro-crate-metadata.json"
+        },
+        {
+          "@id": "fastText_statistics_transfer.py"
+        },
+        {
+          "@id": "DS_langDetect_transfer.py"
+        },
+        {
+          "@id": "langdetect.py"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/ro-crate-preview.html"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/.DS_Store"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/input/"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/input/input_data.txt"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/output/"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/output/langdetect_predictions.txt"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/method_resources/"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/method_resources/.DS_Store"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/ro-crate-metadata.json"
+        },
+        {
+          "@id": "langdetect_statistics_transfer.py"
+        },
+        {
+          "@id": "statistics.py"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/ro-crate-preview.html"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/.DS_Store"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/input/"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/input/fastText_predictions.txt"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/input/langdetect_predictions.txt"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/input/validation.txt"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/fastText_validation.txt"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/accuracy_by_language.png"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/primary_validation.txt"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/langdetect_validation.txt"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/fastText_stats.json"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/accuracy_by_language.csv"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/langdetect_stats.json"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/method_resources/"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/ro-crate-metadata.json"
+        },
+        {
+          "@id": "statistics_DS_transfer.py"
+        }
+      ],
+      "@reverse": {
+        "about": [
+          {
+            "@id": "ro-crate-metadata.json"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      }
+    },
+    {
+      "@id": "https://creativecommons.org/licenses/by-nc-sa/3.0/au/",
+      "@type": "CreativeWork",
+      "description": "This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Australia License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/au/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.",
+      "identifier": "https://creativecommons.org/licenses/by-nc-sa/3.0/au/",
+      "name": "Attribution-NonCommercial-ShareAlike 3.0 Australia (CC BY-NC-SA 3.0 AU)"
+     },
+    {
+      "@id": "#supplmental",
+      "@type": "Thing",
+      "WEP": {
+        "@id": "WEP.json"
+      },
+      "WEP_input": {
+        "@id": "WEP_input.json"
+      },
+      "description": "Supplmental information for the Globus workflow execution",
+      "name": "Supplmental"
+    },
+    {
+      "@id": "WEP.json",
+      "@type": [
+        "File",
+        "SoftwareSourceCode",
+        "ComputationalWorkflow"
+      ],
+      "description": "Globus workflow definition written in Amazon States Language (ASL)",
+      "encodingFormat": "application/json",
+      "hasPart": {
+        "@id": "WEP_input.json"
+      },
+      "name": "WEP.json",
+      "programmingLanguage": {
+        "@id": "#asl"
+      },
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "WEP": [
+          {
+            "@id": "#supplmental"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#asl",
+      "@type": "ComputerLanguage",
+      "alternateName": "ASL",
+      "name": "Amazon States Language",
+      "url": "https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html",
+      "@reverse": {
+        "programmingLanguage": [
+          {
+            "@id": "WEP.json"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "WEP_input.json",
+      "@type": "File",
+      "description": "WEP input schema for input perameters",
+      "encodingFormat": "application/json",
+      "name": "WEP_input.json",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "WEP.json"
+          }
+        ],
+        "WEP_input": [
+          {
+            "@id": "#supplmental"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#primary",
+      "@type": "Thing",
+      "description": "Step by step execution, and record of Globus flow",
+      "name": "Primary",
+      "step_1": {
+        "@id": "DS_fastText_Transfer.py"
+      },
+      "step_2": {
+        "@id": "fastText.py"
+      },
+      "step_3": {
+        "@id": "fastText_statistics_transfer.py"
+      },
+      "step_4": {
+        "@id": "DS_langDetect_transfer.py"
+      },
+      "step_5": {
+        "@id": "langdetect.py"
+      },
+      "step_6": {
+        "@id": "langdetect_statistics_transfer.py"
+      },
+      "step_7": {
+        "@id": "statistics.py"
+      },
+      "step_8": {
+        "@id": "statistics_DS_transfer.py"
+      }
+    },
+    {
+      "@id": "DS_fastText_Transfer.py",
+      "@type": "File",
+      "AP_type": "AP",
+      "Next": {
+        "@id": "fastText.py"
+      },
+      "action_id": "cSl6GGETjODJ",
+      "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+      "description": "Transfer test data to fastText",
+      "name": "STEP_1: DS_fastText_Transfer",
+      "status": "succeeded",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "step_1": [
+          {
+            "@id": "#primary"
+          }
+        ],
+        "previous": [
+          {
+            "@id": "fastText.py"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "fastText.py",
+      "@type": "File",
+      "AP_type": "LPAP",
+      "Next": {
+        "@id": "fastText_statistics_transfer.py"
+      },
+      "action_id": "ful1t6i5wdGV",
+      "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+      "description": "fastText",
+      "hasPart": {
+        "@id": "crate_ful1t6i5wdGV/"
+      },
+      "name": "STEP_2: fastText",
+      "previous": {
+        "@id": "DS_fastText_Transfer.py"
+      },
+      "status": "succeeded",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "step_2": [
+          {
+            "@id": "#primary"
+          }
+        ],
+        "Next": [
+          {
+            "@id": "DS_fastText_Transfer.py"
+          }
+        ],
+        "previous": [
+          {
+            "@id": "fastText_statistics_transfer.py"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_ful1t6i5wdGV/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_ful1t6i5wdGV/ro-crate-preview.html"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/.DS_Store"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/input/"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/output/"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/method_resources/"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/ro-crate-metadata.json"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "fastText.py"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_ful1t6i5wdGV/ro-crate-preview.html",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_ful1t6i5wdGV/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_ful1t6i5wdGV/.DS_Store",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_ful1t6i5wdGV/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_ful1t6i5wdGV/input/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_ful1t6i5wdGV/input/input_data.txt"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_ful1t6i5wdGV/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_ful1t6i5wdGV/input/input_data.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_ful1t6i5wdGV/input/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_ful1t6i5wdGV/output/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_ful1t6i5wdGV/output/fastText_predictions.txt"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_ful1t6i5wdGV/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_ful1t6i5wdGV/output/fastText_predictions.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_ful1t6i5wdGV/output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_ful1t6i5wdGV/method_resources/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_ful1t6i5wdGV/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz"
+        },
+        {
+          "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/main.py"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_ful1t6i5wdGV/method_resources/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/main.py",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_ful1t6i5wdGV/ro-crate-metadata.json",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_ful1t6i5wdGV/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "fastText_statistics_transfer.py",
+      "@type": "File",
+      "AP_type": "AP",
+      "Next": {
+        "@id": "DS_langDetect_transfer.py"
+      },
+      "action_id": "zU8nVGLvxls6",
+      "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+      "description": "Transfer fastText statistics to statistics LPAP",
+      "name": "STEP_3: fastText_statistics_transfer",
+      "previous": {
+        "@id": "fastText.py"
+      },
+      "status": "succeeded",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "step_3": [
+          {
+            "@id": "#primary"
+          }
+        ],
+        "Next": [
+          {
+            "@id": "fastText.py"
+          }
+        ],
+        "previous": [
+          {
+            "@id": "DS_langDetect_transfer.py"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "DS_langDetect_transfer.py",
+      "@type": "File",
+      "AP_type": "AP",
+      "Next": {
+        "@id": "langdetect.py"
+      },
+      "action_id": "1Rgp1ufSQXlYh",
+      "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+      "description": "Transfer test data to langdetect LPAP",
+      "name": "STEP_4: DS_langDetect_transfer",
+      "previous": {
+        "@id": "fastText_statistics_transfer.py"
+      },
+      "status": "succeeded",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "step_4": [
+          {
+            "@id": "#primary"
+          }
+        ],
+        "Next": [
+          {
+            "@id": "fastText_statistics_transfer.py"
+          }
+        ],
+        "previous": [
+          {
+            "@id": "langdetect.py"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "langdetect.py",
+      "@type": "File",
+      "AP_type": "LPAP",
+      "Next": {
+        "@id": "langdetect_statistics_transfer.py"
+      },
+      "action_id": "zUfXO6bgxbUU",
+      "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+      "description": "Execute langdetect on test data",
+      "hasPart": {
+        "@id": "crate_zUfXO6bgxbUU/"
+      },
+      "name": "STEP_5: langdetect",
+      "previous": {
+        "@id": "DS_langDetect_transfer.py"
+      },
+      "status": "succeeded",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "step_5": [
+          {
+            "@id": "#primary"
+          }
+        ],
+        "Next": [
+          {
+            "@id": "DS_langDetect_transfer.py"
+          }
+        ],
+        "previous": [
+          {
+            "@id": "langdetect_statistics_transfer.py"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_zUfXO6bgxbUU/ro-crate-preview.html"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/.DS_Store"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/input/"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/output/"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/method_resources/"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/ro-crate-metadata.json"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "langdetect.py"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/ro-crate-preview.html",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_zUfXO6bgxbUU/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/.DS_Store",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_zUfXO6bgxbUU/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/input/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_zUfXO6bgxbUU/input/input_data.txt"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_zUfXO6bgxbUU/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/input/input_data.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_zUfXO6bgxbUU/input/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/output/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_zUfXO6bgxbUU/output/langdetect_predictions.txt"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_zUfXO6bgxbUU/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/output/langdetect_predictions.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_zUfXO6bgxbUU/output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/method_resources/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_zUfXO6bgxbUU/method_resources/.DS_Store"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_zUfXO6bgxbUU/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/method_resources/.DS_Store",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_zUfXO6bgxbUU/method_resources/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile"
+        },
+        {
+          "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_zUfXO6bgxbUU/method_resources/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_zUfXO6bgxbUU/ro-crate-metadata.json",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_zUfXO6bgxbUU/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "langdetect_statistics_transfer.py",
+      "@type": "File",
+      "AP_type": "AP",
+      "Next": {
+        "@id": "statistics.py"
+      },
+      "action_id": "k2WyRBpOjxK8",
+      "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+      "description": "Transfer langdetect statistics to statistics LPAP",
+      "name": "STEP_6: langdetect_statistics_transfer",
+      "previous": {
+        "@id": "langdetect.py"
+      },
+      "status": "succeeded",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "step_6": [
+          {
+            "@id": "#primary"
+          }
+        ],
+        "Next": [
+          {
+            "@id": "langdetect.py"
+          }
+        ],
+        "previous": [
+          {
+            "@id": "statistics.py"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "statistics.py",
+      "@type": "File",
+      "AP_type": "LPAP",
+      "Next": {
+        "@id": "statistics_DS_transfer.py"
+      },
+      "action_id": "15XkigrEbqqfZ",
+      "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+      "description": "Execute statistics on generated data",
+      "hasPart": {
+        "@id": "crate_15XkigrEbqqfZ/"
+      },
+      "name": "STEP_7: statistics",
+      "previous": {
+        "@id": "langdetect_statistics_transfer.py"
+      },
+      "status": "succeeded",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "step_7": [
+          {
+            "@id": "#primary"
+          }
+        ],
+        "Next": [
+          {
+            "@id": "langdetect_statistics_transfer.py"
+          }
+        ],
+        "previous": [
+          {
+            "@id": "statistics_DS_transfer.py"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_15XkigrEbqqfZ/ro-crate-preview.html"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/.DS_Store"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/input/"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/method_resources/"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/ro-crate-metadata.json"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "statistics.py"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/ro-crate-preview.html",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/.DS_Store",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/input/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_15XkigrEbqqfZ/input/fastText_predictions.txt"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/input/langdetect_predictions.txt"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/input/validation.txt"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/input/fastText_predictions.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/input/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/input/langdetect_predictions.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/input/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/input/validation.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/input/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/output/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/fastText_validation.txt"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/accuracy_by_language.png"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/primary_validation.txt"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/langdetect_validation.txt"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/fastText_stats.json"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/accuracy_by_language.csv"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/output/langdetect_stats.json"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/output/fastText_validation.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/output/accuracy_by_language.png",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/output/primary_validation.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/output/langdetect_validation.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/output/fastText_stats.json",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/output/accuracy_by_language.csv",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/output/langdetect_stats.json",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/method_resources/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile"
+        },
+        {
+          "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/method_resources/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "crate_15XkigrEbqqfZ/ro-crate-metadata.json",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "crate_15XkigrEbqqfZ/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "statistics_DS_transfer.py",
+      "@type": "File",
+      "AP_type": "AP",
+      "action_id": "16ItXaJOX7STB",
+      "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+      "description": "Transfer statistics to Data Store",
+      "end": true,
+      "name": "STEP_8: statistics_DS_transfer",
+      "previous": {
+        "@id": "statistics.py"
+      },
+      "status": "succeeded",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "step_8": [
+          {
+            "@id": "#primary"
+          }
+        ],
+        "Next": [
+          {
+            "@id": "statistics.py"
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://unpkg.com/ro-crate-html-js/dist/ro-crate-dynamic.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+<meta charset='utf-8'/>
+<style>
+
+table.table {
+  padding-bottom: 300px;
+}
+</style>
+</head>
+
+
+<body>
+
+  <script>
+    // The path to your image
+    var imagePath = 'lp_logo.png';
+  
+    // How many logos to display
+    var count = 20;
+  
+    // Minimum distance between logos (in percentage of page width)
+    var minDistance = 10; // Adjust as needed
+  
+    // Array to store logo positions
+    var positions = [];
+  
+    // Function to check if a position is too close to any existing logo
+    function isTooClose(newPos) {
+        for (var i = 0; i < positions.length; i++) {
+            var pos = positions[i];
+            var dx = newPos.left - pos.left;
+            var dy = newPos.top - pos.top;
+            var distance = Math.sqrt(dx * dx + dy * dy);
+            if (distance < minDistance) {
+                return true;
+            }
+        }
+        return false;
+    }
+  
+    // Add images
+    for (var i = 0; i < count; i++) {
+        // Create image element
+        var img = document.createElement('img');
+        img.src = imagePath;
+        img.style.position = 'absolute';
+        img.style.width = '100px'; // Adjust as needed
+        img.style.height = 'auto';
+  
+        // Set random position and check if it's too close to any existing logo
+        var newPos;
+        do {
+            newPos = {
+                left: Math.random() * 100,
+                top: Math.random() * 100
+            };
+        } while (isTooClose(newPos));
+        img.style.left = newPos.left + '%';
+        img.style.top = newPos.top + '%';
+  
+        // Store the new position
+        positions.push(newPos);
+  
+        // Set random rotation
+        var angle = Math.random() * 360;
+        img.style.transform = 'rotate(' + angle + 'deg)';
+  
+        // Send image to the background
+        img.style.zIndex = -1;
+  
+        // Add image to body
+        document.body.appendChild(img);
+    }
+  </script>
+
+  <nav class="navbar">
+
+    <ul class="nav navbar-nav" >
+        <li ><a href="#"><span class="glyphicon glyphicon-home dataset_name">&nbsp;</span></a></li>
+    </ul>
+
+  </nav>
+<div class="container">
+<div class="jumbotron">
+<h4 class="citation"></h3>
+<h3 class="item_name"></h4>
+
+
+  <div class="paper-title">Language identification method comparison: LivePublication example</div>
+  <div class="paper-authors">Augusus Ellerm, Ben Adams, Mark Gahegan</div>
+
+
+<a href="./ro-crate-metadata.json">⬇️🏷️ Download all the metadata for <span class='name'></span> in JSON-LD format</a>
+
+
+<div id="check"></div>
+
+
+</div>
+
+<div class="paper-card">
+<div id="summary">
+<div class='all-meta'>
+           <div>
+            <h3> ./</h3>
+            
+            
+            
+            
+        <div id="./">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>./</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">datePublished<span>&nbsp;</span><a href="http://schema.org/datePublished">[?]</a></th>
+            <td style='text-align:left'><span>2023-06-16T06:09:37+00:00</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'>
+                        <details style='margin-left: 3%'>
+                            <summary>
+                                <a href="#WEP.json">WEP.json</a> -to- <a href="#crate_15XkigrEbqqfZ/output/accuracy_by_language.csv">crate_15XkigrEbqqfZ/output/accuracy_by_language.csv</a>
+                            </summary>
+                            <ul>
+                        <li><a href="#WEP.json">WEP.json</a></li>
+                        
+                        <li><a href="#WEP_input.json">WEP_input.json</a></li>
+                        
+                        <li><a href="#DS_fastText_Transfer.py">STEP_1: DS_fastText_Transfer</a></li>
+                        
+                        <li><a href="#fastText.py">STEP_2: fastText</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/">crate_ful1t6i5wdGV/</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/ro-crate-preview.html">crate_ful1t6i5wdGV/ro-crate-preview.html</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/.DS_Store">crate_ful1t6i5wdGV/.DS_Store</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/input/">crate_ful1t6i5wdGV/input/</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/input/input_data.txt">crate_ful1t6i5wdGV/input/input_data.txt</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/output/">crate_ful1t6i5wdGV/output/</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/output/fastText_predictions.txt">crate_ful1t6i5wdGV/output/fastText_predictions.txt</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/method_resources/">crate_ful1t6i5wdGV/method_resources/</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/method_resources/computation_docker/">crate_ful1t6i5wdGV/method_resources/computation_docker/</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile">crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz">crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/method_resources/computation_docker/main.py">crate_ful1t6i5wdGV/method_resources/computation_docker/main.py</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/ro-crate-metadata.json">crate_ful1t6i5wdGV/ro-crate-metadata.json</a></li>
+                        
+                        <li><a href="#fastText_statistics_transfer.py">STEP_3: fastText_statistics_transfer</a></li>
+                        
+                        <li><a href="#DS_langDetect_transfer.py">STEP_4: DS_langDetect_transfer</a></li>
+                        
+                        <li><a href="#langdetect.py">STEP_5: langdetect</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/">crate_zUfXO6bgxbUU/</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/ro-crate-preview.html">crate_zUfXO6bgxbUU/ro-crate-preview.html</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/.DS_Store">crate_zUfXO6bgxbUU/.DS_Store</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/input/">crate_zUfXO6bgxbUU/input/</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/input/input_data.txt">crate_zUfXO6bgxbUU/input/input_data.txt</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/output/">crate_zUfXO6bgxbUU/output/</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/output/langdetect_predictions.txt">crate_zUfXO6bgxbUU/output/langdetect_predictions.txt</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/">crate_zUfXO6bgxbUU/method_resources/</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/.DS_Store">crate_zUfXO6bgxbUU/method_resources/.DS_Store</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/computation_docker/">crate_zUfXO6bgxbUU/method_resources/computation_docker/</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt">crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile">crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py">crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/ro-crate-metadata.json">crate_zUfXO6bgxbUU/ro-crate-metadata.json</a></li>
+                        
+                        <li><a href="#langdetect_statistics_transfer.py">STEP_6: langdetect_statistics_transfer</a></li>
+                        
+                        <li><a href="#statistics.py">STEP_7: statistics</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/">crate_15XkigrEbqqfZ/</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/ro-crate-preview.html">crate_15XkigrEbqqfZ/ro-crate-preview.html</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/.DS_Store">crate_15XkigrEbqqfZ/.DS_Store</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/input/">crate_15XkigrEbqqfZ/input/</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/input/fastText_predictions.txt">crate_15XkigrEbqqfZ/input/fastText_predictions.txt</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/input/langdetect_predictions.txt">crate_15XkigrEbqqfZ/input/langdetect_predictions.txt</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/input/validation.txt">crate_15XkigrEbqqfZ/input/validation.txt</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/">crate_15XkigrEbqqfZ/output/</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/fastText_validation.txt">crate_15XkigrEbqqfZ/output/fastText_validation.txt</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/accuracy_by_language.png">crate_15XkigrEbqqfZ/output/accuracy_by_language.png</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/primary_validation.txt">crate_15XkigrEbqqfZ/output/primary_validation.txt</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/langdetect_validation.txt">crate_15XkigrEbqqfZ/output/langdetect_validation.txt</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/fastText_stats.json">crate_15XkigrEbqqfZ/output/fastText_stats.json</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/accuracy_by_language.csv">crate_15XkigrEbqqfZ/output/accuracy_by_language.csv</a></li>
+                        </ul>
+                        </details>
+                
+                        <details style='margin-left: 3%'>
+                            <summary>
+                                <a href="#crate_15XkigrEbqqfZ/output/langdetect_stats.json">crate_15XkigrEbqqfZ/output/langdetect_stats.json</a> -to- <a href="#statistics_DS_transfer.py">STEP_8: statistics_DS_transfer</a>
+                            </summary>
+                            <ul>
+                        <li><a href="#crate_15XkigrEbqqfZ/output/langdetect_stats.json">crate_15XkigrEbqqfZ/output/langdetect_stats.json</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/method_resources/">crate_15XkigrEbqqfZ/method_resources/</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/method_resources/computation_docker/">crate_15XkigrEbqqfZ/method_resources/computation_docker/</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile">crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py">crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/ro-crate-metadata.json">crate_15XkigrEbqqfZ/ro-crate-metadata.json</a></li>
+                        
+                        <li><a href="#statistics_DS_transfer.py">STEP_8: statistics_DS_transfer</a></li>
+                        </ul>
+                        </details>
+                </td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">about<span>&nbsp;</span><a href="http://schema.org/about">[?]</a></th>
+            <td style='text-align:left'><a href="#ro-crate-metadata.json">ro-crate-metadata.json</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="WEP.json">⬇️ Download: </a> WEP.json</h3>
+            
+            
+            
+            
+        <div id="WEP.json">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>WEP.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>WEP.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>File</span></li>
+                        
+                        <li><span>SoftwareSourceCode</span></li>
+                        
+                        <li><span>ComputationalWorkflow</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>Globus workflow definition written in Amazon States Language (ASL)</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>application/json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#WEP_input.json">WEP_input.json</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">programmingLanguage<span>&nbsp;</span><a href="http://schema.org/programmingLanguage">[?]</a></th>
+            <td style='text-align:left'><a href="#%23asl">Amazon States Language</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">WEP</th>
+            <td style='text-align:left'><a href="#%23supplmental">Supplmental</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="WEP_input.json">⬇️ Download: </a> WEP_input.json</h3>
+            
+            
+            
+            
+        <div id="WEP_input.json">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>WEP_input.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>WEP_input.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>WEP input schema for input perameters</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">encodingFormat<span>&nbsp;</span><a href="http://schema.org/encodingFormat">[?]</a></th>
+            <td style='text-align:left'><span>application/json</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#WEP.json">WEP.json</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">WEP_input</th>
+            <td style='text-align:left'><a href="#%23supplmental">Supplmental</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="DS_fastText_Transfer.py">⬇️ Download: </a> STEP_1: DS_fastText_Transfer</h3>
+            
+            
+            
+            
+        <div id="DS_fastText_Transfer.py">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>DS_fastText_Transfer.py</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>STEP_1: DS_fastText_Transfer</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>Transfer test data to fastText</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">AP_type</th>
+            <td style='text-align:left'><span>AP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#fastText.py">STEP_2: fastText</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">action_id</th>
+            <td style='text-align:left'><span>cSl6GGETjODJ</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">creator_id</th>
+            <td style='text-align:left'><span>urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">status<span>&nbsp;</span><a href="http://schema.org/status">[?]</a></th>
+            <td style='text-align:left'><span>succeeded</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">step_1</th>
+            <td style='text-align:left'><a href="#%23primary">Primary</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#fastText.py">STEP_2: fastText</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="fastText.py">⬇️ Download: </a> STEP_2: fastText</h3>
+            
+            
+            
+            
+        <div id="fastText.py">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>fastText.py</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>STEP_2: fastText</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>fastText</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">AP_type</th>
+            <td style='text-align:left'><span>LPAP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#fastText_statistics_transfer.py">STEP_3: fastText_statistics_transfer</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">action_id</th>
+            <td style='text-align:left'><span>ful1t6i5wdGV</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">creator_id</th>
+            <td style='text-align:left'><span>urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#crate_ful1t6i5wdGV/">crate_ful1t6i5wdGV/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#DS_fastText_Transfer.py">STEP_1: DS_fastText_Transfer</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">status<span>&nbsp;</span><a href="http://schema.org/status">[?]</a></th>
+            <td style='text-align:left'><span>succeeded</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">step_2</th>
+            <td style='text-align:left'><a href="#%23primary">Primary</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#DS_fastText_Transfer.py">STEP_1: DS_fastText_Transfer</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#fastText_statistics_transfer.py">STEP_3: fastText_statistics_transfer</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_ful1t6i5wdGV/</h3>
+            
+            
+            
+            
+        <div id="crate_ful1t6i5wdGV/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#crate_ful1t6i5wdGV/ro-crate-preview.html">crate_ful1t6i5wdGV/ro-crate-preview.html</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/.DS_Store">crate_ful1t6i5wdGV/.DS_Store</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/input/">crate_ful1t6i5wdGV/input/</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/output/">crate_ful1t6i5wdGV/output/</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/method_resources/">crate_ful1t6i5wdGV/method_resources/</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/ro-crate-metadata.json">crate_ful1t6i5wdGV/ro-crate-metadata.json</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#fastText.py">STEP_2: fastText</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_ful1t6i5wdGV/ro-crate-preview.html">⬇️ Download: </a> crate_ful1t6i5wdGV/ro-crate-preview.html</h3>
+            
+            
+            
+            
+        <div id="crate_ful1t6i5wdGV/ro-crate-preview.html">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV/ro-crate-preview.html</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/">crate_ful1t6i5wdGV/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_ful1t6i5wdGV/.DS_Store">⬇️ Download: </a> crate_ful1t6i5wdGV/.DS_Store</h3>
+            
+            
+            
+            
+        <div id="crate_ful1t6i5wdGV/.DS_Store">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV/.DS_Store</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/">crate_ful1t6i5wdGV/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_ful1t6i5wdGV/input/</h3>
+            
+            
+            
+            
+        <div id="crate_ful1t6i5wdGV/input/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV/input/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#crate_ful1t6i5wdGV/input/input_data.txt">crate_ful1t6i5wdGV/input/input_data.txt</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/">crate_ful1t6i5wdGV/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_ful1t6i5wdGV/input/input_data.txt">⬇️ Download: </a> crate_ful1t6i5wdGV/input/input_data.txt</h3>
+            
+            
+            
+            
+        <div id="crate_ful1t6i5wdGV/input/input_data.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV/input/input_data.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/input/">crate_ful1t6i5wdGV/input/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_ful1t6i5wdGV/output/</h3>
+            
+            
+            
+            
+        <div id="crate_ful1t6i5wdGV/output/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV/output/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#crate_ful1t6i5wdGV/output/fastText_predictions.txt">crate_ful1t6i5wdGV/output/fastText_predictions.txt</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/">crate_ful1t6i5wdGV/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_ful1t6i5wdGV/output/fastText_predictions.txt">⬇️ Download: </a> crate_ful1t6i5wdGV/output/fastText_predictions.txt</h3>
+            
+            
+            
+            
+        <div id="crate_ful1t6i5wdGV/output/fastText_predictions.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV/output/fastText_predictions.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/output/">crate_ful1t6i5wdGV/output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_ful1t6i5wdGV/method_resources/</h3>
+            
+            
+            
+            
+        <div id="crate_ful1t6i5wdGV/method_resources/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV/method_resources/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#crate_ful1t6i5wdGV/method_resources/computation_docker/">crate_ful1t6i5wdGV/method_resources/computation_docker/</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/">crate_ful1t6i5wdGV/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_ful1t6i5wdGV/method_resources/computation_docker/</h3>
+            
+            
+            
+            
+        <div id="crate_ful1t6i5wdGV/method_resources/computation_docker/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV/method_resources/computation_docker/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile">crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz">crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/method_resources/computation_docker/main.py">crate_ful1t6i5wdGV/method_resources/computation_docker/main.py</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/method_resources/">crate_ful1t6i5wdGV/method_resources/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile">⬇️ Download: </a> crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile</h3>
+            
+            
+            
+            
+        <div id="crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/method_resources/computation_docker/">crate_ful1t6i5wdGV/method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz">⬇️ Download: </a> crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz</h3>
+            
+            
+            
+            
+        <div id="crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/method_resources/computation_docker/">crate_ful1t6i5wdGV/method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_ful1t6i5wdGV/method_resources/computation_docker/main.py">⬇️ Download: </a> crate_ful1t6i5wdGV/method_resources/computation_docker/main.py</h3>
+            
+            
+            
+            
+        <div id="crate_ful1t6i5wdGV/method_resources/computation_docker/main.py">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV/method_resources/computation_docker/main.py</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/method_resources/computation_docker/">crate_ful1t6i5wdGV/method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_ful1t6i5wdGV/ro-crate-metadata.json">⬇️ Download: </a> crate_ful1t6i5wdGV/ro-crate-metadata.json</h3>
+            
+            
+            
+            
+        <div id="crate_ful1t6i5wdGV/ro-crate-metadata.json">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV/ro-crate-metadata.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_ful1t6i5wdGV/">crate_ful1t6i5wdGV/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="fastText_statistics_transfer.py">⬇️ Download: </a> STEP_3: fastText_statistics_transfer</h3>
+            
+            
+            
+            
+        <div id="fastText_statistics_transfer.py">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>fastText_statistics_transfer.py</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>STEP_3: fastText_statistics_transfer</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>Transfer fastText statistics to statistics LPAP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">AP_type</th>
+            <td style='text-align:left'><span>AP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#DS_langDetect_transfer.py">STEP_4: DS_langDetect_transfer</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">action_id</th>
+            <td style='text-align:left'><span>zU8nVGLvxls6</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">creator_id</th>
+            <td style='text-align:left'><span>urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#fastText.py">STEP_2: fastText</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">status<span>&nbsp;</span><a href="http://schema.org/status">[?]</a></th>
+            <td style='text-align:left'><span>succeeded</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">step_3</th>
+            <td style='text-align:left'><a href="#%23primary">Primary</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#fastText.py">STEP_2: fastText</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#DS_langDetect_transfer.py">STEP_4: DS_langDetect_transfer</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="DS_langDetect_transfer.py">⬇️ Download: </a> STEP_4: DS_langDetect_transfer</h3>
+            
+            
+            
+            
+        <div id="DS_langDetect_transfer.py">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>DS_langDetect_transfer.py</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>STEP_4: DS_langDetect_transfer</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>Transfer test data to langdetect LPAP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">AP_type</th>
+            <td style='text-align:left'><span>AP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#langdetect.py">STEP_5: langdetect</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">action_id</th>
+            <td style='text-align:left'><span>1Rgp1ufSQXlYh</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">creator_id</th>
+            <td style='text-align:left'><span>urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#fastText_statistics_transfer.py">STEP_3: fastText_statistics_transfer</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">status<span>&nbsp;</span><a href="http://schema.org/status">[?]</a></th>
+            <td style='text-align:left'><span>succeeded</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">step_4</th>
+            <td style='text-align:left'><a href="#%23primary">Primary</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#fastText_statistics_transfer.py">STEP_3: fastText_statistics_transfer</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#langdetect.py">STEP_5: langdetect</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="langdetect.py">⬇️ Download: </a> STEP_5: langdetect</h3>
+            
+            
+            
+            
+        <div id="langdetect.py">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>langdetect.py</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>STEP_5: langdetect</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>Execute langdetect on test data</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">AP_type</th>
+            <td style='text-align:left'><span>LPAP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#langdetect_statistics_transfer.py">STEP_6: langdetect_statistics_transfer</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">action_id</th>
+            <td style='text-align:left'><span>zUfXO6bgxbUU</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">creator_id</th>
+            <td style='text-align:left'><span>urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#crate_zUfXO6bgxbUU/">crate_zUfXO6bgxbUU/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#DS_langDetect_transfer.py">STEP_4: DS_langDetect_transfer</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">status<span>&nbsp;</span><a href="http://schema.org/status">[?]</a></th>
+            <td style='text-align:left'><span>succeeded</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">step_5</th>
+            <td style='text-align:left'><a href="#%23primary">Primary</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#DS_langDetect_transfer.py">STEP_4: DS_langDetect_transfer</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#langdetect_statistics_transfer.py">STEP_6: langdetect_statistics_transfer</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_zUfXO6bgxbUU/</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#crate_zUfXO6bgxbUU/ro-crate-preview.html">crate_zUfXO6bgxbUU/ro-crate-preview.html</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/.DS_Store">crate_zUfXO6bgxbUU/.DS_Store</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/input/">crate_zUfXO6bgxbUU/input/</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/output/">crate_zUfXO6bgxbUU/output/</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/">crate_zUfXO6bgxbUU/method_resources/</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/ro-crate-metadata.json">crate_zUfXO6bgxbUU/ro-crate-metadata.json</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#langdetect.py">STEP_5: langdetect</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_zUfXO6bgxbUU/ro-crate-preview.html">⬇️ Download: </a> crate_zUfXO6bgxbUU/ro-crate-preview.html</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/ro-crate-preview.html">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/ro-crate-preview.html</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/">crate_zUfXO6bgxbUU/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_zUfXO6bgxbUU/.DS_Store">⬇️ Download: </a> crate_zUfXO6bgxbUU/.DS_Store</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/.DS_Store">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/.DS_Store</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/">crate_zUfXO6bgxbUU/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_zUfXO6bgxbUU/input/</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/input/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/input/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#crate_zUfXO6bgxbUU/input/input_data.txt">crate_zUfXO6bgxbUU/input/input_data.txt</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/">crate_zUfXO6bgxbUU/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_zUfXO6bgxbUU/input/input_data.txt">⬇️ Download: </a> crate_zUfXO6bgxbUU/input/input_data.txt</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/input/input_data.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/input/input_data.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/input/">crate_zUfXO6bgxbUU/input/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_zUfXO6bgxbUU/output/</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/output/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/output/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#crate_zUfXO6bgxbUU/output/langdetect_predictions.txt">crate_zUfXO6bgxbUU/output/langdetect_predictions.txt</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/">crate_zUfXO6bgxbUU/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_zUfXO6bgxbUU/output/langdetect_predictions.txt">⬇️ Download: </a> crate_zUfXO6bgxbUU/output/langdetect_predictions.txt</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/output/langdetect_predictions.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/output/langdetect_predictions.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/output/">crate_zUfXO6bgxbUU/output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_zUfXO6bgxbUU/method_resources/</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/method_resources/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/method_resources/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/.DS_Store">crate_zUfXO6bgxbUU/method_resources/.DS_Store</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/computation_docker/">crate_zUfXO6bgxbUU/method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/">crate_zUfXO6bgxbUU/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_zUfXO6bgxbUU/method_resources/.DS_Store">⬇️ Download: </a> crate_zUfXO6bgxbUU/method_resources/.DS_Store</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/method_resources/.DS_Store">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/method_resources/.DS_Store</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/">crate_zUfXO6bgxbUU/method_resources/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_zUfXO6bgxbUU/method_resources/computation_docker/</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/method_resources/computation_docker/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/method_resources/computation_docker/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt">crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile">crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py">crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/">crate_zUfXO6bgxbUU/method_resources/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt">⬇️ Download: </a> crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/computation_docker/">crate_zUfXO6bgxbUU/method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile">⬇️ Download: </a> crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/computation_docker/">crate_zUfXO6bgxbUU/method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py">⬇️ Download: </a> crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/method_resources/computation_docker/">crate_zUfXO6bgxbUU/method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_zUfXO6bgxbUU/ro-crate-metadata.json">⬇️ Download: </a> crate_zUfXO6bgxbUU/ro-crate-metadata.json</h3>
+            
+            
+            
+            
+        <div id="crate_zUfXO6bgxbUU/ro-crate-metadata.json">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_zUfXO6bgxbUU/ro-crate-metadata.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_zUfXO6bgxbUU/">crate_zUfXO6bgxbUU/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="langdetect_statistics_transfer.py">⬇️ Download: </a> STEP_6: langdetect_statistics_transfer</h3>
+            
+            
+            
+            
+        <div id="langdetect_statistics_transfer.py">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>langdetect_statistics_transfer.py</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>STEP_6: langdetect_statistics_transfer</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>Transfer langdetect statistics to statistics LPAP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">AP_type</th>
+            <td style='text-align:left'><span>AP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#statistics.py">STEP_7: statistics</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">action_id</th>
+            <td style='text-align:left'><span>k2WyRBpOjxK8</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">creator_id</th>
+            <td style='text-align:left'><span>urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#langdetect.py">STEP_5: langdetect</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">status<span>&nbsp;</span><a href="http://schema.org/status">[?]</a></th>
+            <td style='text-align:left'><span>succeeded</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">step_6</th>
+            <td style='text-align:left'><a href="#%23primary">Primary</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#langdetect.py">STEP_5: langdetect</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#statistics.py">STEP_7: statistics</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="statistics.py">⬇️ Download: </a> STEP_7: statistics</h3>
+            
+            
+            
+            
+        <div id="statistics.py">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>statistics.py</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>STEP_7: statistics</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>Execute statistics on generated data</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">AP_type</th>
+            <td style='text-align:left'><span>LPAP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#statistics_DS_transfer.py">STEP_8: statistics_DS_transfer</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">action_id</th>
+            <td style='text-align:left'><span>15XkigrEbqqfZ</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">creator_id</th>
+            <td style='text-align:left'><span>urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#crate_15XkigrEbqqfZ/">crate_15XkigrEbqqfZ/</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#langdetect_statistics_transfer.py">STEP_6: langdetect_statistics_transfer</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">status<span>&nbsp;</span><a href="http://schema.org/status">[?]</a></th>
+            <td style='text-align:left'><span>succeeded</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">step_7</th>
+            <td style='text-align:left'><a href="#%23primary">Primary</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#langdetect_statistics_transfer.py">STEP_6: langdetect_statistics_transfer</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#statistics_DS_transfer.py">STEP_8: statistics_DS_transfer</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_15XkigrEbqqfZ/</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#crate_15XkigrEbqqfZ/ro-crate-preview.html">crate_15XkigrEbqqfZ/ro-crate-preview.html</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/.DS_Store">crate_15XkigrEbqqfZ/.DS_Store</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/input/">crate_15XkigrEbqqfZ/input/</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/">crate_15XkigrEbqqfZ/output/</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/method_resources/">crate_15XkigrEbqqfZ/method_resources/</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/ro-crate-metadata.json">crate_15XkigrEbqqfZ/ro-crate-metadata.json</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#statistics.py">STEP_7: statistics</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/ro-crate-preview.html">⬇️ Download: </a> crate_15XkigrEbqqfZ/ro-crate-preview.html</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/ro-crate-preview.html">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/ro-crate-preview.html</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/">crate_15XkigrEbqqfZ/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/.DS_Store">⬇️ Download: </a> crate_15XkigrEbqqfZ/.DS_Store</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/.DS_Store">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/.DS_Store</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/">crate_15XkigrEbqqfZ/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_15XkigrEbqqfZ/input/</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/input/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/input/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#crate_15XkigrEbqqfZ/input/fastText_predictions.txt">crate_15XkigrEbqqfZ/input/fastText_predictions.txt</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/input/langdetect_predictions.txt">crate_15XkigrEbqqfZ/input/langdetect_predictions.txt</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/input/validation.txt">crate_15XkigrEbqqfZ/input/validation.txt</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/">crate_15XkigrEbqqfZ/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/input/fastText_predictions.txt">⬇️ Download: </a> crate_15XkigrEbqqfZ/input/fastText_predictions.txt</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/input/fastText_predictions.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/input/fastText_predictions.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/input/">crate_15XkigrEbqqfZ/input/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/input/langdetect_predictions.txt">⬇️ Download: </a> crate_15XkigrEbqqfZ/input/langdetect_predictions.txt</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/input/langdetect_predictions.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/input/langdetect_predictions.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/input/">crate_15XkigrEbqqfZ/input/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/input/validation.txt">⬇️ Download: </a> crate_15XkigrEbqqfZ/input/validation.txt</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/input/validation.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/input/validation.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/input/">crate_15XkigrEbqqfZ/input/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_15XkigrEbqqfZ/output/</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/output/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/output/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#crate_15XkigrEbqqfZ/output/fastText_validation.txt">crate_15XkigrEbqqfZ/output/fastText_validation.txt</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/accuracy_by_language.png">crate_15XkigrEbqqfZ/output/accuracy_by_language.png</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/primary_validation.txt">crate_15XkigrEbqqfZ/output/primary_validation.txt</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/langdetect_validation.txt">crate_15XkigrEbqqfZ/output/langdetect_validation.txt</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/fastText_stats.json">crate_15XkigrEbqqfZ/output/fastText_stats.json</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/accuracy_by_language.csv">crate_15XkigrEbqqfZ/output/accuracy_by_language.csv</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/langdetect_stats.json">crate_15XkigrEbqqfZ/output/langdetect_stats.json</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/">crate_15XkigrEbqqfZ/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/output/fastText_validation.txt">⬇️ Download: </a> crate_15XkigrEbqqfZ/output/fastText_validation.txt</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/output/fastText_validation.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/output/fastText_validation.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/">crate_15XkigrEbqqfZ/output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/output/accuracy_by_language.png">⬇️ Download: </a> crate_15XkigrEbqqfZ/output/accuracy_by_language.png</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/output/accuracy_by_language.png">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/output/accuracy_by_language.png</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/">crate_15XkigrEbqqfZ/output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/output/primary_validation.txt">⬇️ Download: </a> crate_15XkigrEbqqfZ/output/primary_validation.txt</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/output/primary_validation.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/output/primary_validation.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/">crate_15XkigrEbqqfZ/output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/output/langdetect_validation.txt">⬇️ Download: </a> crate_15XkigrEbqqfZ/output/langdetect_validation.txt</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/output/langdetect_validation.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/output/langdetect_validation.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/">crate_15XkigrEbqqfZ/output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/output/fastText_stats.json">⬇️ Download: </a> crate_15XkigrEbqqfZ/output/fastText_stats.json</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/output/fastText_stats.json">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/output/fastText_stats.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/">crate_15XkigrEbqqfZ/output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/output/accuracy_by_language.csv">⬇️ Download: </a> crate_15XkigrEbqqfZ/output/accuracy_by_language.csv</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/output/accuracy_by_language.csv">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/output/accuracy_by_language.csv</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/">crate_15XkigrEbqqfZ/output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/output/langdetect_stats.json">⬇️ Download: </a> crate_15XkigrEbqqfZ/output/langdetect_stats.json</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/output/langdetect_stats.json">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/output/langdetect_stats.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/output/">crate_15XkigrEbqqfZ/output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_15XkigrEbqqfZ/method_resources/</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/method_resources/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/method_resources/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#crate_15XkigrEbqqfZ/method_resources/computation_docker/">crate_15XkigrEbqqfZ/method_resources/computation_docker/</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/">crate_15XkigrEbqqfZ/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> crate_15XkigrEbqqfZ/method_resources/computation_docker/</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/method_resources/computation_docker/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/method_resources/computation_docker/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile">crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py">crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/method_resources/">crate_15XkigrEbqqfZ/method_resources/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile">⬇️ Download: </a> crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/method_resources/computation_docker/">crate_15XkigrEbqqfZ/method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py">⬇️ Download: </a> crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/method_resources/computation_docker/">crate_15XkigrEbqqfZ/method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="crate_15XkigrEbqqfZ/ro-crate-metadata.json">⬇️ Download: </a> crate_15XkigrEbqqfZ/ro-crate-metadata.json</h3>
+            
+            
+            
+            
+        <div id="crate_15XkigrEbqqfZ/ro-crate-metadata.json">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ/ro-crate-metadata.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">./</a></li>
+                        
+                        <li><a href="#crate_15XkigrEbqqfZ/">crate_15XkigrEbqqfZ/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="statistics_DS_transfer.py">⬇️ Download: </a> STEP_8: statistics_DS_transfer</h3>
+            
+            
+            
+            
+        <div id="statistics_DS_transfer.py">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>statistics_DS_transfer.py</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>STEP_8: statistics_DS_transfer</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>Transfer statistics to Data Store</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">AP_type</th>
+            <td style='text-align:left'><span>AP</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">action_id</th>
+            <td style='text-align:left'><span>16ItXaJOX7STB</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">creator_id</th>
+            <td style='text-align:left'><span>urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">end</th>
+            <td style='text-align:left'><span>true</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">previous</th>
+            <td style='text-align:left'><a href="#statistics.py">STEP_7: statistics</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">status<span>&nbsp;</span><a href="http://schema.org/status">[?]</a></th>
+            <td style='text-align:left'><span>succeeded</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">./</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">step_8</th>
+            <td style='text-align:left'><a href="#%23primary">Primary</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">Next</th>
+            <td style='text-align:left'><a href="#statistics.py">STEP_7: statistics</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/></div>
+</div>
+
+
+
+
+</div>
+</body>
+</html>

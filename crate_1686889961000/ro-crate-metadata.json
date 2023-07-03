@@ -1,0 +1,748 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "datePublished": "2023-06-16T06:09:37+00:00",
+            "hasPart": [
+                {
+                    "@id": "WEP.json"
+                },
+                {
+                    "@id": "WEP_input.json"
+                },
+                {
+                    "@id": "DS_fastText_Transfer.py"
+                },
+                {
+                    "@id": "fastText.py"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/ro-crate-preview.html"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/.DS_Store"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/input/"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/input/input_data.txt"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/output/"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/output/fastText_predictions.txt"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/method_resources/"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/main.py"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/ro-crate-metadata.json"
+                },
+                {
+                    "@id": "fastText_statistics_transfer.py"
+                },
+                {
+                    "@id": "DS_langDetect_transfer.py"
+                },
+                {
+                    "@id": "langdetect.py"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/ro-crate-preview.html"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/.DS_Store"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/input/"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/input/input_data.txt"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/output/"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/output/langdetect_predictions.txt"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/method_resources/"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/method_resources/.DS_Store"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/ro-crate-metadata.json"
+                },
+                {
+                    "@id": "langdetect_statistics_transfer.py"
+                },
+                {
+                    "@id": "statistics.py"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/ro-crate-preview.html"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/.DS_Store"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/input/"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/input/fastText_predictions.txt"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/input/langdetect_predictions.txt"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/input/validation.txt"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/fastText_validation.txt"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/accuracy_by_language.png"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/primary_validation.txt"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/langdetect_validation.txt"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/fastText_stats.json"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/accuracy_by_language.csv"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/langdetect_stats.json"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/method_resources/"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/ro-crate-metadata.json"
+                },
+                {
+                    "@id": "statistics_DS_transfer.py"
+                }
+            ]
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.1"
+            }
+        },
+        {
+            "@id": "#supplmental",
+            "@type": "Thing",
+            "WEP": {
+                "@id": "WEP.json"
+            },
+            "WEP_input": {
+                "@id": "WEP_input.json"
+            },
+            "description": "Supplmental information for the Globus workflow execution",
+            "name": "Supplmental"
+        },
+        {
+            "@id": "WEP.json",
+            "@type": [
+                "File",
+                "SoftwareSourceCode",
+                "ComputationalWorkflow"
+            ],
+            "description": "Globus workflow definition written in Amazon States Language (ASL)",
+            "encodingFormat": "application/json",
+            "hasPart": {
+                "@id": "WEP_input.json"
+            },
+            "name": "WEP.json",
+            "programmingLanguage": {
+                "@id": "#asl"
+            }
+        },
+        {
+            "@id": "#asl",
+            "@type": "ComputerLanguage",
+            "alternateName": "ASL",
+            "name": "Amazon States Language",
+            "url": "https://docs.aws.amazon.com/step-functions/latest/dg/concepts-amazon-states-language.html"
+        },
+        {
+            "@id": "WEP_input.json",
+            "@type": "File",
+            "description": "WEP input schema for input perameters",
+            "encodingFormat": "application/json",
+            "name": "WEP_input.json"
+        },
+        {
+            "@id": "#primary",
+            "@type": "Thing",
+            "description": "Step by step execution, and record of Globus flow",
+            "name": "Primary",
+            "step_1": {
+                "@id": "DS_fastText_Transfer.py"
+            },
+            "step_2": {
+                "@id": "fastText.py"
+            },
+            "step_3": {
+                "@id": "fastText_statistics_transfer.py"
+            },
+            "step_4": {
+                "@id": "DS_langDetect_transfer.py"
+            },
+            "step_5": {
+                "@id": "langdetect.py"
+            },
+            "step_6": {
+                "@id": "langdetect_statistics_transfer.py"
+            },
+            "step_7": {
+                "@id": "statistics.py"
+            },
+            "step_8": {
+                "@id": "statistics_DS_transfer.py"
+            }
+        },
+        {
+            "@id": "DS_fastText_Transfer.py",
+            "@type": "File",
+            "AP_type": "AP",
+            "Next": {
+                "@id": "fastText.py"
+            },
+            "action_id": "cSl6GGETjODJ",
+            "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "description": "Transfer test data to fastText",
+            "name": "STEP_1: DS_fastText_Transfer",
+            "status": "succeeded"
+        },
+        {
+            "@id": "fastText.py",
+            "@type": "File",
+            "AP_type": "LPAP",
+            "Next": {
+                "@id": "fastText_statistics_transfer.py"
+            },
+            "action_id": "ful1t6i5wdGV",
+            "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "description": "fastText",
+            "hasPart": {
+                "@id": "crate_ful1t6i5wdGV/"
+            },
+            "name": "STEP_2: fastText",
+            "previous": {
+                "@id": "DS_fastText_Transfer.py"
+            },
+            "status": "succeeded"
+        },
+        {
+            "@id": "crate_ful1t6i5wdGV/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_ful1t6i5wdGV/ro-crate-preview.html"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/.DS_Store"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/input/"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/output/"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/method_resources/"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/ro-crate-metadata.json"
+                }
+            ]
+        },
+        {
+            "@id": "crate_ful1t6i5wdGV/ro-crate-preview.html",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_ful1t6i5wdGV/.DS_Store",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_ful1t6i5wdGV/input/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_ful1t6i5wdGV/input/input_data.txt"
+                }
+            ]
+        },
+        {
+            "@id": "crate_ful1t6i5wdGV/input/input_data.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_ful1t6i5wdGV/output/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_ful1t6i5wdGV/output/fastText_predictions.txt"
+                }
+            ]
+        },
+        {
+            "@id": "crate_ful1t6i5wdGV/output/fastText_predictions.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_ful1t6i5wdGV/method_resources/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/"
+                }
+            ]
+        },
+        {
+            "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz"
+                },
+                {
+                    "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/main.py"
+                }
+            ]
+        },
+        {
+            "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/Dockerfile",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_ful1t6i5wdGV/method_resources/computation_docker/main.py",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_ful1t6i5wdGV/ro-crate-metadata.json",
+            "@type": "File"
+        },
+        {
+            "@id": "fastText_statistics_transfer.py",
+            "@type": "File",
+            "AP_type": "AP",
+            "Next": {
+                "@id": "DS_langDetect_transfer.py"
+            },
+            "action_id": "zU8nVGLvxls6",
+            "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "description": "Transfer fastText statistics to statistics LPAP",
+            "name": "STEP_3: fastText_statistics_transfer",
+            "previous": {
+                "@id": "fastText.py"
+            },
+            "status": "succeeded"
+        },
+        {
+            "@id": "DS_langDetect_transfer.py",
+            "@type": "File",
+            "AP_type": "AP",
+            "Next": {
+                "@id": "langdetect.py"
+            },
+            "action_id": "1Rgp1ufSQXlYh",
+            "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "description": "Transfer test data to langdetect LPAP",
+            "name": "STEP_4: DS_langDetect_transfer",
+            "previous": {
+                "@id": "fastText_statistics_transfer.py"
+            },
+            "status": "succeeded"
+        },
+        {
+            "@id": "langdetect.py",
+            "@type": "File",
+            "AP_type": "LPAP",
+            "Next": {
+                "@id": "langdetect_statistics_transfer.py"
+            },
+            "action_id": "zUfXO6bgxbUU",
+            "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "description": "Execute langdetect on test data",
+            "hasPart": {
+                "@id": "crate_zUfXO6bgxbUU/"
+            },
+            "name": "STEP_5: langdetect",
+            "previous": {
+                "@id": "DS_langDetect_transfer.py"
+            },
+            "status": "succeeded"
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_zUfXO6bgxbUU/ro-crate-preview.html"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/.DS_Store"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/input/"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/output/"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/method_resources/"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/ro-crate-metadata.json"
+                }
+            ]
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/ro-crate-preview.html",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/.DS_Store",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/input/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_zUfXO6bgxbUU/input/input_data.txt"
+                }
+            ]
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/input/input_data.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/output/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_zUfXO6bgxbUU/output/langdetect_predictions.txt"
+                }
+            ]
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/output/langdetect_predictions.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/method_resources/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_zUfXO6bgxbUU/method_resources/.DS_Store"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/"
+                }
+            ]
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/method_resources/.DS_Store",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile"
+                },
+                {
+                    "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py"
+                }
+            ]
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/requirements.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/Dockerfile",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_zUfXO6bgxbUU/ro-crate-metadata.json",
+            "@type": "File"
+        },
+        {
+            "@id": "langdetect_statistics_transfer.py",
+            "@type": "File",
+            "AP_type": "AP",
+            "Next": {
+                "@id": "statistics.py"
+            },
+            "action_id": "k2WyRBpOjxK8",
+            "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "description": "Transfer langdetect statistics to statistics LPAP",
+            "name": "STEP_6: langdetect_statistics_transfer",
+            "previous": {
+                "@id": "langdetect.py"
+            },
+            "status": "succeeded"
+        },
+        {
+            "@id": "statistics.py",
+            "@type": "File",
+            "AP_type": "LPAP",
+            "Next": {
+                "@id": "statistics_DS_transfer.py"
+            },
+            "action_id": "15XkigrEbqqfZ",
+            "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "description": "Execute statistics on generated data",
+            "hasPart": {
+                "@id": "crate_15XkigrEbqqfZ/"
+            },
+            "name": "STEP_7: statistics",
+            "previous": {
+                "@id": "langdetect_statistics_transfer.py"
+            },
+            "status": "succeeded"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_15XkigrEbqqfZ/ro-crate-preview.html"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/.DS_Store"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/input/"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/method_resources/"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/ro-crate-metadata.json"
+                }
+            ]
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/ro-crate-preview.html",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/.DS_Store",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/input/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_15XkigrEbqqfZ/input/fastText_predictions.txt"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/input/langdetect_predictions.txt"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/input/validation.txt"
+                }
+            ]
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/input/fastText_predictions.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/input/langdetect_predictions.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/input/validation.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/output/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/fastText_validation.txt"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/accuracy_by_language.png"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/primary_validation.txt"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/langdetect_validation.txt"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/fastText_stats.json"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/accuracy_by_language.csv"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/output/langdetect_stats.json"
+                }
+            ]
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/output/fastText_validation.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/output/accuracy_by_language.png",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/output/primary_validation.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/output/langdetect_validation.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/output/fastText_stats.json",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/output/accuracy_by_language.csv",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/output/langdetect_stats.json",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/method_resources/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/"
+                }
+            ]
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile"
+                },
+                {
+                    "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py"
+                }
+            ]
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/Dockerfile",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/method_resources/computation_docker/main.py",
+            "@type": "File"
+        },
+        {
+            "@id": "crate_15XkigrEbqqfZ/ro-crate-metadata.json",
+            "@type": "File"
+        },
+        {
+            "@id": "statistics_DS_transfer.py",
+            "@type": "File",
+            "AP_type": "AP",
+            "action_id": "16ItXaJOX7STB",
+            "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "description": "Transfer statistics to Data Store",
+            "end": true,
+            "name": "STEP_8: statistics_DS_transfer",
+            "previous": {
+                "@id": "statistics.py"
+            },
+            "status": "succeeded"
+        }
+    ]
+}

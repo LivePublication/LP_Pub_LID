@@ -1,0 +1,244 @@
+# Language identification method comparison
+
+## Introduction
+
+Welcome to our LivePublication demonstration! This website represents how we can incorporate real-time computation within the narrative structure of a research article.
+
+This LivePublication is the product of an ongoing initiative to move beyond the limitations of traditional scientific publishing by integrating dynamic computational workflows within the fabric of a publication. The LivePublication framework aims to enable live, reactive publications while simultaneously enhancing transparency, repeatability, and collaborative scientific research.
+
+To enable this, LivePublication integrates with distributed Globus flows by providing custom Action Provides (LivePublication Action Providers, LPAPs) to generate descriptive RO-Crates at each major computational step in a workflow/methodology. These distributed artefacts are then combined into a full description of the workflow execution recording inputs, outputs, methods, and descriptive metadata. This primary artefact is then used as a data model for a publication, such as this website, to draw upon - providing updating figures, metrics, and other metadata. The structure, recorded metadata, and methods of integration with the publication are all early areas under active development.
+
+Find a browseable version of the underpinning orchestration RO-Crate [here](http://130.216.217.137:8080)!
+
+## Globus flow, and orchestration crate generation
+
+Find a simple representation of the Globus flow below. Each node in the flow diagram provides a link to execution details within the orchestration crate. 
+
+```{mermaid securityLevel='loose'}
+flowchart LR
+  data_store[(Data store)] --> transfer_ap[Transfer AP]
+  transfer_ap --> ft[[fastText LPAP]] & ld[[langdetect LPAP]]
+  ft & ld --> transfer_ap2[Transfer AP]
+  transfer_ap2 --> stats[[Statistics LPAP]]
+  stats --> transfer_ap3[Transfer AP]
+  transfer_ap3 --> results_store[(Results store)]
+  click transfer_ap "http://130.216.217.137:8080/#DS_fastText_Transfer.py" "Go to transfer 1"
+  click ft "http://130.216.217.137:8080/#fastText.py" "Go to fastText LPAP"
+  click transfer_ap2 "http://130.216.217.137:8080/#fastText_statistics_transfer.py" "go to transfer 2"
+  click ld "http://130.216.217.137:8080/#langdetect.py" "Go to langdetect LPAP"
+  click transfer_ap_3 "http://130.216.217.137:8080/#langdetect_statistics_transfer.py" "Go to transfer 3"
+  click stats "http://130.216.217.137:8080/#statistics.py" "Go to statistics LPAP"
+```
+
+
+## Reactive publications - predicating content on the data-model
+
+This section provides examples of how we can leverage live data to create variable, or dependent text. 
+There are many plausable methods for how variable content can be implemented. At its most basic, switch or if statements can be used to include/exclude information dependent on a combination of variables. More complex applications include hybrid LLM/Author NL generation, providing a more flexable interface.
+
+<!-- Load in variables & provide reactive components -->
+```{ojs}
+//| code-overflow: wrap
+fastText_stats = FileAttachment("crate_1686889961000/crate_15XkigrEbqqfZ/output/fastText_stats.json").json() 
+langdetect_stats = FileAttachment("crate_1686889961000/crate_15XkigrEbqqfZ/output/langdetect_stats.json").json() 
+fastText_acc_actual = fastText_stats["overall_accuracy"] 
+langdetect_acc_actual = langdetect_stats["overall_accuracy"] 
+
+viewof fastText_acc = Inputs.range([80.0, 100.0], {
+  label: "FastText accuracy:", 
+  step: 0.1,
+  value: fastText_acc_actual,
+  width: 500
+  })
+
+viewof langdetect_acc = Inputs.range([80.0, 100.0], {
+  label: "Langdetect accuracy:", 
+  step: 0.1,
+  value: langdetect_acc_actual,
+  width: 500
+  })
+```
+
+### Variable text
+
+A simple example of variable text is provided below. Depending on the relative accuracy results of each model (fastText, langdetect) the content changes. 
+
+```{ojs}
+//| echo: True
+accuracy_conclusion = {
+  if (fastText_acc > langdetect_acc) {
+    return `FastText achieved a greater accuracy, achieving ${fastText_acc}% compared to langdetect, which achieved ${langdetect_acc}%`
+  } else if (fastText_acc < langdetect_acc) {
+    return `Langdetect achieved a greater accuracy, achieving ${langdetect_acc}% vs fastText's ${fastText_acc}%`
+  } else {
+    return `FastText and langdetect both achieved the same accuracy: ${fastText_acc}%`
+  }
+}
+```
+
+:::{.callout-note}
+## Variable Text
+${accuracy_conclusion}
+:::
+
+### Delimited variables and dashboard-like functionality
+
+Rather than a simple switch statement as above, we can provide alerts if variables exit a delimited range, or the relationship between variables changes. 
+
+```{ojs}
+//| echo: True
+//| code-overflow: wrap
+fastText_limit = {
+  function isInRange(value, lowerBound, upperBound) {
+    return value >= lowerBound && value <= upperBound;
+  }
+  let fastText_lower = 90;
+  let fastText_upper = 100;
+  if (!isInRange(fastText_acc, fastText_lower, fastText_upper)) {
+    return `Not in Range: ${fastText_acc}% is outside the range of ${fastText_lower}% - ${fastText_upper}%`
+  } else {
+    return `Within Range: ${fastText_acc}% is within the range of ${fastText_lower}% - ${fastText_upper}%`
+  }
+}
+```
+
+```{ojs}
+//| echo: True
+//| code-overflow: wrap
+langdetect_limit = {
+  function isInRange(value, lowerBound, upperBound) {
+    return value >= lowerBound && value <= upperBound;
+  }
+  let langdetect_lower = 90;
+  let langdetect_upper = 100;
+  if (!isInRange(langdetect_acc, langdetect_lower, langdetect_upper)) {
+    return `Not in Range: ${langdetect_acc}% is outside the range of ${langdetect_lower}% - ${langdetect_upper}%`
+  } else {
+    return `Within Range: ${langdetect_acc}% is within the range of ${langdetect_lower}% - ${langdetect_upper}%`
+  }
+}
+```
+
+:::{.callout-warning}
+## fastText accuracy limit
+${fastText_limit}
+:::
+
+:::{.callout-warning}
+## fastText accuracy limit
+${langdetect_limit}
+:::
+
+## LID performance comparison 
+
+While future LivePublication applications will primarily focus on how author-driven content can be realistically, and seamlessly integrated with live updating articles, this article uses mostly generative content drawing on data exported from the underlying [RO-Crate](http://130.216.217.137:8080/). Research on how the author and live content can be integrated is ongoing. Below, GPT-4 provides a short description of the results of this computational workflow, drawing on [data generated during the flow](#data). An overview of the LID comparison is provided in figure @fig-accuracies_by_language.
+
+- Model: GPT-4
+- Prompt: This experiment compares the performance of two language identification methods: fastText and Langdetect. FastText's results are [results](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json) and langdetect results are [results](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json). Write a few paragraphs discussing the performance of each, comparing their best and worst language accuracies. 
+
+:::{.callout-note}
+## Generative Content
+
+The evaluation of the language identification methods - fastText and Langdetect - reveals a nuanced performance profile contingent on the specific language being identified. Overall, the fastText model demonstrated superior performance with an overall accuracy of [``98.6%``](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json) compared to Langdetect's [``97.91%``](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json). This comparison, however, does not capture the individual variances in accuracy across languages for the two models.
+
+Delving into these language-specific performances, FastText exhibits impeccable accuracy in identifying several languages. These include German (deu), Greek (ell), English (eng), French (fra), Japanese (jpn), Thai (tha), and Chinese (zho) - all at 100% accuracy. Other languages such as Bulgarian (bul), Italian (ita), Russian (rus), and Vietnamese (vie) also show remarkable results with accuracy close to 100%. FastText's weakest performance is observed for Swahili (swa) at [``85.4%``](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json) accuracy, indicating a potential area for model improvement.
+
+On the other hand, Langdetect also showcased impressive accuracy with several languages reaching 100% identification rate, namely Greek (ell), Japanese (jpn), Thai (tha), and Vietnamese (vie). It performed notably well with Arabic (ara), German (deu), and Turkish (tur) too, with accuracy rates nearing 100%. The lowest performance was observed with Dutch (nld) at [``93.6%``](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json), signifying a potential area of focus for future model enhancements.
+
+When comparing the two models on specific languages, FastText notably outperforms Langdetect in identifying languages such as Bulgarian, English, French, Dutch, Polish, Portuguese, and Spanish. Conversely, both models demonstrate equivalent performance in Arabic, Greek, Japanese, Thai, and Vietnamese identification. Langdetect's performance appears to surpass FastText slightly in Hindi and Urdu.
+
+:::
+
+[![Accuracy by language](crate_1686889961000/crate_15XkigrEbqqfZ/output/accuracy_by_language.png){#fig-accuracies_by_language}](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/accuracy_by_language.png)
+
+## Workflow / Method description
+
+Below is a very early attempt at generative content based on the generated [Workflow Execution Plan](http://130.216.217.137:8080/#WEP.json) (WEP). The WEP only provides a description of the Globus flow, and includes no information regarding the actual execution of the method. Including details from the Workflow Execution Description (WED) can further enhance the description including things like execution state (succeeded, failed), time taken per step, and other pertinent information. 
+
+- Model: GPT-4
+- Prompt: Generate a description of this workflow, from the perspective of an academic methodological section: [WEP](http://130.216.217.137:8080/#WEP.json)
+
+
+:::{.callout-note}
+## Generative Content
+The methodology to compare the performance of two language identification models, fastText and langdetect, involves the execution of a series of actions within a structured workflow. The actions range from data transfer operations to the execution of language identification models and statistical analysis of the generated results. The overall flow is organized as follows:
+
+1. [**Data Transfer for fastText Model**](http://130.216.217.137:8080/#DS_fastText_Transfer.py): The process begins by transferring the required dataset from the data store to the location accessible by the fastText model. This is done using Globus, a high-speed data transfer protocol. The specific parameters of this operation such as the source and destination endpoint identifiers, along with the respective paths are supplied at runtime.
+
+2. [**fastText Model Execution**](http://130.216.217.137:8080/#fastText.py): With the data in place, the fastText language identification model is executed. The model reads the input data from the path specified in the previous step, performs language identification, and stores the result in the same location.
+
+3. [**Result Transfer for fastText Model**](http://130.216.217.137:8080/#fastText_statistics_transfer.py): The output of the fastText model, including statistics related to its performance, is then transferred back to the data store via another Globus transfer operation.
+
+4. [**Data Transfer for langdetect Model**](http://130.216.217.137:8080/#DS_langDetect_transfer.py): Similarly to step 1, the required dataset is transferred from the data store to the location accessible by the langdetect model using a Globus transfer operation.
+
+5. [**langdetect Model Execution**](http://130.216.217.137:8080/#langdetect.py): The langdetect model is then executed, processing the transferred data to perform language identification. The results of the model are stored in the designated location.
+
+6. [**Result Transfer for langdetect Model**](http://130.216.217.137:8080/#langdetect_statistics_transfer.py): The results of the langdetect model, including its performance statistics, are then transferred back to the data store via Globus transfer operation.
+
+7. [**Statistical Analysis**](http://130.216.217.137:8080/#statistics.py): With the results from both models in place, a statistical analysis is performed to compare their performances. The analysis includes accuracy statistics, and the generation of figures, tables, and other representations of the results for presentation in the publication layer.
+
+8. [**Statistics Transfer to the Data Store**](http://130.216.217.137:8080/#statistics_DS_transfer.py): Finally, the results of the statistical analysis are transferred back to the data store using another Globus transfer operation.
+
+Each of these operations is executed asynchronously, with designated wait times to ensure the completion of each task before moving to the next. The process has been designed for scalability and efficiency, with a focus on managing data and computational resources effectively.
+:::
+
+### Method description generation experiement
+
+Each LPAP contains a method directory including the docker image and associated scripts. Using these, we can attempt to generate descriptions of the method in NL. This is an early experiement into the performance/accuracy of such a method. 
+
+#### FastText LPAP
+
+{{< downloadthis crate_1686889961000/crate_ful1t6i5wdGV/method_resources/computation_docker/main.py dname="fastText" label="Download the script" icon="filetype-py" type="info" >}}
+
+::: {add-from=crate_1686889961000/crate_ful1t6i5wdGV/method_resources/computation_docker/main.py}
+```{.py}
+```
+:::
+
+:::{.callout-note}
+## Generative Content
+
+FastText is a library for text classification and representation learning, created by Facebook's AI Research lab. This script loads a FastText model trained to classify text and then uses this model to predict the class of each line of an input text file.
+
+Here's a step-by-step breakdown:
+
+1. The script begins by setting up necessary directories. The base directory (`BASE_DIR`) is set as the directory where this script is located. `INPUT_DIR` and `OUTPUT_DIR` are then defined as subdirectories of the base directory.
+2. In the main execution block (`if name == "main":`), the script first opens an input file (`sys.argv[1]`) with read access using the codecs library, which allows the script to handle text encoded in UTF-8. The content of the file is read line by line into the lines variable.
+3. A pre-trained FastText model is loaded from a file named `model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz`. This model is trained to predict the class of a line of text.
+4. The script then iterates through each line in the input file again. For each line, any newline character () at the end of the line is removed using `rstrip("")`. The cleaned line is then fed to the FastText model to generate a prediction. Each prediction is appended to the predictions list.
+5. Finally, all the predictions are written to a file in the output directory named `fastText_predictions.txt`. Each prediction is written on a new line, with any "label" prefix removed.
+
+In the context of the workflow, this script follows the DS_fastText_Transfer state where the necessary files are transferred to the appropriate location. The output of this script, fastText_predictions.txt, is used in the final statistics state of the workflow to compute accuracy statistics.
+:::
+
+#### langdetect LPAP
+
+{{< downloadthis crate_1686889961000/crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py dname="langdetect" label="Download the script" icon="filetype-py" type="info" >}}
+
+::: {add-from=crate_1686889961000/crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py}
+```{.py}
+```
+:::
+
+:::{.callout-note}
+## Generative Content
+This Python script uses the langdetect library to determine the language of each line of text in an input file. The resulting predictions are then written to an output file.
+
+Here's a step-by-step breakdown:
+
+1. The script sets up necessary directories. The base directory (`BASE_DIR`) is set as the directory where the script resides. The input directory (`INPUT_DIR`) and the output directory (`OUTPUT_DIR`) are then set as environment variables or default to the subdirectories "input" and "output" in the base directory, respectively.
+2. In the main execution block (`if __name__ == "__main__":`), the script begins by opening an input file (`sys.argv[1]`) with read access using the codecs library, enabling it to handle UTF-8 encoded text. The contents of the file are read line by line into the variable 'lines'.
+3. An output file named "langdetect_predictions.txt" is opened or created in the output directory. 
+4. The script then starts processing each line in the 'lines' variable. It removes leading and trailing white spaces from each line. If the line is not empty, it increments a counter and tries to determine the language of the line using langdetect. The detected language or an error message (in case of failure) is then written to the output file.
+
+In the context of the workflow, this script is executed in the 'langdetect' state. It comes after the 'DS_langDetect_transfer' state, where the necessary input file is transferred to the langdetect endpoint. The output of this script, "langdetect_predictions.txt", is then used in the 'statistics' state of the workflow, where the accuracy of the langdetect and fastText predictions are compared.
+:::
+
+## Referencing
+
+Some narrative text which includes a reference (@miller2011cipres).
+A small list of references:
+
+* @uhrin2021workflows
+* @goecks2010galaxy
+* @vescovi2022linking

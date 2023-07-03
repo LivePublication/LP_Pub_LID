@@ -1,0 +1,1015 @@
+
+
+<html>
+<head>
+
+
+<script type="application/ld+json"> 
+  {
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "datePublished": "2023-06-16T03:11:23.987102",
+      "description": "LP artefact for action 15XkigrEbqqfZ",
+      "hasPart": [
+        {
+          "@id": "input/"
+        },
+        {
+          "@id": "input/fastText_predictions.txt"
+        },
+        {
+          "@id": "input/langdetect_predictions.txt"
+        },
+        {
+          "@id": "input/validation.txt"
+        },
+        {
+          "@id": "output/"
+        },
+        {
+          "@id": "output/langdetect_validation.txt"
+        },
+        {
+          "@id": "output/primary_validation.txt"
+        },
+        {
+          "@id": "output/accuracy_by_language.csv"
+        },
+        {
+          "@id": "output/fastText_validation.txt"
+        },
+        {
+          "@id": "output/accuracy_by_language.png"
+        },
+        {
+          "@id": "output/langdetect_stats.json"
+        },
+        {
+          "@id": "output/fastText_stats.json"
+        },
+        {
+          "@id": "method_resources/"
+        },
+        {
+          "@id": "method_resources/computation_docker/"
+        },
+        {
+          "@id": "method_resources/computation_docker/Dockerfile"
+        },
+        {
+          "@id": "method_resources/computation_docker/main.py"
+        }
+      ],
+      "name": "crate_15XkigrEbqqfZ",
+      "@reverse": {
+        "about": [
+          {
+            "@id": "ro-crate-metadata.json"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      }
+    },
+    {
+      "@id": "#25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+      "@type": "Person",
+      "affiliation": "The University of Auckland",
+      "email": "ellermaugustus@gmail.com",
+      "name": "Gus Ellerm",
+      "username": "aell854@auckland.ac.nz",
+      "@reverse": {
+        "executed": [
+          {
+            "@id": "#15XkigrEbqqfZ"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#15XkigrEbqqfZ",
+      "@type": "SoftwareApplication",
+      "API_version": "1.0",
+      "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+      "description": "A simple LPAP, ingesting data from fastText and langdetect lid methods to compare their accuracy to ground truth.",
+      "executed": {
+        "@id": "#25af9d3b-aeb8-4f44-9c88-3264ad82a3ae"
+      },
+      "globus_auth_scope": "https://auth.globus.org/scopes/c45fe380-8e83-43da-a603-fffb0f4a782e/action_provider_operations",
+      "input_dir": {
+        "@id": "input/"
+      },
+      "keywords": [
+        "LiD",
+        "Statistics",
+        "Accuracy",
+        "Language Identification"
+      ],
+      "method": {
+        "@id": "method_resources/"
+      },
+      "output_dir": {
+        "@id": "output/"
+      },
+      "subtitle": "Generates statistics, figures, and tables comparing LiD accuracy to ground truth",
+      "title": "statistics",
+      "total_time": 3.1332385540008545,
+      "url": "http://130.216.217.213:8080/statistics/run",
+      "visible_to": [
+        "public"
+      ]
+    },
+    {
+      "@id": "input/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "input/fastText_predictions.txt"
+        },
+        {
+          "@id": "input/langdetect_predictions.txt"
+        },
+        {
+          "@id": "input/validation.txt"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "input_dir": [
+          {
+            "@id": "#15XkigrEbqqfZ"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "input/fastText_predictions.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "input/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "input/langdetect_predictions.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "input/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "input/validation.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "input/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "output/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "output/langdetect_validation.txt"
+        },
+        {
+          "@id": "output/primary_validation.txt"
+        },
+        {
+          "@id": "output/accuracy_by_language.csv"
+        },
+        {
+          "@id": "output/fastText_validation.txt"
+        },
+        {
+          "@id": "output/accuracy_by_language.png"
+        },
+        {
+          "@id": "output/langdetect_stats.json"
+        },
+        {
+          "@id": "output/fastText_stats.json"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "output_dir": [
+          {
+            "@id": "#15XkigrEbqqfZ"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "output/langdetect_validation.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "output/primary_validation.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "output/accuracy_by_language.csv",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "output/fastText_validation.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "output/accuracy_by_language.png",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "output/langdetect_stats.json",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "output/fastText_stats.json",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "method_resources/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "method_resources/computation_docker/"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "method": [
+          {
+            "@id": "#15XkigrEbqqfZ"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "method_resources/computation_docker/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "method_resources/computation_docker/Dockerfile"
+        },
+        {
+          "@id": "method_resources/computation_docker/main.py"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "method_resources/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "method_resources/computation_docker/Dockerfile",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "method_resources/computation_docker/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "method_resources/computation_docker/main.py",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "method_resources/computation_docker/"
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
+
+    
+<!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script -->
+<script src="https://unpkg.com/ro-crate-html-js/dist/ro-crate-dynamic.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset='utf-8'/>
+<style>
+
+table.table {
+  padding-bottom: 300px;
+}
+</style>
+</head>
+
+
+<body>
+
+  <nav class="navbar">
+
+    <ul class="nav navbar-nav" >
+        <li ><a href="#"><span class="glyphicon glyphicon-home dataset_name">&nbsp;crate_15XkigrEbqqfZ</span></a></li>
+    </ul>
+
+  </nav>
+<div class="container">
+<div class="jumbotron">
+<h4 class="citation"></h3>
+<h3 class="item_name">crate_15XkigrEbqqfZ</h4>
+
+
+<a href="./ro-crate-metadata.json">⬇️🏷️ Download all the metadata for <span class='name'>crate_15XkigrEbqqfZ</span> in JSON-LD format</a>
+
+
+<div id="check"></div>
+
+
+</div>
+
+
+
+<div id="summary">
+<div class='all-meta'>
+           <div>
+            <h3> crate_15XkigrEbqqfZ</h3>
+            
+            
+            
+            
+        <div id="./">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>./</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>crate_15XkigrEbqqfZ</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>LP artefact for action 15XkigrEbqqfZ</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">datePublished<span>&nbsp;</span><a href="http://schema.org/datePublished">[?]</a></th>
+            <td style='text-align:left'><span>2023-06-16T03:11:23.987102</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#input/">input/</a></li>
+                        
+                        <li><a href="#input/fastText_predictions.txt">input/fastText_predictions.txt</a></li>
+                        
+                        <li><a href="#input/langdetect_predictions.txt">input/langdetect_predictions.txt</a></li>
+                        
+                        <li><a href="#input/validation.txt">input/validation.txt</a></li>
+                        
+                        <li><a href="#output/">output/</a></li>
+                        
+                        <li><a href="#output/langdetect_validation.txt">output/langdetect_validation.txt</a></li>
+                        
+                        <li><a href="#output/primary_validation.txt">output/primary_validation.txt</a></li>
+                        
+                        <li><a href="#output/accuracy_by_language.csv">output/accuracy_by_language.csv</a></li>
+                        
+                        <li><a href="#output/fastText_validation.txt">output/fastText_validation.txt</a></li>
+                        
+                        <li><a href="#output/accuracy_by_language.png">output/accuracy_by_language.png</a></li>
+                        
+                        <li><a href="#output/langdetect_stats.json">output/langdetect_stats.json</a></li>
+                        
+                        <li><a href="#output/fastText_stats.json">output/fastText_stats.json</a></li>
+                        
+                        <li><a href="#method_resources/">method_resources/</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/">method_resources/computation_docker/</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/Dockerfile">method_resources/computation_docker/Dockerfile</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/main.py">method_resources/computation_docker/main.py</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">about<span>&nbsp;</span><a href="http://schema.org/about">[?]</a></th>
+            <td style='text-align:left'><a href="#ro-crate-metadata.json">ro-crate-metadata.json</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> input/</h3>
+            
+            
+            
+            
+        <div id="input/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>input/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#input/fastText_predictions.txt">input/fastText_predictions.txt</a></li>
+                        
+                        <li><a href="#input/langdetect_predictions.txt">input/langdetect_predictions.txt</a></li>
+                        
+                        <li><a href="#input/validation.txt">input/validation.txt</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">crate_15XkigrEbqqfZ</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">input_dir</th>
+            <td style='text-align:left'><a href="#%2315XkigrEbqqfZ">#15XkigrEbqqfZ</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="input/fastText_predictions.txt">⬇️ Download: </a> input/fastText_predictions.txt</h3>
+            
+            <iframe src='input/fastText_predictions.txt' width='100%' height='500'></iframe>
+            
+            
+        <div id="input/fastText_predictions.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>input/fastText_predictions.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_15XkigrEbqqfZ</a></li>
+                        
+                        <li><a href="#input/">input/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="input/langdetect_predictions.txt">⬇️ Download: </a> input/langdetect_predictions.txt</h3>
+            
+            <iframe src='input/langdetect_predictions.txt' width='100%' height='500'></iframe>
+            
+            
+        <div id="input/langdetect_predictions.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>input/langdetect_predictions.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_15XkigrEbqqfZ</a></li>
+                        
+                        <li><a href="#input/">input/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="input/validation.txt">⬇️ Download: </a> input/validation.txt</h3>
+            
+            <iframe src='input/validation.txt' width='100%' height='500'></iframe>
+            
+            
+        <div id="input/validation.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>input/validation.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_15XkigrEbqqfZ</a></li>
+                        
+                        <li><a href="#input/">input/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> output/</h3>
+            
+            
+            
+            
+        <div id="output/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>output/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#output/langdetect_validation.txt">output/langdetect_validation.txt</a></li>
+                        
+                        <li><a href="#output/primary_validation.txt">output/primary_validation.txt</a></li>
+                        
+                        <li><a href="#output/accuracy_by_language.csv">output/accuracy_by_language.csv</a></li>
+                        
+                        <li><a href="#output/fastText_validation.txt">output/fastText_validation.txt</a></li>
+                        
+                        <li><a href="#output/accuracy_by_language.png">output/accuracy_by_language.png</a></li>
+                        
+                        <li><a href="#output/langdetect_stats.json">output/langdetect_stats.json</a></li>
+                        
+                        <li><a href="#output/fastText_stats.json">output/fastText_stats.json</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">crate_15XkigrEbqqfZ</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">output_dir</th>
+            <td style='text-align:left'><a href="#%2315XkigrEbqqfZ">#15XkigrEbqqfZ</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="output/langdetect_validation.txt">⬇️ Download: </a> output/langdetect_validation.txt</h3>
+            
+            <iframe src='output/langdetect_validation.txt' width='100%' height='500'></iframe>
+            
+            
+        <div id="output/langdetect_validation.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>output/langdetect_validation.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_15XkigrEbqqfZ</a></li>
+                        
+                        <li><a href="#output/">output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="output/primary_validation.txt">⬇️ Download: </a> output/primary_validation.txt</h3>
+            
+            <iframe src='output/primary_validation.txt' width='100%' height='500'></iframe>
+            
+            
+        <div id="output/primary_validation.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>output/primary_validation.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_15XkigrEbqqfZ</a></li>
+                        
+                        <li><a href="#output/">output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="output/accuracy_by_language.csv">⬇️ Download: </a> output/accuracy_by_language.csv</h3>
+            
+            
+            
+            
+        <div id="output/accuracy_by_language.csv">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>output/accuracy_by_language.csv</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_15XkigrEbqqfZ</a></li>
+                        
+                        <li><a href="#output/">output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="output/fastText_validation.txt">⬇️ Download: </a> output/fastText_validation.txt</h3>
+            
+            <iframe src='output/fastText_validation.txt' width='100%' height='500'></iframe>
+            
+            
+        <div id="output/fastText_validation.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>output/fastText_validation.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_15XkigrEbqqfZ</a></li>
+                        
+                        <li><a href="#output/">output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="output/accuracy_by_language.png">⬇️ Download: </a> output/accuracy_by_language.png</h3>
+            
+            <img width='100%' style='object-fit: contain' src='output/accuracy_by_language.png'/>
+            
+            
+        <div id="output/accuracy_by_language.png">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>output/accuracy_by_language.png</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_15XkigrEbqqfZ</a></li>
+                        
+                        <li><a href="#output/">output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="output/langdetect_stats.json">⬇️ Download: </a> output/langdetect_stats.json</h3>
+            
+            
+            
+            
+        <div id="output/langdetect_stats.json">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>output/langdetect_stats.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_15XkigrEbqqfZ</a></li>
+                        
+                        <li><a href="#output/">output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="output/fastText_stats.json">⬇️ Download: </a> output/fastText_stats.json</h3>
+            
+            
+            
+            
+        <div id="output/fastText_stats.json">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>output/fastText_stats.json</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_15XkigrEbqqfZ</a></li>
+                        
+                        <li><a href="#output/">output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> method_resources/</h3>
+            
+            
+            
+            
+        <div id="method_resources/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>method_resources/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#method_resources/computation_docker/">method_resources/computation_docker/</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">crate_15XkigrEbqqfZ</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">method</th>
+            <td style='text-align:left'><a href="#%2315XkigrEbqqfZ">#15XkigrEbqqfZ</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> method_resources/computation_docker/</h3>
+            
+            
+            
+            
+        <div id="method_resources/computation_docker/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>method_resources/computation_docker/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#method_resources/computation_docker/Dockerfile">method_resources/computation_docker/Dockerfile</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/main.py">method_resources/computation_docker/main.py</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_15XkigrEbqqfZ</a></li>
+                        
+                        <li><a href="#method_resources/">method_resources/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="method_resources/computation_docker/Dockerfile">⬇️ Download: </a> method_resources/computation_docker/Dockerfile</h3>
+            
+            
+            
+            
+        <div id="method_resources/computation_docker/Dockerfile">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>method_resources/computation_docker/Dockerfile</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_15XkigrEbqqfZ</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/">method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="method_resources/computation_docker/main.py">⬇️ Download: </a> method_resources/computation_docker/main.py</h3>
+            
+            
+            
+            
+        <div id="method_resources/computation_docker/main.py">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>method_resources/computation_docker/main.py</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_15XkigrEbqqfZ</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/">method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/></div>
+</div>
+
+
+
+
+
+</body>
+</html>

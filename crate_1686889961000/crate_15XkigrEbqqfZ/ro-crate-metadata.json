@@ -1,0 +1,224 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "datePublished": "2023-06-16T03:11:23.987102",
+            "description": "LP artefact for action 15XkigrEbqqfZ",
+            "hasPart": [
+                {
+                    "@id": "input/"
+                },
+                {
+                    "@id": "input/fastText_predictions.txt"
+                },
+                {
+                    "@id": "input/langdetect_predictions.txt"
+                },
+                {
+                    "@id": "input/validation.txt"
+                },
+                {
+                    "@id": "output/"
+                },
+                {
+                    "@id": "output/langdetect_validation.txt"
+                },
+                {
+                    "@id": "output/primary_validation.txt"
+                },
+                {
+                    "@id": "output/accuracy_by_language.csv"
+                },
+                {
+                    "@id": "output/fastText_validation.txt"
+                },
+                {
+                    "@id": "output/accuracy_by_language.png"
+                },
+                {
+                    "@id": "output/langdetect_stats.json"
+                },
+                {
+                    "@id": "output/fastText_stats.json"
+                },
+                {
+                    "@id": "method_resources/"
+                },
+                {
+                    "@id": "method_resources/computation_docker/"
+                },
+                {
+                    "@id": "method_resources/computation_docker/Dockerfile"
+                },
+                {
+                    "@id": "method_resources/computation_docker/main.py"
+                }
+            ],
+            "name": "crate_15XkigrEbqqfZ"
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.1"
+            }
+        },
+        {
+            "@id": "#25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "@type": "Person",
+            "affiliation": "The University of Auckland",
+            "email": "ellermaugustus@gmail.com",
+            "name": "Gus Ellerm",
+            "username": "aell854@auckland.ac.nz"
+        },
+        {
+            "@id": "#15XkigrEbqqfZ",
+            "@type": "SoftwareApplication",
+            "API_version": "1.0",
+            "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "description": "A simple LPAP, ingesting data from fastText and langdetect lid methods to compare their accuracy to ground truth.",
+            "executed": {
+                "@id": "#25af9d3b-aeb8-4f44-9c88-3264ad82a3ae"
+            },
+            "globus_auth_scope": "https://auth.globus.org/scopes/c45fe380-8e83-43da-a603-fffb0f4a782e/action_provider_operations",
+            "input_dir": {
+                "@id": "input/"
+            },
+            "keywords": [
+                "LiD",
+                "Statistics",
+                "Accuracy",
+                "Language Identification"
+            ],
+            "method": {
+                "@id": "method_resources/"
+            },
+            "output_dir": {
+                "@id": "output/"
+            },
+            "subtitle": "Generates statistics, figures, and tables comparing LiD accuracy to ground truth",
+            "title": "statistics",
+            "total_time": 3.1332385540008545,
+            "url": "http://130.216.217.213:8080/statistics/run",
+            "visible_to": [
+                "public"
+            ]
+        },
+        {
+            "@id": "input/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "input/fastText_predictions.txt"
+                },
+                {
+                    "@id": "input/langdetect_predictions.txt"
+                },
+                {
+                    "@id": "input/validation.txt"
+                }
+            ]
+        },
+        {
+            "@id": "input/fastText_predictions.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "input/langdetect_predictions.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "input/validation.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "output/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "output/langdetect_validation.txt"
+                },
+                {
+                    "@id": "output/primary_validation.txt"
+                },
+                {
+                    "@id": "output/accuracy_by_language.csv"
+                },
+                {
+                    "@id": "output/fastText_validation.txt"
+                },
+                {
+                    "@id": "output/accuracy_by_language.png"
+                },
+                {
+                    "@id": "output/langdetect_stats.json"
+                },
+                {
+                    "@id": "output/fastText_stats.json"
+                }
+            ]
+        },
+        {
+            "@id": "output/langdetect_validation.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "output/primary_validation.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "output/accuracy_by_language.csv",
+            "@type": "File"
+        },
+        {
+            "@id": "output/fastText_validation.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "output/accuracy_by_language.png",
+            "@type": "File"
+        },
+        {
+            "@id": "output/langdetect_stats.json",
+            "@type": "File"
+        },
+        {
+            "@id": "output/fastText_stats.json",
+            "@type": "File"
+        },
+        {
+            "@id": "method_resources/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "method_resources/computation_docker/"
+                }
+            ]
+        },
+        {
+            "@id": "method_resources/computation_docker/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "method_resources/computation_docker/Dockerfile"
+                },
+                {
+                    "@id": "method_resources/computation_docker/main.py"
+                }
+            ]
+        },
+        {
+            "@id": "method_resources/computation_docker/Dockerfile",
+            "@type": "File"
+        },
+        {
+            "@id": "method_resources/computation_docker/main.py",
+            "@type": "File"
+        }
+    ]
+}

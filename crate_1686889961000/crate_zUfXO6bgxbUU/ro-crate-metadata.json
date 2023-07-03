@@ -1,0 +1,155 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "datePublished": "2023-06-16T02:44:47.254785",
+            "description": "LP artefact for action zUfXO6bgxbUU",
+            "hasPart": [
+                {
+                    "@id": "input/"
+                },
+                {
+                    "@id": "input/input_data.txt"
+                },
+                {
+                    "@id": "output/"
+                },
+                {
+                    "@id": "output/langdetect_predictions.txt"
+                },
+                {
+                    "@id": "method_resources/"
+                },
+                {
+                    "@id": "method_resources/computation_docker/"
+                },
+                {
+                    "@id": "method_resources/computation_docker/Dockerfile"
+                },
+                {
+                    "@id": "method_resources/computation_docker/main.py"
+                },
+                {
+                    "@id": "method_resources/computation_docker/requirements.txt"
+                }
+            ],
+            "name": "crate_zUfXO6bgxbUU"
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.1"
+            }
+        },
+        {
+            "@id": "#25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "@type": "Person",
+            "affiliation": "The University of Auckland",
+            "email": "ellermaugustus@gmail.com",
+            "name": "Gus Ellerm",
+            "username": "aell854@auckland.ac.nz"
+        },
+        {
+            "@id": "#zUfXO6bgxbUU",
+            "@type": "SoftwareApplication",
+            "API_version": "1.0",
+            "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "description": "Executes the langdetect library to classify the langauge line by line of a text file.",
+            "executed": {
+                "@id": "#25af9d3b-aeb8-4f44-9c88-3264ad82a3ae"
+            },
+            "globus_auth_scope": "https://auth.globus.org/scopes/feda0005-01ad-414d-81ce-dcc5b7f61a1f/action_provider_operations",
+            "input_dir": {
+                "@id": "input/"
+            },
+            "keywords": [
+                "langdetec",
+                "LID",
+                "Library",
+                "Language Identification",
+                "Text Classification"
+            ],
+            "method": {
+                "@id": "method_resources/"
+            },
+            "output_dir": {
+                "@id": "output/"
+            },
+            "subtitle": "langdetect Action Provider",
+            "title": "langdetect",
+            "total_time": 40.80521607398987,
+            "url": "http://130.216.217.48:8080/langdetect/run",
+            "visible_to": [
+                "public"
+            ]
+        },
+        {
+            "@id": "input/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "input/input_data.txt"
+                }
+            ]
+        },
+        {
+            "@id": "input/input_data.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "output/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "output/langdetect_predictions.txt"
+                }
+            ]
+        },
+        {
+            "@id": "output/langdetect_predictions.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "method_resources/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "method_resources/computation_docker/"
+                }
+            ]
+        },
+        {
+            "@id": "method_resources/computation_docker/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "method_resources/computation_docker/Dockerfile"
+                },
+                {
+                    "@id": "method_resources/computation_docker/main.py"
+                },
+                {
+                    "@id": "method_resources/computation_docker/requirements.txt"
+                }
+            ]
+        },
+        {
+            "@id": "method_resources/computation_docker/Dockerfile",
+            "@type": "File"
+        },
+        {
+            "@id": "method_resources/computation_docker/main.py",
+            "@type": "File"
+        },
+        {
+            "@id": "method_resources/computation_docker/requirements.txt",
+            "@type": "File"
+        }
+    ]
+}

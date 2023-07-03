@@ -1,0 +1,26 @@
+{
+    "accuracy_by_language": {
+        "ara": 99.6,
+        "bul": 99.2,
+        "deu": 100.0,
+        "ell": 100.0,
+        "eng": 100.0,
+        "fra": 100.0,
+        "hin": 96.8,
+        "ita": 99.8,
+        "jpn": 100.0,
+        "nld": 98.6,
+        "pol": 98.6,
+        "por": 98.6,
+        "rus": 99.8,
+        "spa": 100.0,
+        "swa": 85.4,
+        "tha": 100.0,
+        "tur": 99.8,
+        "urd": 96.0,
+        "vie": 99.8,
+        "zho": 100.0
+    },
+    "name": "FastText",
+    "overall_accuracy": 98.6
+}

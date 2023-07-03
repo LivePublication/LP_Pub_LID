@@ -1,0 +1,646 @@
+
+
+<html>
+<head>
+
+
+<script type="application/ld+json"> 
+  {
+  "@context": "https://w3id.org/ro/crate/1.1/context",
+  "@graph": [
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "datePublished": "2023-06-16T02:02:46.576938",
+      "description": "LP artefact for action ful1t6i5wdGV",
+      "hasPart": [
+        {
+          "@id": "input/"
+        },
+        {
+          "@id": "input/input_data.txt"
+        },
+        {
+          "@id": "output/"
+        },
+        {
+          "@id": "output/fastText_predictions.txt"
+        },
+        {
+          "@id": "method_resources/"
+        },
+        {
+          "@id": "method_resources/computation_docker/"
+        },
+        {
+          "@id": "method_resources/computation_docker/Dockerfile"
+        },
+        {
+          "@id": "method_resources/computation_docker/main.py"
+        },
+        {
+          "@id": "method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz"
+        }
+      ],
+      "name": "crate_ful1t6i5wdGV",
+      "@reverse": {
+        "about": [
+          {
+            "@id": "ro-crate-metadata.json"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.1"
+      }
+    },
+    {
+      "@id": "#25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+      "@type": "Person",
+      "affiliation": "The University of Auckland",
+      "email": "ellermaugustus@gmail.com",
+      "name": "Gus Ellerm",
+      "username": "aell854@auckland.ac.nz",
+      "@reverse": {
+        "executed": [
+          {
+            "@id": "#ful1t6i5wdGV"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "#ful1t6i5wdGV",
+      "@type": "SoftwareApplication",
+      "API_version": "1.0",
+      "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+      "description": "Executes fastText v0.9.2 on text data, and produces a list of categorisations (LID) for each line.",
+      "executed": {
+        "@id": "#25af9d3b-aeb8-4f44-9c88-3264ad82a3ae"
+      },
+      "globus_auth_scope": "https://auth.globus.org/scopes/ca022ddb-b17d-4004-b600-4f15354a297c/action_provider_operations",
+      "input_dir": {
+        "@id": "input/"
+      },
+      "keywords": [
+        "fasText",
+        "LID",
+        "Model"
+      ],
+      "method": {
+        "@id": "method_resources/"
+      },
+      "output_dir": {
+        "@id": "output/"
+      },
+      "subtitle": "fastText v0.9.2",
+      "title": "fastText",
+      "total_time": 23.468305349349976,
+      "url": "http://130.216.216.5:8080/fastText/run",
+      "visible_to": [
+        "public"
+      ]
+    },
+    {
+      "@id": "input/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "input/input_data.txt"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "input_dir": [
+          {
+            "@id": "#ful1t6i5wdGV"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "input/input_data.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "input/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "output/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "output/fastText_predictions.txt"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "output_dir": [
+          {
+            "@id": "#ful1t6i5wdGV"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "output/fastText_predictions.txt",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "output/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "method_resources/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "method_resources/computation_docker/"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          }
+        ],
+        "method": [
+          {
+            "@id": "#ful1t6i5wdGV"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "method_resources/computation_docker/",
+      "@type": "Dataset",
+      "hasPart": [
+        {
+          "@id": "method_resources/computation_docker/Dockerfile"
+        },
+        {
+          "@id": "method_resources/computation_docker/main.py"
+        },
+        {
+          "@id": "method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz"
+        }
+      ],
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "method_resources/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "method_resources/computation_docker/Dockerfile",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "method_resources/computation_docker/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "method_resources/computation_docker/main.py",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "method_resources/computation_docker/"
+          }
+        ]
+      }
+    },
+    {
+      "@id": "method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz",
+      "@type": "File",
+      "@reverse": {
+        "hasPart": [
+          {
+            "@id": "./"
+          },
+          {
+            "@id": "method_resources/computation_docker/"
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
+
+    
+<!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script -->
+<script src="https://unpkg.com/ro-crate-html-js/dist/ro-crate-dynamic.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset='utf-8'/>
+<style>
+
+table.table {
+  padding-bottom: 300px;
+}
+</style>
+</head>
+
+
+<body>
+
+  <nav class="navbar">
+
+    <ul class="nav navbar-nav" >
+        <li ><a href="#"><span class="glyphicon glyphicon-home dataset_name">&nbsp;crate_ful1t6i5wdGV</span></a></li>
+    </ul>
+
+  </nav>
+<div class="container">
+<div class="jumbotron">
+<h4 class="citation"></h3>
+<h3 class="item_name">crate_ful1t6i5wdGV</h4>
+
+
+<a href="./ro-crate-metadata.json">⬇️🏷️ Download all the metadata for <span class='name'>crate_ful1t6i5wdGV</span> in JSON-LD format</a>
+
+
+<div id="check"></div>
+
+
+</div>
+
+
+
+<div id="summary">
+<div class='all-meta'>
+           <div>
+            <h3> crate_ful1t6i5wdGV</h3>
+            
+            
+            
+            
+        <div id="./">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>./</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>crate_ful1t6i5wdGV</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>LP artefact for action ful1t6i5wdGV</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">datePublished<span>&nbsp;</span><a href="http://schema.org/datePublished">[?]</a></th>
+            <td style='text-align:left'><span>2023-06-16T02:02:46.576938</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#input/">input/</a></li>
+                        
+                        <li><a href="#input/input_data.txt">input/input_data.txt</a></li>
+                        
+                        <li><a href="#output/">output/</a></li>
+                        
+                        <li><a href="#output/fastText_predictions.txt">output/fastText_predictions.txt</a></li>
+                        
+                        <li><a href="#method_resources/">method_resources/</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/">method_resources/computation_docker/</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/Dockerfile">method_resources/computation_docker/Dockerfile</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/main.py">method_resources/computation_docker/main.py</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz">method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">about<span>&nbsp;</span><a href="http://schema.org/about">[?]</a></th>
+            <td style='text-align:left'><a href="#ro-crate-metadata.json">ro-crate-metadata.json</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> input/</h3>
+            
+            
+            
+            
+        <div id="input/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>input/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#input/input_data.txt">input/input_data.txt</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">crate_ful1t6i5wdGV</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">input_dir</th>
+            <td style='text-align:left'><a href="#%23ful1t6i5wdGV">#ful1t6i5wdGV</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="input/input_data.txt">⬇️ Download: </a> input/input_data.txt</h3>
+            
+            <iframe src='input/input_data.txt' width='100%' height='500'></iframe>
+            
+            
+        <div id="input/input_data.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>input/input_data.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_ful1t6i5wdGV</a></li>
+                        
+                        <li><a href="#input/">input/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> output/</h3>
+            
+            
+            
+            
+        <div id="output/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>output/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#output/fastText_predictions.txt">output/fastText_predictions.txt</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">crate_ful1t6i5wdGV</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">output_dir</th>
+            <td style='text-align:left'><a href="#%23ful1t6i5wdGV">#ful1t6i5wdGV</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="output/fastText_predictions.txt">⬇️ Download: </a> output/fastText_predictions.txt</h3>
+            
+            <iframe src='output/fastText_predictions.txt' width='100%' height='500'></iframe>
+            
+            
+        <div id="output/fastText_predictions.txt">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>output/fastText_predictions.txt</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_ful1t6i5wdGV</a></li>
+                        
+                        <li><a href="#output/">output/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> method_resources/</h3>
+            
+            
+            
+            
+        <div id="method_resources/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>method_resources/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#method_resources/computation_docker/">method_resources/computation_docker/</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">crate_ful1t6i5wdGV</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">method</th>
+            <td style='text-align:left'><a href="#%23ful1t6i5wdGV">#ful1t6i5wdGV</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3> method_resources/computation_docker/</h3>
+            
+            
+            
+            
+        <div id="method_resources/computation_docker/">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>method_resources/computation_docker/</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#method_resources/computation_docker/Dockerfile">method_resources/computation_docker/Dockerfile</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/main.py">method_resources/computation_docker/main.py</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz">method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz</a></li>
+                        </ul></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_ful1t6i5wdGV</a></li>
+                        
+                        <li><a href="#method_resources/">method_resources/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="method_resources/computation_docker/Dockerfile">⬇️ Download: </a> method_resources/computation_docker/Dockerfile</h3>
+            
+            
+            
+            
+        <div id="method_resources/computation_docker/Dockerfile">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>method_resources/computation_docker/Dockerfile</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_ful1t6i5wdGV</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/">method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="method_resources/computation_docker/main.py">⬇️ Download: </a> method_resources/computation_docker/main.py</h3>
+            
+            
+            
+            
+        <div id="method_resources/computation_docker/main.py">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>method_resources/computation_docker/main.py</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_ful1t6i5wdGV</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/">method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/>
+           <div>
+            <h3><a href="method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz">⬇️ Download: </a> method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz</h3>
+            
+            
+            
+            
+        <div id="method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">crate_ful1t6i5wdGV</a></li>
+                        
+                        <li><a href="#method_resources/computation_docker/">method_resources/computation_docker/</a></li>
+                        </ul></td>
+            </tr></tbody>
+            </table>
+        </div>
+
+        </div>
+        <hr/><br/><br/></div>
+</div>
+
+
+
+
+
+</body>
+</html>

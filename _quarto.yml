@@ -1,0 +1,62 @@
+title: Language identification method comparison
+subtitle: A LivePublication example, and testbed.
+date: 2023-06-27
+date-format: short
+abstract: >
+  This article presents an early look at how the LivePublication 
+  framework can enable live, updating components and generative 
+  content for computationally driven sciences. Presented is a 
+  language identification performance task, comparing the accuracy 
+  of two methods (langdetect and fastText).
+keywords:
+  - Computational Science
+  - Publication
+  - Reproducibility
+  - Workflows
+title-block-banner: true
+title-block-style: default
+bibliography: references.bib
+execute:
+  echo: false
+format:
+  html:
+    code-fold: true
+    code-tools: true
+    code-block-bg: true
+    code-block-border-left: "#31BAE9"
+filters:
+  - add-code-files
+  - social-share
+  - shinylive
+jupyter: python3
+share:
+  permalink: "https://mr.schochastics.net/"
+  description: "awesome page"
+  twitter: true
+  facebook: true
+  reddit: true
+  stumble: true
+  tumblr: true
+  linkedin: true
+  email: true
+authors:
+  - name: Augustus Ellerm
+    affiliations:
+      - ref: uc
+    corresponding: true
+    email: gus.ellerm@pg.canterbury.ac.nz
+    orcid: 0000-1111-2222-3333
+    equal-contributor: true
+  - name: Mark Gahegan
+    affiliations:
+      - ref: ua
+    orcid: 0000-3333-2222-1111
+  - name: Benjamin Adams
+    affiliations:
+      - ref: uc
+    orcid: 0000-2222-1111-3333
+affiliations:
+  - id: uc
+    name: University of Canterbury, Christchurch, New Zealand
+  - id: ua
+    name: University of Auckland, Auckland, New Zealand

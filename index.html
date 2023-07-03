@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.427">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="keywords" content="Computational Science, Publication, Reproducibility, Workflows">
+
+<title>Language identification method comparison</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/quarto-contrib/social-share-0.1.0/social-share.css" rel="stylesheet">
+<link href="index_files/libs/quarto-contrib/social-share-0.1.0/all.css" rel="stylesheet">
+<link href="index_files/libs/quarto-contrib/downloadthis-1.9.1/downloadthis.css" rel="stylesheet">
+<script type="module" src="index_files/libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="index_files/libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script src="index_files/libs/quarto-diagram/mermaid.min.js"></script>
+<script src="index_files/libs/quarto-diagram/mermaid-init.js"></script>
+<link href="index_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="fullcontent">
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <div class="quarto-title-block"><div><h1 class="title">Language identification method comparison</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
+            <p class="subtitle lead">A LivePublication example, and testbed.</p>
+                      </div>
+  </div>
+    
+  <div class="quarto-title-meta-author">
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">Affiliations</div>
+    
+      <div class="quarto-title-meta-contents">
+      <p class="author">Augustus Ellerm <a href="https://orcid.org/0000-1111-2222-3333" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              University of Canterbury, Christchurch, New Zealand
+            </p>
+        </div>
+        <div class="quarto-title-meta-contents">
+      <p class="author">Mark Gahegan <a href="https://orcid.org/0000-3333-2222-1111" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              University of Auckland, Auckland, New Zealand
+            </p>
+        </div>
+        <div class="quarto-title-meta-contents">
+      <p class="author">Benjamin Adams <a href="https://orcid.org/0000-2222-1111-3333" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+    </div>
+      <div class="quarto-title-meta-contents">
+          <p class="affiliation">
+              University of Canterbury, Christchurch, New Zealand
+            </p>
+        </div>
+      </div>
+
+  <div class="quarto-title-meta">
+
+        
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">6/27/23</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  <div>
+    <div class="abstract">
+      <div class="abstract-title">Abstract</div>
+      <p>This article presents an early look at how the LivePublication framework can enable live, updating components and generative content for computationally driven sciences. Presented is a language identification performance task, comparing the accuracy of two methods (langdetect and fastText).</p>
+    </div>
+  </div>
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="language-identification-method-comparison" class="level1">
+<h1>Language identification method comparison</h1>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Welcome to our LivePublication demonstration! This website represents how we can incorporate real-time computation within the narrative structure of a research article.</p>
+<p>This LivePublication is the product of an ongoing initiative to move beyond the limitations of traditional scientific publishing by integrating dynamic computational workflows within the fabric of a publication. The LivePublication framework aims to enable live, reactive publications while simultaneously enhancing transparency, repeatability, and collaborative scientific research.</p>
+<p>To enable this, LivePublication integrates with distributed Globus flows by providing custom Action Provides (LivePublication Action Providers, LPAPs) to generate descriptive RO-Crates at each major computational step in a workflow/methodology. These distributed artefacts are then combined into a full description of the workflow execution recording inputs, outputs, methods, and descriptive metadata. This primary artefact is then used as a data model for a publication, such as this website, to draw upon - providing updating figures, metrics, and other metadata. The structure, recorded metadata, and methods of integration with the publication are all early areas under active development.</p>
+<p>Find a browseable version of the underpinning orchestration RO-Crate <a href="http://130.216.217.137:8080">here</a>!</p>
+</section>
+<section id="globus-flow-and-orchestration-crate-generation" class="level2">
+<h2 class="anchored" data-anchor-id="globus-flow-and-orchestration-crate-generation">Globus flow, and orchestration crate generation</h2>
+<p>Find a simple representation of the Globus flow below. Each node in the flow diagram provides a link to execution details within the orchestration crate.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  data_store[(Data store)] --&gt; transfer_ap[Transfer AP]
+  transfer_ap --&gt; ft[[fastText LPAP]] &amp; ld[[langdetect LPAP]]
+  ft &amp; ld --&gt; transfer_ap2[Transfer AP]
+  transfer_ap2 --&gt; stats[[Statistics LPAP]]
+  stats --&gt; transfer_ap3[Transfer AP]
+  transfer_ap3 --&gt; results_store[(Results store)]
+  click transfer_ap "http://130.216.217.137:8080/#DS_fastText_Transfer.py" "Go to transfer 1"
+  click ft "http://130.216.217.137:8080/#fastText.py" "Go to fastText LPAP"
+  click transfer_ap2 "http://130.216.217.137:8080/#fastText_statistics_transfer.py" "go to transfer 2"
+  click ld "http://130.216.217.137:8080/#langdetect.py" "Go to langdetect LPAP"
+  click transfer_ap_3 "http://130.216.217.137:8080/#langdetect_statistics_transfer.py" "Go to transfer 3"
+  click stats "http://130.216.217.137:8080/#statistics.py" "Go to statistics LPAP"
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="reactive-publications---predicating-content-on-the-data-model" class="level2">
+<h2 class="anchored" data-anchor-id="reactive-publications---predicating-content-on-the-data-model">Reactive publications - predicating content on the data-model</h2>
+<p>This section provides examples of how we can leverage live data to create variable, or dependent text. There are many plausable methods for how variable content can be implemented. At its most basic, switch or if statements can be used to include/exclude information dependent on a combination of variables. More complex applications include hybrid LLM/Author NL generation, providing a more flexable interface.</p>
+<!-- Load in variables & provide reactive components -->
+<div class="cell">
+<details class="hidden">
+<summary>Code</summary>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="42" data-source-offset="-0"><pre class="sourceCode js code-overflow-wrap code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 41;"><span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>fastText_stats <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"crate_1686889961000/crate_15XkigrEbqqfZ/output/fastText_stats.json"</span>)<span class="op">.</span><span class="fu">json</span>() </span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>langdetect_stats <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"crate_1686889961000/crate_15XkigrEbqqfZ/output/langdetect_stats.json"</span>)<span class="op">.</span><span class="fu">json</span>() </span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>fastText_acc_actual <span class="op">=</span> fastText_stats[<span class="st">"overall_accuracy"</span>] </span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>langdetect_acc_actual <span class="op">=</span> langdetect_stats[<span class="st">"overall_accuracy"</span>] </span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>viewof fastText_acc <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="fl">80.0</span><span class="op">,</span> <span class="fl">100.0</span>]<span class="op">,</span> {</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"FastText accuracy:"</span><span class="op">,</span> </span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>  <span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> fastText_acc_actual<span class="op">,</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">500</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>viewof langdetect_acc <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="fl">80.0</span><span class="op">,</span> <span class="fl">100.0</span>]<span class="op">,</span> {</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Langdetect accuracy:"</span><span class="op">,</span> </span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  <span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> langdetect_acc_actual<span class="op">,</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">500</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  })</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<section id="variable-text" class="level3">
+<h3 class="anchored" data-anchor-id="variable-text">Variable text</h3>
+<p>A simple example of variable text is provided below. Depending on the relative accuracy results of each model (fastText, langdetect) the content changes.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2" data-startfrom="67" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 66;"><span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>accuracy_conclusion <span class="op">=</span> {</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (fastText_acc <span class="op">&gt;</span> langdetect_acc) {</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`FastText achieved a greater accuracy, achieving </span><span class="sc">${</span>fastText_acc<span class="sc">}</span><span class="vs">% compared to langdetect, which achieved </span><span class="sc">${</span>langdetect_acc<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (fastText_acc <span class="op">&lt;</span> langdetect_acc) {</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`Langdetect achieved a greater accuracy, achieving </span><span class="sc">${</span>langdetect_acc<span class="sc">}</span><span class="vs">% vs fastText's </span><span class="sc">${</span>fastText_acc<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`FastText and langdetect both achieved the same accuracy: </span><span class="sc">${</span>fastText_acc<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Variable Text
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span><span id="ojs-element-id-1"></span></span></p>
+</div>
+</div>
+</section>
+<section id="delimited-variables-and-dashboard-like-functionality" class="level3">
+<h3 class="anchored" data-anchor-id="delimited-variables-and-dashboard-like-functionality">Delimited variables and dashboard-like functionality</h3>
+<p>Rather than a simple switch statement as above, we can provide alerts if variables exit a delimited range, or the relationship between variables changes.</p>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3" data-startfrom="90" data-source-offset="0"><pre class="sourceCode js code-overflow-wrap code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 89;"><span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>fastText_limit <span class="op">=</span> {</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">isInRange</span>(value<span class="op">,</span> lowerBound<span class="op">,</span> upperBound) {</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> value <span class="op">&gt;=</span> lowerBound <span class="op">&amp;&amp;</span> value <span class="op">&lt;=</span> upperBound<span class="op">;</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> fastText_lower <span class="op">=</span> <span class="dv">90</span><span class="op">;</span></span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> fastText_upper <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span><span class="fu">isInRange</span>(fastText_acc<span class="op">,</span> fastText_lower<span class="op">,</span> fastText_upper)) {</span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`Not in Range: </span><span class="sc">${</span>fastText_acc<span class="sc">}</span><span class="vs">% is outside the range of </span><span class="sc">${</span>fastText_lower<span class="sc">}</span><span class="vs">% - </span><span class="sc">${</span>fastText_upper<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb3-99"><a href="#cb3-99" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`Within Range: </span><span class="sc">${</span>fastText_acc<span class="sc">}</span><span class="vs">% is within the range of </span><span class="sc">${</span>fastText_lower<span class="sc">}</span><span class="vs">% - </span><span class="sc">${</span>fastText_upper<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4" data-startfrom="107" data-source-offset="0"><pre class="sourceCode js code-overflow-wrap code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 106;"><span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>langdetect_limit <span class="op">=</span> {</span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">isInRange</span>(value<span class="op">,</span> lowerBound<span class="op">,</span> upperBound) {</span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> value <span class="op">&gt;=</span> lowerBound <span class="op">&amp;&amp;</span> value <span class="op">&lt;=</span> upperBound<span class="op">;</span></span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> langdetect_lower <span class="op">=</span> <span class="dv">90</span><span class="op">;</span></span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> langdetect_upper <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span><span class="fu">isInRange</span>(langdetect_acc<span class="op">,</span> langdetect_lower<span class="op">,</span> langdetect_upper)) {</span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`Not in Range: </span><span class="sc">${</span>langdetect_acc<span class="sc">}</span><span class="vs">% is outside the range of </span><span class="sc">${</span>langdetect_lower<span class="sc">}</span><span class="vs">% - </span><span class="sc">${</span>langdetect_upper<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`Within Range: </span><span class="sc">${</span>langdetect_acc<span class="sc">}</span><span class="vs">% is within the range of </span><span class="sc">${</span>langdetect_lower<span class="sc">}</span><span class="vs">% - </span><span class="sc">${</span>langdetect_upper<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+fastText accuracy limit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span><span id="ojs-element-id-2"></span></span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+fastText accuracy limit
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span><span id="ojs-element-id-3"></span></span></p>
+</div>
+</div>
+</section>
+</section>
+<section id="lid-performance-comparison" class="level2">
+<h2 class="anchored" data-anchor-id="lid-performance-comparison">LID performance comparison</h2>
+<p>While future LivePublication applications will primarily focus on how author-driven content can be realistically, and seamlessly integrated with live updating articles, this article uses mostly generative content drawing on data exported from the underlying <a href="http://130.216.217.137:8080/">RO-Crate</a>. Research on how the author and live content can be integrated is ongoing. Below, GPT-4 provides a short description of the results of this computational workflow, drawing on <a href="#data">data generated during the flow</a>. An overview of the LID comparison is provided in figure <a href="#fig-accuracies_by_language">Figure&nbsp;1</a>.</p>
+<ul>
+<li>Model: GPT-4</li>
+<li>Prompt: This experiment compares the performance of two language identification methods: fastText and Langdetect. FastText’s results are <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json">results</a> and langdetect results are <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json">results</a>. Write a few paragraphs discussing the performance of each, comparing their best and worst language accuracies.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Generative Content
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The evaluation of the language identification methods - fastText and Langdetect - reveals a nuanced performance profile contingent on the specific language being identified. Overall, the fastText model demonstrated superior performance with an overall accuracy of <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json"><code>98.6%</code></a> compared to Langdetect’s <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json"><code>97.91%</code></a>. This comparison, however, does not capture the individual variances in accuracy across languages for the two models.</p>
+<p>Delving into these language-specific performances, FastText exhibits impeccable accuracy in identifying several languages. These include German (deu), Greek (ell), English (eng), French (fra), Japanese (jpn), Thai (tha), and Chinese (zho) - all at 100% accuracy. Other languages such as Bulgarian (bul), Italian (ita), Russian (rus), and Vietnamese (vie) also show remarkable results with accuracy close to 100%. FastText’s weakest performance is observed for Swahili (swa) at <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json"><code>85.4%</code></a> accuracy, indicating a potential area for model improvement.</p>
+<p>On the other hand, Langdetect also showcased impressive accuracy with several languages reaching 100% identification rate, namely Greek (ell), Japanese (jpn), Thai (tha), and Vietnamese (vie). It performed notably well with Arabic (ara), German (deu), and Turkish (tur) too, with accuracy rates nearing 100%. The lowest performance was observed with Dutch (nld) at <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json"><code>93.6%</code></a>, signifying a potential area of focus for future model enhancements.</p>
+<p>When comparing the two models on specific languages, FastText notably outperforms Langdetect in identifying languages such as Bulgarian, English, French, Dutch, Polish, Portuguese, and Spanish. Conversely, both models demonstrate equivalent performance in Arabic, Greek, Japanese, Thai, and Vietnamese identification. Langdetect’s performance appears to surpass FastText slightly in Hindi and Urdu.</p>
+</div>
+</div>
+<div id="fig-accuracies_by_language" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/accuracy_by_language.png"><img src="crate_1686889961000/crate_15XkigrEbqqfZ/output/accuracy_by_language.png" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Accuracy by language</figcaption>
+</figure>
+</div>
+</section>
+<section id="workflow-method-description" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-method-description">Workflow / Method description</h2>
+<p>Below is a very early attempt at generative content based on the generated <a href="http://130.216.217.137:8080/#WEP.json">Workflow Execution Plan</a> (WEP). The WEP only provides a description of the Globus flow, and includes no information regarding the actual execution of the method. Including details from the Workflow Execution Description (WED) can further enhance the description including things like execution state (succeeded, failed), time taken per step, and other pertinent information.</p>
+<ul>
+<li>Model: GPT-4</li>
+<li>Prompt: Generate a description of this workflow, from the perspective of an academic methodological section: <a href="http://130.216.217.137:8080/#WEP.json">WEP</a></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Generative Content
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The methodology to compare the performance of two language identification models, fastText and langdetect, involves the execution of a series of actions within a structured workflow. The actions range from data transfer operations to the execution of language identification models and statistical analysis of the generated results. The overall flow is organized as follows:</p>
+<ol type="1">
+<li><p><a href="http://130.216.217.137:8080/#DS_fastText_Transfer.py"><strong>Data Transfer for fastText Model</strong></a>: The process begins by transferring the required dataset from the data store to the location accessible by the fastText model. This is done using Globus, a high-speed data transfer protocol. The specific parameters of this operation such as the source and destination endpoint identifiers, along with the respective paths are supplied at runtime.</p></li>
+<li><p><a href="http://130.216.217.137:8080/#fastText.py"><strong>fastText Model Execution</strong></a>: With the data in place, the fastText language identification model is executed. The model reads the input data from the path specified in the previous step, performs language identification, and stores the result in the same location.</p></li>
+<li><p><a href="http://130.216.217.137:8080/#fastText_statistics_transfer.py"><strong>Result Transfer for fastText Model</strong></a>: The output of the fastText model, including statistics related to its performance, is then transferred back to the data store via another Globus transfer operation.</p></li>
+<li><p><a href="http://130.216.217.137:8080/#DS_langDetect_transfer.py"><strong>Data Transfer for langdetect Model</strong></a>: Similarly to step 1, the required dataset is transferred from the data store to the location accessible by the langdetect model using a Globus transfer operation.</p></li>
+<li><p><a href="http://130.216.217.137:8080/#langdetect.py"><strong>langdetect Model Execution</strong></a>: The langdetect model is then executed, processing the transferred data to perform language identification. The results of the model are stored in the designated location.</p></li>
+<li><p><a href="http://130.216.217.137:8080/#langdetect_statistics_transfer.py"><strong>Result Transfer for langdetect Model</strong></a>: The results of the langdetect model, including its performance statistics, are then transferred back to the data store via Globus transfer operation.</p></li>
+<li><p><a href="http://130.216.217.137:8080/#statistics.py"><strong>Statistical Analysis</strong></a>: With the results from both models in place, a statistical analysis is performed to compare their performances. The analysis includes accuracy statistics, and the generation of figures, tables, and other representations of the results for presentation in the publication layer.</p></li>
+<li><p><a href="http://130.216.217.137:8080/#statistics_DS_transfer.py"><strong>Statistics Transfer to the Data Store</strong></a>: Finally, the results of the statistical analysis are transferred back to the data store using another Globus transfer operation.</p></li>
+</ol>
+<p>Each of these operations is executed asynchronously, with designated wait times to ensure the completion of each task before moving to the next. The process has been designed for scalability and efficiency, with a focus on managing data and computational resources effectively.</p>
+</div>
+</div>
+<section id="method-description-generation-experiement" class="level3">
+<h3 class="anchored" data-anchor-id="method-description-generation-experiement">Method description generation experiement</h3>
+<p>Each LPAP contains a method directory including the docker image and associated scripts. Using these, we can attempt to generate descriptions of the method in NL. This is an early experiement into the performance/accuracy of such a method.</p>
+<section id="fasttext-lpap" class="level4">
+<h4 class="anchored" data-anchor-id="fasttext-lpap">FastText LPAP</h4>
+<p><a href="#dnldts24306" onclick="fetch('data:application/x-python;base64,aW1wb3J0IG9zCmltcG9ydCBmYXN0dGV4dAppbXBvcnQgY29kZWNzIAppbXBvcnQgc3lzCgojIERpcmVjdG9yeSBjb25zdGFudHMKQkFTRV9ESVIgPSBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5hYnNwYXRoKF9fZmlsZV9fKSkKSU5QVVRfRElSID0gb3MuZW52aXJvbi5nZXQoIklOUFVUX0RJUiIsIG9zLnBhdGguam9pbihCQVNFX0RJUiwgImlucHV0IikpICAKT1VUUFVUX0RJUiA9IG9zLmVudmlyb24uZ2V0KCJPVVRQVVRfRElSIiwgb3MucGF0aC5qb2luKEJBU0VfRElSLCAib3V0cHV0IikpCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgCiAgICB3aXRoIGNvZGVjcy5vcGVuKHN5cy5hcmd2WzFdLCAiciIsIGVuY29kaW5nID0gInV0Zi04IikgYXMgZjoKICAgICAgICBsaW5lcyA9IGYucmVhZGxpbmVzKCkKCiAgICAjTElEMiBDb25zdGFudHMKICAgIG1vZGVsID0gZmFzdHRleHQubG9hZF9tb2RlbCgibW9kZWwubGlkLnRvcDgwMC5lcG9jaDIwLm5lZzEwMC5kaW0xMDAubnMuc21hbGwubWluNS5mdHoiKQoKICAgIHByZWRpY3Rpb25zID0gW10KICAgIGZvciBsaW5lIGluIG9wZW4oc3lzLmFyZ3ZbMV0pOgogICAgICAgICMgc3RyaXAgXG4gZnJvbSBsaW5lCiAgICAgICAgbGluZSA9IGxpbmUucnN0cmlwKCJcbiIpCiAgICAgICAgcHJlZF9sYWJlbCA9IG1vZGVsLnByZWRpY3QobGluZSkKICAgICAgICBwcmVkaWN0aW9ucy5hcHBlbmQocHJlZF9sYWJlbCkKCiAgICAjIHdyaXRlIHByZWRpY3Rpb25zIHRvIGZpbGUKICAgIHdpdGggb3BlbihmIntPVVRQVVRfRElSfS9mYXN0VGV4dF9wcmVkaWN0aW9ucy50eHQiLCAidyIpIGFzIGY6CiAgICAgICAgZm9yIHByZWQgaW4gcHJlZGljdGlvbnM6CiAgICAgICAgICAgICMgV3JpdGUgcHJlZGljdGlvbiB0byBmaWxlLCBhbmQgcmVtb3ZlIF9fbGFiZWxfXyBwcmVmaXgKICAgICAgICAgICAgZi53cml0ZShwcmVkWzBdWzBdLnJlcGxhY2UoIl9fbGFiZWxfXyIsICIiKSArICJcbiIpCg==').then(res => res.blob()).then(blob => {
+      const downloadURL = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      document.body.appendChild(a);
+      a.href = downloadURL;
+      a.download = 'fastText.py'; a.click();
+      window.URL.revokeObjectURL(downloadURL);
+      document.body.removeChild(a);
+        });"><button class="btn btn-info downloadthis  " id="dnldts24306"><i class="bi bi-filetype-py"></i> Download the script </button></a></p>
+<div data-add-from="crate_1686889961000/crate_ful1t6i5wdGV/method_resources/computation_docker/main.py">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> fasttext</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> codecs </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Directory constants</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>BASE_DIR <span class="op">=</span> os.path.dirname(os.path.abspath(<span class="va">__file__</span>))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>INPUT_DIR <span class="op">=</span> os.environ.get(<span class="st">"INPUT_DIR"</span>, os.path.join(BASE_DIR, <span class="st">"input"</span>))  </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>OUTPUT_DIR <span class="op">=</span> os.environ.get(<span class="st">"OUTPUT_DIR"</span>, os.path.join(BASE_DIR, <span class="st">"output"</span>))</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> codecs.<span class="bu">open</span>(sys.argv[<span class="dv">1</span>], <span class="st">"r"</span>, encoding <span class="op">=</span> <span class="st">"utf-8"</span>) <span class="im">as</span> f:</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        lines <span class="op">=</span> f.readlines()</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">#LID2 Constants</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    model <span class="op">=</span> fasttext.load_model(<span class="st">"model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz"</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    predictions <span class="op">=</span> []</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(sys.argv[<span class="dv">1</span>]):</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># strip \n from line</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        line <span class="op">=</span> line.rstrip(<span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        pred_label <span class="op">=</span> model.predict(line)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        predictions.append(pred_label)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># write predictions to file</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(<span class="ss">f"</span><span class="sc">{</span>OUTPUT_DIR<span class="sc">}</span><span class="ss">/fastText_predictions.txt"</span>, <span class="st">"w"</span>) <span class="im">as</span> f:</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> pred <span class="kw">in</span> predictions:</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Write prediction to file, and remove __label__ prefix</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>            f.write(pred[<span class="dv">0</span>][<span class="dv">0</span>].replace(<span class="st">"__label__"</span>, <span class="st">""</span>) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Generative Content
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>FastText is a library for text classification and representation learning, created by Facebook’s AI Research lab. This script loads a FastText model trained to classify text and then uses this model to predict the class of each line of an input text file.</p>
+<p>Here’s a step-by-step breakdown:</p>
+<ol type="1">
+<li>The script begins by setting up necessary directories. The base directory (<code>BASE_DIR</code>) is set as the directory where this script is located. <code>INPUT_DIR</code> and <code>OUTPUT_DIR</code> are then defined as subdirectories of the base directory.</li>
+<li>In the main execution block (<code>if name == "main":</code>), the script first opens an input file (<code>sys.argv[1]</code>) with read access using the codecs library, which allows the script to handle text encoded in UTF-8. The content of the file is read line by line into the lines variable.</li>
+<li>A pre-trained FastText model is loaded from a file named <code>model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz</code>. This model is trained to predict the class of a line of text.</li>
+<li>The script then iterates through each line in the input file again. For each line, any newline character () at the end of the line is removed using <code>rstrip("")</code>. The cleaned line is then fed to the FastText model to generate a prediction. Each prediction is appended to the predictions list.</li>
+<li>Finally, all the predictions are written to a file in the output directory named <code>fastText_predictions.txt</code>. Each prediction is written on a new line, with any “label” prefix removed.</li>
+</ol>
+<p>In the context of the workflow, this script follows the DS_fastText_Transfer state where the necessary files are transferred to the appropriate location. The output of this script, fastText_predictions.txt, is used in the final statistics state of the workflow to compute accuracy statistics.</p>
+</div>
+</div>
+</section>
+<section id="langdetect-lpap" class="level4">
+<h4 class="anchored" data-anchor-id="langdetect-lpap">langdetect LPAP</h4>
+<p><a href="#dnldts9660" onclick="fetch('data:application/x-python;base64,ZnJvbSBsYW5nZGV0ZWN0IGltcG9ydCBEZXRlY3RvckZhY3RvcnksIGRldGVjdCwgZGV0ZWN0X2xhbmdzCmltcG9ydCBvcwppbXBvcnQgY29kZWNzIAppbXBvcnQgc3lzCgojIERpcmVjdG9yeSBjb25zdGFudHMKQkFTRV9ESVIgPSBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5hYnNwYXRoKF9fZmlsZV9fKSkKSU5QVVRfRElSID0gb3MuZW52aXJvbi5nZXQoIklOUFVUX0RJUiIsIG9zLnBhdGguam9pbihCQVNFX0RJUiwgImlucHV0IikpICAKT1VUUFVUX0RJUiA9IG9zLmVudmlyb24uZ2V0KCJPVVRQVVRfRElSIiwgb3MucGF0aC5qb2luKEJBU0VfRElSLCAib3V0cHV0IikpCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgCiAgICB3aXRoIGNvZGVjcy5vcGVuKHN5cy5hcmd2WzFdLCAiciIsIGVuY29kaW5nID0gInV0Zi04IikgYXMgZjoKICAgICAgICBsaW5lcyA9IGYucmVhZGxpbmVzKCkKCiAgICAgICMgd3JpdGUgcHJlZGljdGlvbnMgdG8gZmlsZQogICAgd2l0aCBvcGVuKGYie09VVFBVVF9ESVJ9L2xhbmdkZXRlY3RfcHJlZGljdGlvbnMudHh0IiwgInciKSBhcyBmOgogICAgICAgIGNvdW50ZXIgPSAwCiAgICAgICAgZm9yIGxpbmUgaW4gbGluZXM6CiAgICAgICAgICAgIGxpbmUgPSBsaW5lLnN0cmlwKCkgICMgUmVtb3ZlIGxlYWRpbmcvdHJhaWxpbmcgd2hpdGUgc3BhY2UgaW5jbHVkaW5nICdcbicKICAgICAgICAgICAgaWYgbGluZTogICMgT25seSBwcm9jZXNzIHRoZSBsaW5lIGlmIGl0J3Mgbm90IGVtcHR5CiAgICAgICAgICAgICAgICBwcmludChjb3VudGVyKQogICAgICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgICAgIGYud3JpdGUoZGV0ZWN0KGxpbmUpICsgIlxuIikKICAgICAgICAgICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgICAgICAgICAjIE9ubHkgd3JpdGUgZXJyb3IgaWYgbGluZSBpc24ndCBlbXB0eQogICAgICAgICAgICAgICAgICAgIGlmIGxpbmU6CiAgICAgICAgICAgICAgICAgICAgICAgIGYud3JpdGUoZiJlcnJvcjoge2xpbmV9IiArICJcbiIpCgogICAgICAgICAgICAgICAgY291bnRlciArPSAxCgogIA==').then(res => res.blob()).then(blob => {
+      const downloadURL = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      document.body.appendChild(a);
+      a.href = downloadURL;
+      a.download = 'langdetect.py'; a.click();
+      window.URL.revokeObjectURL(downloadURL);
+      document.body.removeChild(a);
+        });"><button class="btn btn-info downloadthis  " id="dnldts9660"><i class="bi bi-filetype-py"></i> Download the script </button></a></p>
+<div data-add-from="crate_1686889961000/crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> langdetect <span class="im">import</span> DetectorFactory, detect, detect_langs</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> codecs </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Directory constants</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>BASE_DIR <span class="op">=</span> os.path.dirname(os.path.abspath(<span class="va">__file__</span>))</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>INPUT_DIR <span class="op">=</span> os.environ.get(<span class="st">"INPUT_DIR"</span>, os.path.join(BASE_DIR, <span class="st">"input"</span>))  </span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>OUTPUT_DIR <span class="op">=</span> os.environ.get(<span class="st">"OUTPUT_DIR"</span>, os.path.join(BASE_DIR, <span class="st">"output"</span>))</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> codecs.<span class="bu">open</span>(sys.argv[<span class="dv">1</span>], <span class="st">"r"</span>, encoding <span class="op">=</span> <span class="st">"utf-8"</span>) <span class="im">as</span> f:</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>        lines <span class="op">=</span> f.readlines()</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>      <span class="co"># write predictions to file</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(<span class="ss">f"</span><span class="sc">{</span>OUTPUT_DIR<span class="sc">}</span><span class="ss">/langdetect_predictions.txt"</span>, <span class="st">"w"</span>) <span class="im">as</span> f:</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        counter <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> line <span class="kw">in</span> lines:</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>            line <span class="op">=</span> line.strip()  <span class="co"># Remove leading/trailing white space including '\n'</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> line:  <span class="co"># Only process the line if it's not empty</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(counter)</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>                <span class="cf">try</span>:</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>                    f.write(detect(line) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>                <span class="cf">except</span>:</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>                    <span class="co"># Only write error if line isn't empty</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> line:</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>                        f.write(<span class="ss">f"error: </span><span class="sc">{</span>line<span class="sc">}</span><span class="ss">"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>                counter <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Generative Content
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This Python script uses the langdetect library to determine the language of each line of text in an input file. The resulting predictions are then written to an output file.</p>
+<p>Here’s a step-by-step breakdown:</p>
+<ol type="1">
+<li>The script sets up necessary directories. The base directory (<code>BASE_DIR</code>) is set as the directory where the script resides. The input directory (<code>INPUT_DIR</code>) and the output directory (<code>OUTPUT_DIR</code>) are then set as environment variables or default to the subdirectories “input” and “output” in the base directory, respectively.</li>
+<li>In the main execution block (<code>if __name__ == "__main__":</code>), the script begins by opening an input file (<code>sys.argv[1]</code>) with read access using the codecs library, enabling it to handle UTF-8 encoded text. The contents of the file are read line by line into the variable ‘lines’.</li>
+<li>An output file named “langdetect_predictions.txt” is opened or created in the output directory.</li>
+<li>The script then starts processing each line in the ‘lines’ variable. It removes leading and trailing white spaces from each line. If the line is not empty, it increments a counter and tries to determine the language of the line using langdetect. The detected language or an error message (in case of failure) is then written to the output file.</li>
+</ol>
+<p>In the context of the workflow, this script is executed in the ‘langdetect’ state. It comes after the ‘DS_langDetect_transfer’ state, where the necessary input file is transferred to the langdetect endpoint. The output of this script, “langdetect_predictions.txt”, is then used in the ‘statistics’ state of the workflow, where the accuracy of the langdetect and fastText predictions are compared.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="referencing" class="level2">
+<h2 class="anchored" data-anchor-id="referencing">Referencing</h2>
+<p>Some narrative text which includes a reference (<span class="citation" data-cites="miller2011cipres">Miller, Pfeiffer, and Schwartz (<a href="#ref-miller2011cipres" role="doc-biblioref">2011</a>)</span>). A small list of references:</p>
+<ul>
+<li><span class="citation" data-cites="uhrin2021workflows">Uhrin et al. (<a href="#ref-uhrin2021workflows" role="doc-biblioref">2021</a>)</span></li>
+<li><span class="citation" data-cites="goecks2010galaxy">Goecks et al. (<a href="#ref-goecks2010galaxy" role="doc-biblioref">2010</a>)</span></li>
+<li><span class="citation" data-cites="vescovi2022linking">Vescovi et al. (<a href="#ref-vescovi2022linking" role="doc-biblioref">2022</a>)</span></li>
+</ul>
+<!-- -->
+
+<script type="ojs-module-contents">
+{"contents":[
+  {"methodName":"interpret","inline":"true","source":"htl.html`<span>${accuracy_conclusion}</span>`", "cellName":"ojs-element-id-1"}
+,
+  {"methodName":"interpret","inline":"true","source":"htl.html`<span>${fastText_limit}</span>`", "cellName":"ojs-element-id-2"}
+,
+  {"methodName":"interpret","inline":"true","source":"htl.html`<span>${langdetect_limit}</span>`", "cellName":"ojs-element-id-3"}
+]}
+</script>
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-goecks2010galaxy" class="csl-entry" role="listitem">
+Goecks, Jeremy, Anton Nekrutenko, James Taylor, and Galaxy Team. 2010. <span>“Galaxy: A Comprehensive Approach for Supporting Accessible, Reproducible, and Transparent Computational Research in the Life Sciences.”</span> <em>Genome Biology</em> 11: 1–13.
+</div>
+<div id="ref-miller2011cipres" class="csl-entry" role="listitem">
+Miller, Mark A, Wayne Pfeiffer, and Terri Schwartz. 2011. <span>“The CIPRES Science Gateway: A Community Resource for Phylogenetic Analyses.”</span> In <em>Proc. 2011 TeraGrid Conference: Extreme Digital Discovery</em>, 1–8.
+</div>
+<div id="ref-uhrin2021workflows" class="csl-entry" role="listitem">
+Uhrin, Martin, Sebastiaan P Huber, Jusong Yu, Nicola Marzari, and Giovanni Pizzi. 2021. <span>“Workflows in <span>AiiDA</span>: Engineering a High-Throughput, Event-Based Engine for Robust and Modular Computational Workflows.”</span> <em>Computational Materials Science</em> 187: 110086.
+</div>
+<div id="ref-vescovi2022linking" class="csl-entry" role="listitem">
+Vescovi, Rafael, Ryan Chard, Nickolaus D Saint, Ben Blaiszik, Jim Pruyne, Tekin Bicer, Alex Lavens, et al. 2022. <span>“Linking Scientific Instruments and Computation: Patterns, Technologies, and Experiences.”</span> <em>Patterns</em> 3 (10): 100606.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script type="ojs-module-contents">
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"fastText_stats = FileAttachment(\"crate_1686889961000/crate_15XkigrEbqqfZ/output/fastText_stats.json\").json() \nlangdetect_stats = FileAttachment(\"crate_1686889961000/crate_15XkigrEbqqfZ/output/langdetect_stats.json\").json() \nfastText_acc_actual = fastText_stats[\"overall_accuracy\"] \nlangdetect_acc_actual = langdetect_stats[\"overall_accuracy\"] \n\nviewof fastText_acc = Inputs.range([80.0, 100.0], {\n  label: \"FastText accuracy:\", \n  step: 0.1,\n  value: fastText_acc_actual,\n  width: 500\n  })\n\nviewof langdetect_acc = Inputs.range([80.0, 100.0], {\n  label: \"Langdetect accuracy:\", \n  step: 0.1,\n  value: langdetect_acc_actual,\n  width: 500\n  })\n"},{"methodName":"interpret","cellName":"ojs-cell-2","inline":false,"source":"accuracy_conclusion = {\n  if (fastText_acc > langdetect_acc) {\n    return `FastText achieved a greater accuracy, achieving ${fastText_acc}% compared to langdetect, which achieved ${langdetect_acc}%`\n  } else if (fastText_acc < langdetect_acc) {\n    return `Langdetect achieved a greater accuracy, achieving ${langdetect_acc}% vs fastText's ${fastText_acc}%`\n  } else {\n    return `FastText and langdetect both achieved the same accuracy: ${fastText_acc}%`\n  }\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-3","inline":false,"source":"fastText_limit = {\n  function isInRange(value, lowerBound, upperBound) {\n    return value >= lowerBound && value <= upperBound;\n  }\n  let fastText_lower = 90;\n  let fastText_upper = 100;\n  if (!isInRange(fastText_acc, fastText_lower, fastText_upper)) {\n    return `Not in Range: ${fastText_acc}% is outside the range of ${fastText_lower}% - ${fastText_upper}%`\n  } else {\n    return `Within Range: ${fastText_acc}% is within the range of ${fastText_lower}% - ${fastText_upper}%`\n  }\n}\n"},{"methodName":"interpret","cellName":"ojs-cell-4","inline":false,"source":"langdetect_limit = {\n  function isInRange(value, lowerBound, upperBound) {\n    return value >= lowerBound && value <= upperBound;\n  }\n  let langdetect_lower = 90;\n  let langdetect_upper = 100;\n  if (!isInRange(langdetect_acc, langdetect_lower, langdetect_upper)) {\n    return `Not in Range: ${langdetect_acc}% is outside the range of ${langdetect_lower}% - ${langdetect_upper}%`\n  } else {\n    return `Within Range: ${langdetect_acc}% is within the range of ${langdetect_lower}% - ${langdetect_upper}%`\n  }\n}\n"},{"methodName":"interpretQuiet","source":"shinyInput('fastText_acc')"},{"methodName":"interpretQuiet","source":"shinyInput('langdetect_acc')"}]}
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../..";
+window._ojs.paths.runtimeToRoot = "../../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Language identification method comparison</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Introduction</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>Welcome to our LivePublication demonstration! This website represents how we can incorporate real-time computation within the narrative structure of a research article.</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>This LivePublication is the product of an ongoing initiative to move beyond the limitations of traditional scientific publishing by integrating dynamic computational workflows within the fabric of a publication. The LivePublication framework aims to enable live, reactive publications while simultaneously enhancing transparency, repeatability, and collaborative scientific research.</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>To enable this, LivePublication integrates with distributed Globus flows by providing custom Action Provides (LivePublication Action Providers, LPAPs) to generate descriptive RO-Crates at each major computational step in a workflow/methodology. These distributed artefacts are then combined into a full description of the workflow execution recording inputs, outputs, methods, and descriptive metadata. This primary artefact is then used as a data model for a publication, such as this website, to draw upon - providing updating figures, metrics, and other metadata. The structure, recorded metadata, and methods of integration with the publication are all early areas under active development.</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>Find a browseable version of the underpinning orchestration RO-Crate <span class="co">[</span><span class="ot">here</span><span class="co">](http://130.216.217.137:8080)</span>!</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">## Globus flow, and orchestration crate generation</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>Find a simple representation of the Globus flow below. Each node in the flow diagram provides a link to execution details within the orchestration crate. </span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid securityLevel='loose'}</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>flowchart LR</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  data_store[(Data store)] --&gt; transfer_ap[Transfer AP]</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  transfer_ap --&gt; ft[[fastText LPAP]] &amp; ld[[langdetect LPAP]]</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  ft &amp; ld --&gt; transfer_ap2[Transfer AP]</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  transfer_ap2 --&gt; stats[[Statistics LPAP]]</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  stats --&gt; transfer_ap3[Transfer AP]</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  transfer_ap3 --&gt; results_store[(Results store)]</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  click transfer_ap <span class="ot">"</span><span class="st">http://130.216.217.137:8080/#DS_fastText_Transfer.py</span><span class="ot">"</span> <span class="ot">"</span><span class="st">Go to transfer 1</span><span class="ot">"</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  click ft <span class="ot">"</span><span class="st">http://130.216.217.137:8080/#fastText.py</span><span class="ot">"</span> <span class="ot">"</span><span class="st">Go to fastText LPAP</span><span class="ot">"</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  click transfer_ap2 <span class="ot">"</span><span class="st">http://130.216.217.137:8080/#fastText_statistics_transfer.py</span><span class="ot">"</span> <span class="ot">"</span><span class="st">go to transfer 2</span><span class="ot">"</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  click ld <span class="ot">"</span><span class="st">http://130.216.217.137:8080/#langdetect.py</span><span class="ot">"</span> <span class="ot">"</span><span class="st">Go to langdetect LPAP</span><span class="ot">"</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>  click transfer_ap_3 <span class="ot">"</span><span class="st">http://130.216.217.137:8080/#langdetect_statistics_transfer.py</span><span class="ot">"</span> <span class="ot">"</span><span class="st">Go to transfer 3</span><span class="ot">"</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  click stats <span class="ot">"</span><span class="st">http://130.216.217.137:8080/#statistics.py</span><span class="ot">"</span> <span class="ot">"</span><span class="st">Go to statistics LPAP</span><span class="ot">"</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a><span class="fu">## Reactive publications - predicating content on the data-model</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>This section provides examples of how we can leverage live data to create variable, or dependent text. </span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>There are many plausable methods for how variable content can be implemented. At its most basic, switch or if statements can be used to include/exclude information dependent on a combination of variables. More complex applications include hybrid LLM/Author NL generation, providing a more flexable interface.</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Load in variables &amp; provide reactive components --&gt;</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a><span class="co">//| code-overflow: wrap</span></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>fastText_stats <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"crate_1686889961000/crate_15XkigrEbqqfZ/output/fastText_stats.json"</span>)<span class="op">.</span><span class="fu">json</span>() </span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>langdetect_stats <span class="op">=</span> <span class="fu">FileAttachment</span>(<span class="st">"crate_1686889961000/crate_15XkigrEbqqfZ/output/langdetect_stats.json"</span>)<span class="op">.</span><span class="fu">json</span>() </span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>fastText_acc_actual <span class="op">=</span> fastText_stats[<span class="st">"overall_accuracy"</span>] </span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>langdetect_acc_actual <span class="op">=</span> langdetect_stats[<span class="st">"overall_accuracy"</span>] </span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>viewof fastText_acc <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="fl">80.0</span><span class="op">,</span> <span class="fl">100.0</span>]<span class="op">,</span> {</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"FastText accuracy:"</span><span class="op">,</span> </span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>  <span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> fastText_acc_actual<span class="op">,</span></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">500</span></span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>viewof langdetect_acc <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="fl">80.0</span><span class="op">,</span> <span class="fl">100.0</span>]<span class="op">,</span> {</span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>  <span class="dt">label</span><span class="op">:</span> <span class="st">"Langdetect accuracy:"</span><span class="op">,</span> </span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>  <span class="dt">step</span><span class="op">:</span> <span class="fl">0.1</span><span class="op">,</span></span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> langdetect_acc_actual<span class="op">,</span></span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">500</span></span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a><span class="fu">### Variable text</span></span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>A simple example of variable text is provided below. Depending on the relative accuracy results of each model (fastText, langdetect) the content changes. </span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: True</span></span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>accuracy_conclusion <span class="op">=</span> {</span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (fastText_acc <span class="op">&gt;</span> langdetect_acc) {</span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`FastText achieved a greater accuracy, achieving </span><span class="sc">${</span>fastText_acc<span class="sc">}</span><span class="vs">% compared to langdetect, which achieved </span><span class="sc">${</span>langdetect_acc<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (fastText_acc <span class="op">&lt;</span> langdetect_acc) {</span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`Langdetect achieved a greater accuracy, achieving </span><span class="sc">${</span>langdetect_acc<span class="sc">}</span><span class="vs">% vs fastText's </span><span class="sc">${</span>fastText_acc<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`FastText and langdetect both achieved the same accuracy: </span><span class="sc">${</span>fastText_acc<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a><span class="fu">## Variable Text</span></span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>${accuracy_conclusion}</span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a><span class="fu">### Delimited variables and dashboard-like functionality</span></span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a>Rather than a simple switch statement as above, we can provide alerts if variables exit a delimited range, or the relationship between variables changes. </span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-94"><a href="#cb7-94" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb7-95"><a href="#cb7-95" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: True</span></span>
+<span id="cb7-96"><a href="#cb7-96" aria-hidden="true" tabindex="-1"></a><span class="co">//| code-overflow: wrap</span></span>
+<span id="cb7-97"><a href="#cb7-97" aria-hidden="true" tabindex="-1"></a>fastText_limit <span class="op">=</span> {</span>
+<span id="cb7-98"><a href="#cb7-98" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">isInRange</span>(value<span class="op">,</span> lowerBound<span class="op">,</span> upperBound) {</span>
+<span id="cb7-99"><a href="#cb7-99" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> value <span class="op">&gt;=</span> lowerBound <span class="op">&amp;&amp;</span> value <span class="op">&lt;=</span> upperBound<span class="op">;</span></span>
+<span id="cb7-100"><a href="#cb7-100" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-101"><a href="#cb7-101" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> fastText_lower <span class="op">=</span> <span class="dv">90</span><span class="op">;</span></span>
+<span id="cb7-102"><a href="#cb7-102" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> fastText_upper <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
+<span id="cb7-103"><a href="#cb7-103" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span><span class="fu">isInRange</span>(fastText_acc<span class="op">,</span> fastText_lower<span class="op">,</span> fastText_upper)) {</span>
+<span id="cb7-104"><a href="#cb7-104" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`Not in Range: </span><span class="sc">${</span>fastText_acc<span class="sc">}</span><span class="vs">% is outside the range of </span><span class="sc">${</span>fastText_lower<span class="sc">}</span><span class="vs">% - </span><span class="sc">${</span>fastText_upper<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb7-105"><a href="#cb7-105" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb7-106"><a href="#cb7-106" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`Within Range: </span><span class="sc">${</span>fastText_acc<span class="sc">}</span><span class="vs">% is within the range of </span><span class="sc">${</span>fastText_lower<span class="sc">}</span><span class="vs">% - </span><span class="sc">${</span>fastText_upper<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb7-107"><a href="#cb7-107" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-108"><a href="#cb7-108" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-109"><a href="#cb7-109" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-110"><a href="#cb7-110" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-113"><a href="#cb7-113" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
+<span id="cb7-114"><a href="#cb7-114" aria-hidden="true" tabindex="-1"></a><span class="co">//| echo: True</span></span>
+<span id="cb7-115"><a href="#cb7-115" aria-hidden="true" tabindex="-1"></a><span class="co">//| code-overflow: wrap</span></span>
+<span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a>langdetect_limit <span class="op">=</span> {</span>
+<span id="cb7-117"><a href="#cb7-117" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">isInRange</span>(value<span class="op">,</span> lowerBound<span class="op">,</span> upperBound) {</span>
+<span id="cb7-118"><a href="#cb7-118" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> value <span class="op">&gt;=</span> lowerBound <span class="op">&amp;&amp;</span> value <span class="op">&lt;=</span> upperBound<span class="op">;</span></span>
+<span id="cb7-119"><a href="#cb7-119" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-120"><a href="#cb7-120" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> langdetect_lower <span class="op">=</span> <span class="dv">90</span><span class="op">;</span></span>
+<span id="cb7-121"><a href="#cb7-121" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> langdetect_upper <span class="op">=</span> <span class="dv">100</span><span class="op">;</span></span>
+<span id="cb7-122"><a href="#cb7-122" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span><span class="fu">isInRange</span>(langdetect_acc<span class="op">,</span> langdetect_lower<span class="op">,</span> langdetect_upper)) {</span>
+<span id="cb7-123"><a href="#cb7-123" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`Not in Range: </span><span class="sc">${</span>langdetect_acc<span class="sc">}</span><span class="vs">% is outside the range of </span><span class="sc">${</span>langdetect_lower<span class="sc">}</span><span class="vs">% - </span><span class="sc">${</span>langdetect_upper<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb7-124"><a href="#cb7-124" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb7-125"><a href="#cb7-125" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="vs">`Within Range: </span><span class="sc">${</span>langdetect_acc<span class="sc">}</span><span class="vs">% is within the range of </span><span class="sc">${</span>langdetect_lower<span class="sc">}</span><span class="vs">% - </span><span class="sc">${</span>langdetect_upper<span class="sc">}</span><span class="vs">%`</span></span>
+<span id="cb7-126"><a href="#cb7-126" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-128"><a href="#cb7-128" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-129"><a href="#cb7-129" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-130"><a href="#cb7-130" aria-hidden="true" tabindex="-1"></a>:::{.callout-warning}</span>
+<span id="cb7-131"><a href="#cb7-131" aria-hidden="true" tabindex="-1"></a><span class="fu">## fastText accuracy limit</span></span>
+<span id="cb7-132"><a href="#cb7-132" aria-hidden="true" tabindex="-1"></a>${fastText_limit}</span>
+<span id="cb7-133"><a href="#cb7-133" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-134"><a href="#cb7-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-135"><a href="#cb7-135" aria-hidden="true" tabindex="-1"></a>:::{.callout-warning}</span>
+<span id="cb7-136"><a href="#cb7-136" aria-hidden="true" tabindex="-1"></a><span class="fu">## fastText accuracy limit</span></span>
+<span id="cb7-137"><a href="#cb7-137" aria-hidden="true" tabindex="-1"></a>${langdetect_limit}</span>
+<span id="cb7-138"><a href="#cb7-138" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-139"><a href="#cb7-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-140"><a href="#cb7-140" aria-hidden="true" tabindex="-1"></a><span class="fu">## LID performance comparison </span></span>
+<span id="cb7-141"><a href="#cb7-141" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-142"><a href="#cb7-142" aria-hidden="true" tabindex="-1"></a>While future LivePublication applications will primarily focus on how author-driven content can be realistically, and seamlessly integrated with live updating articles, this article uses mostly generative content drawing on data exported from the underlying <span class="co">[</span><span class="ot">RO-Crate</span><span class="co">](http://130.216.217.137:8080/)</span>. Research on how the author and live content can be integrated is ongoing. Below, GPT-4 provides a short description of the results of this computational workflow, drawing on <span class="co">[</span><span class="ot">data generated during the flow</span><span class="co">](#data)</span>. An overview of the LID comparison is provided in figure @fig-accuracies_by_language.</span>
+<span id="cb7-143"><a href="#cb7-143" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-144"><a href="#cb7-144" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Model: GPT-4</span>
+<span id="cb7-145"><a href="#cb7-145" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Prompt: This experiment compares the performance of two language identification methods: fastText and Langdetect. FastText's results are <span class="co">[</span><span class="ot">results</span><span class="co">](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json)</span> and langdetect results are <span class="co">[</span><span class="ot">results</span><span class="co">](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json)</span>. Write a few paragraphs discussing the performance of each, comparing their best and worst language accuracies. </span>
+<span id="cb7-146"><a href="#cb7-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-147"><a href="#cb7-147" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb7-148"><a href="#cb7-148" aria-hidden="true" tabindex="-1"></a><span class="fu">## Generative Content</span></span>
+<span id="cb7-149"><a href="#cb7-149" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-150"><a href="#cb7-150" aria-hidden="true" tabindex="-1"></a>The evaluation of the language identification methods - fastText and Langdetect - reveals a nuanced performance profile contingent on the specific language being identified. Overall, the fastText model demonstrated superior performance with an overall accuracy of <span class="co">[</span><span class="ot">``98.6%``</span><span class="co">](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json)</span> compared to Langdetect's <span class="co">[</span><span class="ot">``97.91%``</span><span class="co">](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json)</span>. This comparison, however, does not capture the individual variances in accuracy across languages for the two models.</span>
+<span id="cb7-151"><a href="#cb7-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-152"><a href="#cb7-152" aria-hidden="true" tabindex="-1"></a>Delving into these language-specific performances, FastText exhibits impeccable accuracy in identifying several languages. These include German (deu), Greek (ell), English (eng), French (fra), Japanese (jpn), Thai (tha), and Chinese (zho) - all at 100% accuracy. Other languages such as Bulgarian (bul), Italian (ita), Russian (rus), and Vietnamese (vie) also show remarkable results with accuracy close to 100%. FastText's weakest performance is observed for Swahili (swa) at <span class="co">[</span><span class="ot">``85.4%``</span><span class="co">](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json)</span> accuracy, indicating a potential area for model improvement.</span>
+<span id="cb7-153"><a href="#cb7-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-154"><a href="#cb7-154" aria-hidden="true" tabindex="-1"></a>On the other hand, Langdetect also showcased impressive accuracy with several languages reaching 100% identification rate, namely Greek (ell), Japanese (jpn), Thai (tha), and Vietnamese (vie). It performed notably well with Arabic (ara), German (deu), and Turkish (tur) too, with accuracy rates nearing 100%. The lowest performance was observed with Dutch (nld) at <span class="co">[</span><span class="ot">``93.6%``</span><span class="co">](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json)</span>, signifying a potential area of focus for future model enhancements.</span>
+<span id="cb7-155"><a href="#cb7-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-156"><a href="#cb7-156" aria-hidden="true" tabindex="-1"></a>When comparing the two models on specific languages, FastText notably outperforms Langdetect in identifying languages such as Bulgarian, English, French, Dutch, Polish, Portuguese, and Spanish. Conversely, both models demonstrate equivalent performance in Arabic, Greek, Japanese, Thai, and Vietnamese identification. Langdetect's performance appears to surpass FastText slightly in Hindi and Urdu.</span>
+<span id="cb7-157"><a href="#cb7-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-158"><a href="#cb7-158" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-159"><a href="#cb7-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-160"><a href="#cb7-160" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Accuracy by language](crate_1686889961000/crate_15XkigrEbqqfZ/output/accuracy_by_language.png)</span><span class="ot">{#fig-accuracies_by_language}</span><span class="co">](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/accuracy_by_language.png)</span></span>
+<span id="cb7-161"><a href="#cb7-161" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-162"><a href="#cb7-162" aria-hidden="true" tabindex="-1"></a><span class="fu">## Workflow / Method description</span></span>
+<span id="cb7-163"><a href="#cb7-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-164"><a href="#cb7-164" aria-hidden="true" tabindex="-1"></a>Below is a very early attempt at generative content based on the generated <span class="co">[</span><span class="ot">Workflow Execution Plan</span><span class="co">](http://130.216.217.137:8080/#WEP.json)</span> (WEP). The WEP only provides a description of the Globus flow, and includes no information regarding the actual execution of the method. Including details from the Workflow Execution Description (WED) can further enhance the description including things like execution state (succeeded, failed), time taken per step, and other pertinent information. </span>
+<span id="cb7-165"><a href="#cb7-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-166"><a href="#cb7-166" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Model: GPT-4</span>
+<span id="cb7-167"><a href="#cb7-167" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Prompt: Generate a description of this workflow, from the perspective of an academic methodological section: <span class="co">[</span><span class="ot">WEP</span><span class="co">](http://130.216.217.137:8080/#WEP.json)</span></span>
+<span id="cb7-168"><a href="#cb7-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-169"><a href="#cb7-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-170"><a href="#cb7-170" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb7-171"><a href="#cb7-171" aria-hidden="true" tabindex="-1"></a><span class="fu">## Generative Content</span></span>
+<span id="cb7-172"><a href="#cb7-172" aria-hidden="true" tabindex="-1"></a>The methodology to compare the performance of two language identification models, fastText and langdetect, involves the execution of a series of actions within a structured workflow. The actions range from data transfer operations to the execution of language identification models and statistical analysis of the generated results. The overall flow is organized as follows:</span>
+<span id="cb7-173"><a href="#cb7-173" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-174"><a href="#cb7-174" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span><span class="co">[</span><span class="ot">**Data Transfer for fastText Model**</span><span class="co">](http://130.216.217.137:8080/#DS_fastText_Transfer.py)</span>: The process begins by transferring the required dataset from the data store to the location accessible by the fastText model. This is done using Globus, a high-speed data transfer protocol. The specific parameters of this operation such as the source and destination endpoint identifiers, along with the respective paths are supplied at runtime.</span>
+<span id="cb7-175"><a href="#cb7-175" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-176"><a href="#cb7-176" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span><span class="co">[</span><span class="ot">**fastText Model Execution**</span><span class="co">](http://130.216.217.137:8080/#fastText.py)</span>: With the data in place, the fastText language identification model is executed. The model reads the input data from the path specified in the previous step, performs language identification, and stores the result in the same location.</span>
+<span id="cb7-177"><a href="#cb7-177" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-178"><a href="#cb7-178" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span><span class="co">[</span><span class="ot">**Result Transfer for fastText Model**</span><span class="co">](http://130.216.217.137:8080/#fastText_statistics_transfer.py)</span>: The output of the fastText model, including statistics related to its performance, is then transferred back to the data store via another Globus transfer operation.</span>
+<span id="cb7-179"><a href="#cb7-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-180"><a href="#cb7-180" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span><span class="co">[</span><span class="ot">**Data Transfer for langdetect Model**</span><span class="co">](http://130.216.217.137:8080/#DS_langDetect_transfer.py)</span>: Similarly to step 1, the required dataset is transferred from the data store to the location accessible by the langdetect model using a Globus transfer operation.</span>
+<span id="cb7-181"><a href="#cb7-181" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-182"><a href="#cb7-182" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span><span class="co">[</span><span class="ot">**langdetect Model Execution**</span><span class="co">](http://130.216.217.137:8080/#langdetect.py)</span>: The langdetect model is then executed, processing the transferred data to perform language identification. The results of the model are stored in the designated location.</span>
+<span id="cb7-183"><a href="#cb7-183" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-184"><a href="#cb7-184" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span><span class="co">[</span><span class="ot">**Result Transfer for langdetect Model**</span><span class="co">](http://130.216.217.137:8080/#langdetect_statistics_transfer.py)</span>: The results of the langdetect model, including its performance statistics, are then transferred back to the data store via Globus transfer operation.</span>
+<span id="cb7-185"><a href="#cb7-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-186"><a href="#cb7-186" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span><span class="co">[</span><span class="ot">**Statistical Analysis**</span><span class="co">](http://130.216.217.137:8080/#statistics.py)</span>: With the results from both models in place, a statistical analysis is performed to compare their performances. The analysis includes accuracy statistics, and the generation of figures, tables, and other representations of the results for presentation in the publication layer.</span>
+<span id="cb7-187"><a href="#cb7-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-188"><a href="#cb7-188" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span><span class="co">[</span><span class="ot">**Statistics Transfer to the Data Store**</span><span class="co">](http://130.216.217.137:8080/#statistics_DS_transfer.py)</span>: Finally, the results of the statistical analysis are transferred back to the data store using another Globus transfer operation.</span>
+<span id="cb7-189"><a href="#cb7-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-190"><a href="#cb7-190" aria-hidden="true" tabindex="-1"></a>Each of these operations is executed asynchronously, with designated wait times to ensure the completion of each task before moving to the next. The process has been designed for scalability and efficiency, with a focus on managing data and computational resources effectively.</span>
+<span id="cb7-191"><a href="#cb7-191" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-192"><a href="#cb7-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-193"><a href="#cb7-193" aria-hidden="true" tabindex="-1"></a><span class="fu">### Method description generation experiement</span></span>
+<span id="cb7-194"><a href="#cb7-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-195"><a href="#cb7-195" aria-hidden="true" tabindex="-1"></a>Each LPAP contains a method directory including the docker image and associated scripts. Using these, we can attempt to generate descriptions of the method in NL. This is an early experiement into the performance/accuracy of such a method. </span>
+<span id="cb7-196"><a href="#cb7-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-197"><a href="#cb7-197" aria-hidden="true" tabindex="-1"></a><span class="fu">#### FastText LPAP</span></span>
+<span id="cb7-198"><a href="#cb7-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-199"><a href="#cb7-199" aria-hidden="true" tabindex="-1"></a>{{&lt; downloadthis crate_1686889961000/crate_ful1t6i5wdGV/method_resources/computation_docker/main.py dname="fastText" label="Download the script" icon="filetype-py" type="info" &gt;}}</span>
+<span id="cb7-200"><a href="#cb7-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-201"><a href="#cb7-201" aria-hidden="true" tabindex="-1"></a>::: {add-from=crate_1686889961000/crate_ful1t6i5wdGV/method_resources/computation_docker/main.py}</span>
+<span id="cb7-202"><a href="#cb7-202" aria-hidden="true" tabindex="-1"></a><span class="in">```{.py}</span></span>
+<span id="cb7-203"><a href="#cb7-203" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-204"><a href="#cb7-204" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-205"><a href="#cb7-205" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-206"><a href="#cb7-206" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb7-207"><a href="#cb7-207" aria-hidden="true" tabindex="-1"></a><span class="fu">## Generative Content</span></span>
+<span id="cb7-208"><a href="#cb7-208" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-209"><a href="#cb7-209" aria-hidden="true" tabindex="-1"></a>FastText is a library for text classification and representation learning, created by Facebook's AI Research lab. This script loads a FastText model trained to classify text and then uses this model to predict the class of each line of an input text file.</span>
+<span id="cb7-210"><a href="#cb7-210" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-211"><a href="#cb7-211" aria-hidden="true" tabindex="-1"></a>Here's a step-by-step breakdown:</span>
+<span id="cb7-212"><a href="#cb7-212" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-213"><a href="#cb7-213" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The script begins by setting up necessary directories. The base directory (<span class="in">`BASE_DIR`</span>) is set as the directory where this script is located. <span class="in">`INPUT_DIR`</span> and <span class="in">`OUTPUT_DIR`</span> are then defined as subdirectories of the base directory.</span>
+<span id="cb7-214"><a href="#cb7-214" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>In the main execution block (<span class="in">`if name == "main":`</span>), the script first opens an input file (<span class="in">`sys.argv[1]`</span>) with read access using the codecs library, which allows the script to handle text encoded in UTF-8. The content of the file is read line by line into the lines variable.</span>
+<span id="cb7-215"><a href="#cb7-215" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>A pre-trained FastText model is loaded from a file named <span class="in">`model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz`</span>. This model is trained to predict the class of a line of text.</span>
+<span id="cb7-216"><a href="#cb7-216" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>The script then iterates through each line in the input file again. For each line, any newline character () at the end of the line is removed using <span class="in">`rstrip("")`</span>. The cleaned line is then fed to the FastText model to generate a prediction. Each prediction is appended to the predictions list.</span>
+<span id="cb7-217"><a href="#cb7-217" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Finally, all the predictions are written to a file in the output directory named <span class="in">`fastText_predictions.txt`</span>. Each prediction is written on a new line, with any "label" prefix removed.</span>
+<span id="cb7-218"><a href="#cb7-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-219"><a href="#cb7-219" aria-hidden="true" tabindex="-1"></a>In the context of the workflow, this script follows the DS_fastText_Transfer state where the necessary files are transferred to the appropriate location. The output of this script, fastText_predictions.txt, is used in the final statistics state of the workflow to compute accuracy statistics.</span>
+<span id="cb7-220"><a href="#cb7-220" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-221"><a href="#cb7-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-222"><a href="#cb7-222" aria-hidden="true" tabindex="-1"></a><span class="fu">#### langdetect LPAP</span></span>
+<span id="cb7-223"><a href="#cb7-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-224"><a href="#cb7-224" aria-hidden="true" tabindex="-1"></a>{{&lt; downloadthis crate_1686889961000/crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py dname="langdetect" label="Download the script" icon="filetype-py" type="info" &gt;}}</span>
+<span id="cb7-225"><a href="#cb7-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-226"><a href="#cb7-226" aria-hidden="true" tabindex="-1"></a>::: {add-from=crate_1686889961000/crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py}</span>
+<span id="cb7-227"><a href="#cb7-227" aria-hidden="true" tabindex="-1"></a><span class="in">```{.py}</span></span>
+<span id="cb7-228"><a href="#cb7-228" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb7-229"><a href="#cb7-229" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-230"><a href="#cb7-230" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-231"><a href="#cb7-231" aria-hidden="true" tabindex="-1"></a>:::{.callout-note}</span>
+<span id="cb7-232"><a href="#cb7-232" aria-hidden="true" tabindex="-1"></a><span class="fu">## Generative Content</span></span>
+<span id="cb7-233"><a href="#cb7-233" aria-hidden="true" tabindex="-1"></a>This Python script uses the langdetect library to determine the language of each line of text in an input file. The resulting predictions are then written to an output file.</span>
+<span id="cb7-234"><a href="#cb7-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-235"><a href="#cb7-235" aria-hidden="true" tabindex="-1"></a>Here's a step-by-step breakdown:</span>
+<span id="cb7-236"><a href="#cb7-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-237"><a href="#cb7-237" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>The script sets up necessary directories. The base directory (<span class="in">`BASE_DIR`</span>) is set as the directory where the script resides. The input directory (<span class="in">`INPUT_DIR`</span>) and the output directory (<span class="in">`OUTPUT_DIR`</span>) are then set as environment variables or default to the subdirectories "input" and "output" in the base directory, respectively.</span>
+<span id="cb7-238"><a href="#cb7-238" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>In the main execution block (<span class="in">`if __name__ == "__main__":`</span>), the script begins by opening an input file (<span class="in">`sys.argv[1]`</span>) with read access using the codecs library, enabling it to handle UTF-8 encoded text. The contents of the file are read line by line into the variable 'lines'.</span>
+<span id="cb7-239"><a href="#cb7-239" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>An output file named "langdetect_predictions.txt" is opened or created in the output directory. </span>
+<span id="cb7-240"><a href="#cb7-240" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>The script then starts processing each line in the 'lines' variable. It removes leading and trailing white spaces from each line. If the line is not empty, it increments a counter and tries to determine the language of the line using langdetect. The detected language or an error message (in case of failure) is then written to the output file.</span>
+<span id="cb7-241"><a href="#cb7-241" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-242"><a href="#cb7-242" aria-hidden="true" tabindex="-1"></a>In the context of the workflow, this script is executed in the 'langdetect' state. It comes after the 'DS_langDetect_transfer' state, where the necessary input file is transferred to the langdetect endpoint. The output of this script, "langdetect_predictions.txt", is then used in the 'statistics' state of the workflow, where the accuracy of the langdetect and fastText predictions are compared.</span>
+<span id="cb7-243"><a href="#cb7-243" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb7-244"><a href="#cb7-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-245"><a href="#cb7-245" aria-hidden="true" tabindex="-1"></a><span class="fu">## Referencing</span></span>
+<span id="cb7-246"><a href="#cb7-246" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-247"><a href="#cb7-247" aria-hidden="true" tabindex="-1"></a>Some narrative text which includes a reference (@miller2011cipres).</span>
+<span id="cb7-248"><a href="#cb7-248" aria-hidden="true" tabindex="-1"></a>A small list of references:</span>
+<span id="cb7-249"><a href="#cb7-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-250"><a href="#cb7-250" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>@uhrin2021workflows</span>
+<span id="cb7-251"><a href="#cb7-251" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>@goecks2010galaxy</span>
+<span id="cb7-252"><a href="#cb7-252" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>@vescovi2022linking</span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+<div class="page-columns page-rows-contents page-layout-article"><div class="social-share"><a href="https://twitter.com/share?url=https://mr.schochastics.net/&amp;text=awesome page" target="_blank" class="twitter"><i class="fab fa-twitter fa-fw fa-lg"></i></a><a href="https://www.linkedin.com/shareArticle?url=https://mr.schochastics.net/&amp;title=awesome page" target="_blank" class="linkedin"><i class="fa-brands fa-linkedin-in fa-fw fa-lg"></i></a>  <a href="mailto:?subject=awesome page&amp;body=Check out this link:https://mr.schochastics.net/" target="_blank" class="email"><i class="fa-solid fa-envelope fa-fw fa-lg"></i></a><a href="https://www.facebook.com/sharer.php?u=https://mr.schochastics.net/" target="_blank" class="facebook"><i class="fab fa-facebook-f fa-fw fa-lg"></i></a><a href="https://reddit.com/submit?url=https://mr.schochastics.net/&amp;title=awesome page" target="_blank" class="reddit">   <i class="fa-brands fa-reddit-alien fa-fw fa-lg"></i></a><a href="https://www.stumbleupon.com/submit?url=https://mr.schochastics.net/&amp;title=awesome page" target="_blank" class="stumbleupon"><i class="fa-brands fa-stumbleupon fa-fw fa-lg"></i></a><a href="https://www.tumblr.com/share/link?url=https://mr.schochastics.net/&amp;name=awesome page" target="_blank" class="tumblr"><i class="fa-brands fa-tumblr fa-fw fa-lg"></i></a></div></div>
+
+
+
+</body></html>

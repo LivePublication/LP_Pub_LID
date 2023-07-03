@@ -1,0 +1,26 @@
+{
+    "accuracy_by_language": {
+        "ara": 99.6,
+        "bul": 94.8,
+        "deu": 99.6,
+        "ell": 100.0,
+        "eng": 97.8,
+        "fra": 98.8,
+        "hin": 96.2,
+        "ita": 97.6,
+        "jpn": 100.0,
+        "nld": 93.6,
+        "pol": 97.6,
+        "por": 96.2,
+        "rus": 98.2,
+        "spa": 98.2,
+        "swa": 98.4,
+        "tha": 100.0,
+        "tur": 99.0,
+        "urd": 96.4,
+        "vie": 100.0,
+        "zho": 96.2
+    },
+    "name": "Langdetect",
+    "overall_accuracy": 97.91
+}
