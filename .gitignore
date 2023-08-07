@@ -98,3 +98,5 @@ pickle-email-*.html
 .DS_Store
 
 /.quarto/
+
+/.luarc.json

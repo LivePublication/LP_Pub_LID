@@ -4,11 +4,18 @@
 
 Welcome to our LivePublication demonstration! This website represents how we can incorporate real-time computation within the narrative structure of a research article.
 
+::: {.column-margin}
+
+<a href="" style="color: green;">Green links</a> indicate links to the underpining orchestration crate.
+
+:::
+
 This LivePublication is the product of an ongoing initiative to move beyond the limitations of traditional scientific publishing by integrating dynamic computational workflows within the fabric of a publication. The LivePublication framework aims to enable live, reactive publications while simultaneously enhancing transparency, repeatability, and collaborative scientific research.
 
 To enable this, LivePublication integrates with distributed Globus flows by providing custom Action Provides (LivePublication Action Providers, LPAPs) to generate descriptive RO-Crates at each major computational step in a workflow/methodology. These distributed artefacts are then combined into a full description of the workflow execution recording inputs, outputs, methods, and descriptive metadata. This primary artefact is then used as a data model for a publication, such as this website, to draw upon - providing updating figures, metrics, and other metadata. The structure, recorded metadata, and methods of integration with the publication are all early areas under active development.
 
-Find a browseable version of the underpinning orchestration RO-Crate [here](http://130.216.217.137:8080)!
+Find a browseable version of the underpinning orchestration RO-Crate <a href="http://130.216.217.137:8080" style="color: green;">here!</a>
+
 
 ## Globus flow, and orchestration crate generation
 
@@ -30,11 +37,30 @@ flowchart LR
   click stats "http://130.216.217.137:8080/#statistics.py" "Go to statistics LPAP"
 ```
 
+::: {.column-margin}
+
+Click on each component to be directed to the relevant orchestration crate component.
+
+:::
+
+::: {.callout-tip title="Generating mermaid with GPT plugins " collapse="true"}
+
+Using GPT, we can parse the workflow definition within the RO-crate, and generate mermaid on the fly. An example is provided below, leveraging the flow definition found <a href="http://130.216.217.137:8080/WEP.json" style="color: green;">here</a>.
+
+- Model: GPT-4
+- Plugin: 
+- Prompt: 
+
+:::
+
 
 ## Reactive publications - predicating content on the data-model
 
 This section provides examples of how we can leverage live data to create variable, or dependent text. 
 There are many plausable methods for how variable content can be implemented. At its most basic, switch or if statements can be used to include/exclude information dependent on a combination of variables. More complex applications include hybrid LLM/Author NL generation, providing a more flexable interface.
+
+
+
 
 <!-- Load in variables & provide reactive components -->
 ```{ojs}
@@ -58,6 +84,12 @@ viewof langdetect_acc = Inputs.range([80.0, 100.0], {
   width: 500
   })
 ```
+
+::: {.column-margin}
+
+Modifying these parameters changes the data-model, and therefore the outputs of this article. 
+
+:::
 
 ### Variable text
 
@@ -131,53 +163,297 @@ ${langdetect_limit}
 
 ## LID performance comparison 
 
-While future LivePublication applications will primarily focus on how author-driven content can be realistically, and seamlessly integrated with live updating articles, this article uses mostly generative content drawing on data exported from the underlying [RO-Crate](http://130.216.217.137:8080/). Research on how the author and live content can be integrated is ongoing. Below, GPT-4 provides a short description of the results of this computational workflow, drawing on [data generated during the flow](#data). An overview of the LID comparison is provided in figure @fig-accuracies_by_language.
+While future LivePublication applications will primarily focus on how author-driven content can be realistically, and seamlessly integrated with live updating articles, this article uses mostly generative content drawing on data exported from the underlying <a href="http://130.216.217.137:8080/" style="color: green;">RO-Crate</a>. Research on how the author and live content can be integrated is ongoing. Below, GPT-4 provides a short description of the results of this computational workflow, drawing on data generated during the flow. An overview of the LID comparison is provided in figure @fig-accuracies_by_language.
 
 - Model: GPT-4
-- Prompt: This experiment compares the performance of two language identification methods: fastText and Langdetect. FastText's results are [results](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json) and langdetect results are [results](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json). Write a few paragraphs discussing the performance of each, comparing their best and worst language accuracies. 
+- Prompt: This experiment compares the performance of two language identification methods: fastText and Langdetect. FastText's results are <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json" style="color: green;">results</a> and langdetect results are <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json" style="color: green;">results</a>. Write a few paragraphs discussing the performance of each, comparing their best and worst language accuracies. 
 
 :::{.callout-note}
 ## Generative Content
 
-The evaluation of the language identification methods - fastText and Langdetect - reveals a nuanced performance profile contingent on the specific language being identified. Overall, the fastText model demonstrated superior performance with an overall accuracy of [``98.6%``](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json) compared to Langdetect's [``97.91%``](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json). This comparison, however, does not capture the individual variances in accuracy across languages for the two models.
+The evaluation of the language identification methods - fastText and Langdetect - reveals a nuanced performance profile contingent on the specific language being identified. Overall, the fastText model demonstrated superior performance with an overall accuracy of <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json" style="color: green;">``98.6%``</a> compared to Langdetect's <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json" style="color: green;">``97.91%``</a>. This comparison, however, does not capture the individual variances in accuracy across languages for the two models.
 
-Delving into these language-specific performances, FastText exhibits impeccable accuracy in identifying several languages. These include German (deu), Greek (ell), English (eng), French (fra), Japanese (jpn), Thai (tha), and Chinese (zho) - all at 100% accuracy. Other languages such as Bulgarian (bul), Italian (ita), Russian (rus), and Vietnamese (vie) also show remarkable results with accuracy close to 100%. FastText's weakest performance is observed for Swahili (swa) at [``85.4%``](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json) accuracy, indicating a potential area for model improvement.
+Delving into these language-specific performances, FastText exhibits impeccable accuracy in identifying several languages. These include German (deu), Greek (ell), English (eng), French (fra), Japanese (jpn), Thai (tha), and Chinese (zho) - all at 100% accuracy. Other languages such as Bulgarian (bul), Italian (ita), Russian (rus), and Vietnamese (vie) also show remarkable results with accuracy close to 100%. FastText's weakest performance is observed for Swahili (swa) at <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json" style="color: green;">``85.4%``</a> accuracy, indicating a potential area for model improvement.
 
-On the other hand, Langdetect also showcased impressive accuracy with several languages reaching 100% identification rate, namely Greek (ell), Japanese (jpn), Thai (tha), and Vietnamese (vie). It performed notably well with Arabic (ara), German (deu), and Turkish (tur) too, with accuracy rates nearing 100%. The lowest performance was observed with Dutch (nld) at [``93.6%``](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json), signifying a potential area of focus for future model enhancements.
+On the other hand, Langdetect also showcased impressive accuracy with several languages reaching 100% identification rate, namely Greek (ell), Japanese (jpn), Thai (tha), and Vietnamese (vie). It performed notably well with Arabic (ara), German (deu), and Turkish (tur) too, with accuracy rates nearing 100%. The lowest performance was observed with Dutch (nld) at <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json" style="color: green;">``93.6%``</a>, signifying a potential area of focus for future model enhancements.
 
 When comparing the two models on specific languages, FastText notably outperforms Langdetect in identifying languages such as Bulgarian, English, French, Dutch, Polish, Portuguese, and Spanish. Conversely, both models demonstrate equivalent performance in Arabic, Greek, Japanese, Thai, and Vietnamese identification. Langdetect's performance appears to surpass FastText slightly in Hindi and Urdu.
 
 :::
 
+### Figure integration and generation
+
+Figures and other visualisations can either be generated during the execution of a workflow, or implemented at the document level through code blocks. An example of both approaches is provided below. 
+
 [![Accuracy by language](crate_1686889961000/crate_15XkigrEbqqfZ/output/accuracy_by_language.png){#fig-accuracies_by_language}](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/accuracy_by_language.png)
+
+::: {.column-margin}
+
+This figure was generated during the statistics step of the workflow. Click to be directed to this component within the orchestration crate. 
+
+:::
+
+@fig-accuracies_by_language was generated within the workflow, however, as the orchestration crate provides the data generated via the workflow, we can generate these figures at the document level as well.
+
+```{ojs}
+d3 = require("d3@7")
+```
+
+<div id="d3-visualization"></div>
+
+::: {.column-margin}
+
+This figure was generated within the Quarto document using data collected from the orchestration crate <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/accuracy_by_language.csv" style="color: green;">here</a> and showcases how LivePublications can integrate with top-level code/narrative-text technologies (e.g. Quarto, Jupyter notebooks, Google colaboratory).
+
+:::
+
+
+```{ojs}
+//| echo: True
+//| code-overflow: wrap
+
+visualisation = {
+  d3.csv("crate_1686889961000/crate_15XkigrEbqqfZ/output/accuracy_by_language.csv").then(data => {
+    const container = d3.select("#d3-visualization");
+    const margin = { top: 40, right: 0, bottom: 10, left: 25 };  
+    const svgWidth = container.node().getBoundingClientRect().width;
+    const barHeight = 5;  // example height for each set of bars (FastText + Langdetect for a language)
+    const barSpacing = 10;  // space between each set of bars
+    const calculatedHeight = data.length * (barHeight + barSpacing) + margin.top + margin.bottom;
+
+    const svgHeight = calculatedHeight;  // use calculated height instead of fixed height
+
+    const width = svgWidth - margin.left - margin.right;
+    const height = svgHeight - margin.top - margin.bottom;
+
+    const x0 = d3.scaleBand()
+        .domain(data.map(d => d.Language_ID))
+        .rangeRound([margin.left, width - margin.right])
+        .paddingInner(0.1);
+
+    const x1 = d3.scaleBand()
+        .domain(['FastText', 'Langdetect'])
+        .rangeRound([0, x0.bandwidth()])
+        .padding(0.05);
+
+    const y = d3.scaleLinear()
+        .domain([0, 100]).nice()
+        .rangeRound([height - margin.bottom, margin.top]);
+
+    const color = d3.scaleOrdinal()
+        .domain(['FastText', 'Langdetect'])
+        .range(['#1f77b4', '#ff7f0e']);
+
+    const xAxis = g => g
+        .attr("transform", `translate(0,${height - margin.bottom})`)
+        .call(d3.axisBottom(x0).tickSizeOuter(0))
+        .call(g => g.select(".domain").remove());
+
+    const yAxis = g => g
+        .attr("transform", `translate(${margin.left},0)`)
+        .call(d3.axisLeft(y).ticks(null, "s"))
+        .call(g => g.select(".domain").remove());
+
+    const svg = container.append("svg")
+        .attr("width", svgWidth)
+        .attr("height", svgHeight)
+        .style("margin-bottom", "10px");  // Reduce space below the SVG
+
+    const title = "Accuracy Comparison: FastText vs. Langdetect";  // Replace with your desired title
+
+    svg.append("text")
+        .attr("x", svgWidth / 2)          // Center the text
+        .attr("y", margin.top / 2)        // Position it at the top, within the top margin
+        .attr("text-anchor", "middle")    // Ensure the text is centered at the position
+        .style("font-size", "20px")       // Set font size
+        .style("font-weight", "bold")     // Make it bold
+        .text(title);
+
+
+    // Tooltip
+    const tooltip = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0)
+        .style("background-color", "white")
+        .style("border", "solid")
+        .style("border-width", "2px")
+        .style("border-radius", "5px")
+        .style("padding", "5px")
+        .style("position", "absolute");
+
+    const barGroups = svg.append("g")
+        .selectAll("g")
+        .data(data)
+        .join("g")
+        .attr("class", "barGroup")
+        .attr("transform", d => `translate(${x0(d.Language_ID)},0)`);
+
+    barGroups.selectAll("rect")
+        .data(d => ['FastText', 'Langdetect'].map(key => ({ key, value: d[key] })))
+        .join("rect")
+        .attr("x", d => x1(d.key))
+        .attr("y", d => y(d.value))
+        .attr("width", x1.bandwidth())
+        .attr("height", d => y(0) - y(d.value))
+        .attr("fill", d => color(d.key))
+        .on("mouseover", function(event, d) {
+            const originalColor = d3.select(this).attr("fill");
+            d3.select(this)
+                .attr("data-original-color", originalColor)  // Store the original color
+                .attr("fill", d3.rgb(originalColor).darker(2));
+            tooltip.transition()
+                .duration(200)
+                .style("opacity", .9);
+            tooltip.html(d.key + ": " + d.value + "%")
+                .style("left", (event.pageX + 5) + "px")
+                .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", function(d) {
+            const originalColor = d3.select(this).attr("data-original-color");
+            d3.select(this)
+                .attr("fill", originalColor)  // Reset to the original color
+                .attr("data-original-color", null);  // Clear the data attribute
+            tooltip.transition()
+                .duration(500)
+                .style("opacity", 0);
+        });
+
+    svg.append("g")
+        .call(xAxis);
+
+    svg.append("g")
+        .call(yAxis);
+
+    // Sorting functions
+    function sortByFastText() {
+        data.sort((a, b) => b.FastText - a.FastText);
+        x0.domain(data.map(d => d.Language_ID));
+        svg.selectAll(".barGroup").transition().duration(1000).attr("transform", d => `translate(${x0(d.Language_ID)},0)`);
+        
+        // Update button styles
+        d3.selectAll("button").filter(function() { return d3.select(this).text() === "Sort by FastText"; }).style("background-color", color('FastText'));
+        d3.selectAll("button").filter(function() { return d3.select(this).text() === "Sort by Langdetect"; }).style("background-color", "#f4f4f4");
+    }
+
+    function sortByLangdetect() {
+        data.sort((a, b) => b.Langdetect - a.Langdetect);
+        x0.domain(data.map(d => d.Language_ID));
+        svg.selectAll(".barGroup").transition().duration(1000).attr("transform", d => `translate(${x0(d.Language_ID)},0)`);
+        
+        // Update button styles
+        d3.selectAll("button").filter(function() { return d3.select(this).text() === "Sort by Langdetect"; }).style("background-color", color('Langdetect'));
+        d3.selectAll("button").filter(function() { return d3.select(this).text() === "Sort by FastText"; }).style("background-color", "#f4f4f4");
+    }
+
+    // Styling function for buttons
+    function styleButton(button) {
+        button.style("padding", "5px 10px")
+              .style("margin", "5px")
+              .style("cursor", "pointer")
+              .style("border", "1px solid #888")
+              .style("background-color", "#f4f4f4")
+              .style("border-radius", "5px")
+              .style("text-align", "center")
+              .on("mouseover", function() {
+                  const currentColor = d3.select(this).style("background-color");
+                  if (currentColor === "rgb(244, 244, 244)") {  // Check if the current color is the default
+                      d3.select(this).style("background-color", "#e0e0e0");
+                  }
+              })
+              .on("mouseout", function() {
+                  const currentColor = d3.select(this).style("background-color");
+                  if (currentColor === "rgb(224, 224, 224)") {  // Check if the color was changed on hover
+                      d3.select(this).style("background-color", "#f4f4f4");
+                  }
+              });
+    }
+
+    // Add sort buttons
+    const sortButtons = container.append("div")
+        .style("margin-bottom", "5px")  // Reduce space below the sort buttons
+        .style("text-align", "left");   // Ensure left alignment
+
+    styleButton(sortButtons.append("button").text("Sort by FastText").on("click", sortByFastText));
+    styleButton(sortButtons.append("button").text("Sort by Langdetect").on("click", sortByLangdetect));
+
+    // Interactive Legends
+    const legend = container.append("div")
+        .attr("class", "legend")
+        .style("display", "flex")
+        .style("justify-content", "flex-start")  // Align the legend to the left
+        .style("margin-bottom", "10px");  // Add some space below the legends for clarity
+
+
+    const tools = ['FastText', 'Langdetect'];
+
+    tools.forEach(tool => {
+        const legendButton = legend.append("div").style("margin", "0 10px");
+
+        const colorBox = legendButton.append("span")
+            .style("background-color", color(tool))
+            .style("width", "20px")
+            .style("height", "20px")
+            .style("display", "inline-block")
+            .style("margin-right", "5px");
+
+        const toolName = legendButton.append("span")
+            .text(tool)
+            .style("cursor", "pointer")
+            .on("click", function() {
+                const isActive = !d3.select(this).classed("inactive");
+                d3.select(this).classed("inactive", isActive);
+                
+                if (isActive) {
+                    colorBox.style("opacity", "0.5");
+                    toolName.style("text-decoration", "line-through");
+                } else {
+                    colorBox.style("opacity", "1");
+                    toolName.style("text-decoration", "none");
+                }
+
+                svg.selectAll(".barGroup")
+                    .selectAll("rect")
+                    .filter(d => d.key === tool)
+                    .transition()
+                    .duration(300)
+                    .style("opacity", isActive ? 0 : 1);
+            });
+            styleButton(legendButton);
+        });  
+    });
+}
+```
+
+
+
 
 ## Workflow / Method description
 
-Below is a very early attempt at generative content based on the generated [Workflow Execution Plan](http://130.216.217.137:8080/#WEP.json) (WEP). The WEP only provides a description of the Globus flow, and includes no information regarding the actual execution of the method. Including details from the Workflow Execution Description (WED) can further enhance the description including things like execution state (succeeded, failed), time taken per step, and other pertinent information. 
+Below is a very early attempt at generative content based on the generated <a href="http://130.216.217.137:8080/#WEP.json" style="color: green;">Workflow Execution Plan</a> (WEP). The WEP only provides a description of the Globus flow, and includes no information regarding the actual execution of the method. Including details from the Workflow Execution Description (WED) can further enhance the description including things like execution state (succeeded, failed), time taken per step, and other pertinent information. 
 
 - Model: GPT-4
-- Prompt: Generate a description of this workflow, from the perspective of an academic methodological section: [WEP](http://130.216.217.137:8080/#WEP.json)
+- Prompt: Generate a description of this workflow, from the perspective of an academic methodological section: <a href="http://130.216.217.137:8080/#WEP.json" style="color: green;">WEP</a>
 
 
 :::{.callout-note}
 ## Generative Content
 The methodology to compare the performance of two language identification models, fastText and langdetect, involves the execution of a series of actions within a structured workflow. The actions range from data transfer operations to the execution of language identification models and statistical analysis of the generated results. The overall flow is organized as follows:
 
-1. [**Data Transfer for fastText Model**](http://130.216.217.137:8080/#DS_fastText_Transfer.py): The process begins by transferring the required dataset from the data store to the location accessible by the fastText model. This is done using Globus, a high-speed data transfer protocol. The specific parameters of this operation such as the source and destination endpoint identifiers, along with the respective paths are supplied at runtime.
+1. <a href="http://130.216.217.137:8080/#DS_fastText_Transfer.py" style="color: green;">**Data Transfer for fastText Model**</a>: The process begins by transferring the required dataset from the data store to the location accessible by the fastText model. This is done using Globus, a high-speed data transfer protocol. The specific parameters of this operation such as the source and destination endpoint identifiers, along with the respective paths are supplied at runtime.
 
-2. [**fastText Model Execution**](http://130.216.217.137:8080/#fastText.py): With the data in place, the fastText language identification model is executed. The model reads the input data from the path specified in the previous step, performs language identification, and stores the result in the same location.
+2. <a href="http://130.216.217.137:8080/#fastText.py" style="color: green;">**fastText Model Execution**</a>: With the data in place, the fastText language identification model is executed. The model reads the input data from the path specified in the previous step, performs language identification, and stores the result in the same location.
 
-3. [**Result Transfer for fastText Model**](http://130.216.217.137:8080/#fastText_statistics_transfer.py): The output of the fastText model, including statistics related to its performance, is then transferred back to the data store via another Globus transfer operation.
+3. <a href="http://130.216.217.137:8080/#fastText_statistics_transfer.py" style="color: green;">**Result Transfer for fastText Model**</a>: The output of the fastText model, including statistics related to its performance, is then transferred back to the data store via another Globus transfer operation.
 
-4. [**Data Transfer for langdetect Model**](http://130.216.217.137:8080/#DS_langDetect_transfer.py): Similarly to step 1, the required dataset is transferred from the data store to the location accessible by the langdetect model using a Globus transfer operation.
+4. <a href="http://130.216.217.137:8080/#DS_langDetect_transfer.py" style="color: green;">**Data Transfer for langdetect Model**</a>: Similarly to step 1, the required dataset is transferred from the data store to the location accessible by the langdetect model using a Globus transfer operation.
 
-5. [**langdetect Model Execution**](http://130.216.217.137:8080/#langdetect.py): The langdetect model is then executed, processing the transferred data to perform language identification. The results of the model are stored in the designated location.
+5. <a href="http://130.216.217.137:8080/#langdetect.py" style="color: green;">**langdetect Model Execution**</a>: The langdetect model is then executed, processing the transferred data to perform language identification. The results of the model are stored in the designated location.
 
-6. [**Result Transfer for langdetect Model**](http://130.216.217.137:8080/#langdetect_statistics_transfer.py): The results of the langdetect model, including its performance statistics, are then transferred back to the data store via Globus transfer operation.
+6. <a href="http://130.216.217.137:8080/#langdetect_statistics_transfer.py" style="color: green;">**Result Transfer for langdetect Model**</a>: The results of the langdetect model, including its performance statistics, are then transferred back to the data store via Globus transfer operation.
 
-7. [**Statistical Analysis**](http://130.216.217.137:8080/#statistics.py): With the results from both models in place, a statistical analysis is performed to compare their performances. The analysis includes accuracy statistics, and the generation of figures, tables, and other representations of the results for presentation in the publication layer.
+7. <a href="(http://130.216.217.137:8080/#statistics.py" style="color: green;">**Statistical Analysis**</a>: With the results from both models in place, a statistical analysis is performed to compare their performances. The analysis includes accuracy statistics, and the generation of figures, tables, and other representations of the results for presentation in the publication layer.
 
-8. [**Statistics Transfer to the Data Store**](http://130.216.217.137:8080/#statistics_DS_transfer.py): Finally, the results of the statistical analysis are transferred back to the data store using another Globus transfer operation.
+8. <a href="(http://130.216.217.137:8080/#statistics_DS_transfer.py" style="color: green;">**Statistics Transfer to the Data Store**</a>: Finally, the results of the statistical analysis are transferred back to the data store using another Globus transfer operation.
 
 Each of these operations is executed asynchronously, with designated wait times to ensure the completion of each task before moving to the next. The process has been designed for scalability and efficiency, with a focus on managing data and computational resources effectively.
 :::
