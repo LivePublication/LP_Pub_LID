@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to our LivePublication demonstration! This website represents how we can incorporate real-time computation within the narrative structure of a research article.
+Welcome to our LivePublication demonstration! The landscape of scientific research is ever-evolving, and with it, the way we share and consume scientific knowledge needs to progress. Traditional scientific publishing, with its static format, often struggles to effectively convey the dynamic nature of modern computational research. This article represents initial steps toward enabling and standardising methods of integrating distributed scientific workflows with top level narrative text, building a pipeline from workflow execution, to publication outputs. 
 
 ::: {.column-margin}
 
@@ -10,12 +10,19 @@ Welcome to our LivePublication demonstration! This website represents how we can
 
 :::
 
-This LivePublication is the product of an ongoing initiative to move beyond the limitations of traditional scientific publishing by integrating dynamic computational workflows within the fabric of a publication. The LivePublication framework aims to enable live, reactive publications while simultaneously enhancing transparency, repeatability, and collaborative scientific research.
+The LivePublication framework aims to enable live, reactive publications while simultaneously enhancing transparency, repeatability, and collaborative scientific research. In order to achive this, LivePublication leverages custom Globus action providers ([AP overview](https://action-provider-tools.readthedocs.io/en/latest/), [custom AP](https://github.com/LivePublication/LP_GlobusAP_Template)) to simultaniously perform work within workflows, and generate descriptive RO-Crates. 
 
-To enable this, LivePublication integrates with distributed Globus flows by providing custom Action Provides (LivePublication Action Providers, LPAPs) to generate descriptive RO-Crates at each major computational step in a workflow/methodology. These distributed artefacts are then combined into a full description of the workflow execution recording inputs, outputs, methods, and descriptive metadata. This primary artefact is then used as a data model for a publication, such as this website, to draw upon - providing updating figures, metrics, and other metadata. The structure, recorded metadata, and methods of integration with the publication are all early areas under active development.
+Subsequently, these individual artefacts come together to form an 'orchestration crate'. This crate offers a comprehensive description of the workflow execution, cataloging inputs, outputs, methods, and associated metadata.
 
-Find a browseable version of the underpinning orchestration RO-Crate <a href="http://130.216.217.137:8080" style="color: green;">here!</a>
+The generated orchestration crate serves as a data model for publications, exemplified by this website, which offers live updates to figures, metrics, and other metadata. The design, captured metadata, and integration techniques with the publication are all areas currently being refined. For a deeper exploration of this method, refer to [this article](https://livepublication.github.io/LP_Pub_DistCompPub/). 
 
+For an overview of the publication pipeline behind this article, see @fig-globus-overview. It's important to mention that the methods featured within Layer 3, pertaining to publication and presentation, are showcased for demonstration only. We are actively researching the transition from the orchestration crate to the final compiled article.
+
+::: {.column-body-outset}
+![Publication pipline overview](globus-overview.svg){fig-alt="A figure of the overall LivePublication pipeline used to generate this article." #fig-globus-overview}
+:::
+
+A browseable version of the orchestration crate can be found <a href="http://130.216.217.137:8080" style="color: green;">here</a> for demonstration purposes. 
 
 ## Globus flow, and orchestration crate generation
 
@@ -43,23 +50,10 @@ Click on each component to be directed to the relevant orchestration crate compo
 
 :::
 
-::: {.callout-tip title="Generating mermaid with GPT plugins " collapse="true"}
-
-Using GPT, we can parse the workflow definition within the RO-crate, and generate mermaid on the fly. An example is provided below, leveraging the flow definition found <a href="http://130.216.217.137:8080/WEP.json" style="color: green;">here</a>.
-
-- Model: GPT-4
-- Plugin: 
-- Prompt: 
-
-:::
-
-
-## Reactive publications - predicating content on the data-model
+## Reactive publications and programmatic articles
 
 This section provides examples of how we can leverage live data to create variable, or dependent text. 
-There are many plausable methods for how variable content can be implemented. At its most basic, switch or if statements can be used to include/exclude information dependent on a combination of variables. More complex applications include hybrid LLM/Author NL generation, providing a more flexable interface.
-
-
+There are many plausable methods for how variable content can be implemented. At its most basic, switch or if statements can be used to include/exclude information dependent on a combination of variables. More complex applications include hybrid LLM/Author NL generation, providing more flexible outputs.
 
 
 <!-- Load in variables & provide reactive components -->
@@ -163,7 +157,7 @@ ${langdetect_limit}
 
 ## LID performance comparison 
 
-While future LivePublication applications will primarily focus on how author-driven content can be realistically, and seamlessly integrated with live updating articles, this article uses mostly generative content drawing on data exported from the underlying <a href="http://130.216.217.137:8080/" style="color: green;">RO-Crate</a>. Research on how the author and live content can be integrated is ongoing. Below, GPT-4 provides a short description of the results of this computational workflow, drawing on data generated during the flow. An overview of the LID comparison is provided in figure @fig-accuracies_by_language.
+While future LivePublication applications will primarily focus on how author-driven content can be realistically, and seamlessly integrated with live updating articles, this article uses mostly generative content drawing on data exported from the <a href="http://130.216.217.137:8080/" style="color: green;">orchestration crate</a>. Research on how the author and live content can be integrated is ongoing. Below, GPT-4 provides a short description of the results of this computational workflow, drawing on data generated during the flow. An overview of the LID comparison is provided in @fig-accuracies_by_language.
 
 - Model: GPT-4
 - Prompt: This experiment compares the performance of two language identification methods: fastText and Langdetect. FastText's results are <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/fastText_stats.json" style="color: green;">results</a> and langdetect results are <a href="http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/langdetect_stats.json" style="color: green;">results</a>. Write a few paragraphs discussing the performance of each, comparing their best and worst language accuracies. 
@@ -193,7 +187,7 @@ This figure was generated during the statistics step of the workflow. Click to b
 
 :::
 
-@fig-accuracies_by_language was generated within the workflow, however, as the orchestration crate provides the data generated via the workflow, we can generate these figures at the document level as well.
+@fig-accuracies_by_language, above, was generated within the workflow, however, as the orchestration crate contains the data generated via the workflow, we can generate these figures at the document level as well.
 
 ```{ojs}
 d3 = require("d3@7")
