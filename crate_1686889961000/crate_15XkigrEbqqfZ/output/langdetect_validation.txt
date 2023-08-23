@@ -8,7 +8,7 @@ tur
 nld
 fra
 spa
-ind
+ita
 ell
 spa
 pol
@@ -176,7 +176,7 @@ urd
 fra
 hin
 ita
-ita
+eng
 rus
 swa
 hin
@@ -398,7 +398,7 @@ ara
 por
 hin
 pol
-spa
+ita
 nld
 deu
 ell
@@ -543,7 +543,7 @@ nld
 fra
 zho
 zho
-bul
+mkd
 swa
 swa
 pol
@@ -644,9 +644,9 @@ ara
 hin
 swa
 spa
-afr
+nld
 bul
-spa
+por
 ell
 rus
 urd
@@ -866,7 +866,7 @@ spa
 ara
 jpn
 tha
-rus
+ukr
 pol
 tur
 ara
@@ -918,7 +918,7 @@ tur
 pol
 hin
 bul
-nld
+afr
 jpn
 swa
 deu
@@ -1362,7 +1362,7 @@ vie
 vie
 hin
 jpn
-por
+spa
 eng
 ell
 vie
@@ -1470,7 +1470,7 @@ deu
 vie
 rus
 eng
-ita
+por
 deu
 eng
 tur
@@ -1516,7 +1516,7 @@ bul
 nld
 hin
 nld
-rus
+ukr
 zho
 jpn
 por
@@ -1908,7 +1908,7 @@ ara
 hin
 pol
 eng
-est
+pol
 fra
 vie
 swa
@@ -1994,7 +1994,7 @@ rus
 deu
 rus
 bul
-mkd
+bul
 ara
 tur
 deu
@@ -2095,7 +2095,7 @@ hin
 tur
 nld
 tha
-som
+swa
 zho
 bul
 jpn
@@ -2143,7 +2143,7 @@ afr
 nld
 ell
 nld
-eng
+ind
 fra
 hin
 rus
@@ -2157,7 +2157,7 @@ hin
 pol
 hin
 nld
-fin
+eng
 spa
 bul
 spa
@@ -2315,6 +2315,7 @@ hin
 rus
 eng
 tha
+ell
 ell
 spa
 tur
@@ -2569,7 +2570,7 @@ tha
 jpn
 bul
 bul
-afr
+nld
 vie
 fra
 por
@@ -2713,7 +2714,7 @@ pol
 swa
 swa
 eng
-sqi
+nld
 por
 hin
 spa
@@ -2748,7 +2749,7 @@ por
 fra
 bul
 ara
-zho
+kor
 por
 pol
 fra
@@ -2873,7 +2874,7 @@ ara
 tur
 hin
 jpn
-por
+fra
 eng
 est
 pol
@@ -3150,7 +3151,7 @@ ell
 bul
 fra
 swa
-nld
+afr
 eng
 por
 swa
@@ -3302,7 +3303,7 @@ nld
 tha
 por
 por
-nld
+afr
 hin
 bul
 eng
@@ -3412,7 +3413,7 @@ pol
 rus
 hin
 zho
-kor
+zho
 eng
 hin
 pol
@@ -3623,7 +3624,7 @@ pol
 jpn
 pol
 bul
-ind
+som
 urd
 rus
 vie
@@ -3706,7 +3707,7 @@ ita
 tur
 est
 jpn
-cat
+ita
 fra
 ara
 fra
@@ -3754,7 +3755,7 @@ spa
 pol
 bul
 hin
-hin
+mar
 pol
 nld
 urd
@@ -3799,7 +3800,7 @@ eng
 eng
 bul
 por
-afr
+nld
 pol
 por
 ita
@@ -3845,7 +3846,7 @@ vie
 urd
 nld
 ita
-nld
+eng
 vie
 rus
 swa
@@ -3865,7 +3866,7 @@ tur
 tur
 nld
 bul
-mkd
+bul
 eng
 urd
 urd
@@ -4222,7 +4223,7 @@ eng
 ara
 tha
 fra
-ita
+spa
 ara
 nld
 zho
@@ -4323,7 +4324,7 @@ zho
 nld
 nld
 vie
-est
+hrv
 spa
 zho
 urd
@@ -4406,7 +4407,7 @@ tur
 urd
 spa
 fra
-ind
+som
 zho
 spa
 urd
@@ -4455,7 +4456,7 @@ bul
 pol
 bul
 swa
-afr
+nld
 fra
 ara
 deu
@@ -4767,7 +4768,7 @@ swa
 swa
 ita
 spa
-eng
+deu
 eng
 jpn
 deu
@@ -5112,7 +5113,7 @@ ara
 tha
 deu
 nld
-afr
+nld
 zho
 jpn
 deu
@@ -5604,7 +5605,7 @@ fra
 eng
 som
 fra
-bul
+rus
 pol
 jpn
 eng
@@ -5804,7 +5805,7 @@ urd
 ita
 ita
 nld
-ita
+spa
 bul
 eng
 vie
@@ -6070,7 +6071,7 @@ jpn
 deu
 ind
 ita
-ind
+tur
 fra
 vie
 deu
@@ -6211,7 +6212,7 @@ tha
 deu
 hin
 tur
-eng
+ind
 spa
 eng
 ara
@@ -7198,7 +7199,7 @@ zho
 hin
 urd
 vie
-afr
+nld
 nld
 pol
 rus
@@ -7469,7 +7470,7 @@ ell
 zho
 bul
 rus
-ita
+slv
 bul
 fra
 jpn
@@ -7893,7 +7894,7 @@ pol
 eng
 tur
 vie
-zho
+kor
 deu
 bul
 spa
@@ -8013,7 +8014,7 @@ fra
 por
 ita
 ara
-nld
+deu
 fra
 vie
 jpn
@@ -8280,7 +8281,7 @@ spa
 eng
 zho
 por
-eng
+nld
 fra
 vie
 spa
@@ -8654,11 +8655,11 @@ swa
 tha
 nld
 urd
-kor
+zho
 eng
 hin
 fra
-nep
+hin
 tha
 por
 ell
@@ -8681,7 +8682,7 @@ deu
 ara
 jpn
 deu
-ind
+fin
 tha
 zho
 spa
@@ -8754,7 +8755,7 @@ rus
 zho
 rus
 tha
-kor
+zho
 ell
 deu
 ita
@@ -8777,7 +8778,7 @@ ita
 ell
 fra
 fra
-ita
+fra
 swa
 bul
 swa
@@ -8957,7 +8958,7 @@ eng
 rus
 swa
 tur
-afr
+eng
 tur
 swa
 afr
@@ -9421,7 +9422,7 @@ zho
 ara
 tha
 pol
-ind
+spa
 fra
 deu
 nld
@@ -9458,7 +9459,7 @@ pol
 ara
 rus
 ita
-por
+ita
 fra
 bul
 ell
@@ -9702,7 +9703,7 @@ deu
 tur
 zho
 zho
-hin
+fra
 por
 ita
 swa
@@ -9952,7 +9953,7 @@ vie
 swa
 fra
 eng
-deu
+eng
 ara
 spa
 spa

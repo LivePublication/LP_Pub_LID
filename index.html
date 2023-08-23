@@ -463,7 +463,7 @@ Generative Content
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>This figure was generated during the statistics step of the workflow. Click to be directed to this component within the orchestration crate.</p>
-</div></div><p><a href="#fig-accuracies_by_language">Figure&nbsp;2</a>, above, was generated within the workflow, however, as the orchestration crate provides the data generated via the workflow, we can generate these figures at the document level as well.</p>
+</div></div><p><a href="#fig-accuracies_by_language">Figure&nbsp;2</a>, above, was generated within the workflow, however, as the orchestration crate contains the data generated via the workflow, we can generate these figures at the document level as well.</p>
 <div class="cell">
 <details class="hidden">
 <summary>Code</summary>
@@ -739,7 +739,7 @@ Generative Content
 <p>Each LPAP contains a method directory including the docker image and associated scripts. Using these, we can attempt to generate descriptions of the method in NL. This is an early experiement into the performance/accuracy of such a method.</p>
 <section id="fasttext-lpap" class="level4">
 <h4 class="anchored" data-anchor-id="fasttext-lpap">FastText LPAP</h4>
-<p><a href="#dnldts48437" onclick="fetch('data:application/x-python;base64,aW1wb3J0IG9zCmltcG9ydCBmYXN0dGV4dAppbXBvcnQgY29kZWNzIAppbXBvcnQgc3lzCgojIERpcmVjdG9yeSBjb25zdGFudHMKQkFTRV9ESVIgPSBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5hYnNwYXRoKF9fZmlsZV9fKSkKSU5QVVRfRElSID0gb3MuZW52aXJvbi5nZXQoIklOUFVUX0RJUiIsIG9zLnBhdGguam9pbihCQVNFX0RJUiwgImlucHV0IikpICAKT1VUUFVUX0RJUiA9IG9zLmVudmlyb24uZ2V0KCJPVVRQVVRfRElSIiwgb3MucGF0aC5qb2luKEJBU0VfRElSLCAib3V0cHV0IikpCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgCiAgICB3aXRoIGNvZGVjcy5vcGVuKHN5cy5hcmd2WzFdLCAiciIsIGVuY29kaW5nID0gInV0Zi04IikgYXMgZjoKICAgICAgICBsaW5lcyA9IGYucmVhZGxpbmVzKCkKCiAgICAjTElEMiBDb25zdGFudHMKICAgIG1vZGVsID0gZmFzdHRleHQubG9hZF9tb2RlbCgibW9kZWwubGlkLnRvcDgwMC5lcG9jaDIwLm5lZzEwMC5kaW0xMDAubnMuc21hbGwubWluNS5mdHoiKQoKICAgIHByZWRpY3Rpb25zID0gW10KICAgIGZvciBsaW5lIGluIG9wZW4oc3lzLmFyZ3ZbMV0pOgogICAgICAgICMgc3RyaXAgXG4gZnJvbSBsaW5lCiAgICAgICAgbGluZSA9IGxpbmUucnN0cmlwKCJcbiIpCiAgICAgICAgcHJlZF9sYWJlbCA9IG1vZGVsLnByZWRpY3QobGluZSkKICAgICAgICBwcmVkaWN0aW9ucy5hcHBlbmQocHJlZF9sYWJlbCkKCiAgICAjIHdyaXRlIHByZWRpY3Rpb25zIHRvIGZpbGUKICAgIHdpdGggb3BlbihmIntPVVRQVVRfRElSfS9mYXN0VGV4dF9wcmVkaWN0aW9ucy50eHQiLCAidyIpIGFzIGY6CiAgICAgICAgZm9yIHByZWQgaW4gcHJlZGljdGlvbnM6CiAgICAgICAgICAgICMgV3JpdGUgcHJlZGljdGlvbiB0byBmaWxlLCBhbmQgcmVtb3ZlIF9fbGFiZWxfXyBwcmVmaXgKICAgICAgICAgICAgZi53cml0ZShwcmVkWzBdWzBdLnJlcGxhY2UoIl9fbGFiZWxfXyIsICIiKSArICJcbiIpCg==').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts1819" onclick="fetch('data:application/x-python;base64,aW1wb3J0IG9zCmltcG9ydCBmYXN0dGV4dAppbXBvcnQgY29kZWNzIAppbXBvcnQgc3lzCgojIERpcmVjdG9yeSBjb25zdGFudHMKQkFTRV9ESVIgPSBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5hYnNwYXRoKF9fZmlsZV9fKSkKSU5QVVRfRElSID0gb3MuZW52aXJvbi5nZXQoIklOUFVUX0RJUiIsIG9zLnBhdGguam9pbihCQVNFX0RJUiwgImlucHV0IikpICAKT1VUUFVUX0RJUiA9IG9zLmVudmlyb24uZ2V0KCJPVVRQVVRfRElSIiwgb3MucGF0aC5qb2luKEJBU0VfRElSLCAib3V0cHV0IikpCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgCiAgICB3aXRoIGNvZGVjcy5vcGVuKHN5cy5hcmd2WzFdLCAiciIsIGVuY29kaW5nID0gInV0Zi04IikgYXMgZjoKICAgICAgICBsaW5lcyA9IGYucmVhZGxpbmVzKCkKCiAgICAjTElEMiBDb25zdGFudHMKICAgIG1vZGVsID0gZmFzdHRleHQubG9hZF9tb2RlbCgibW9kZWwubGlkLnRvcDgwMC5lcG9jaDIwLm5lZzEwMC5kaW0xMDAubnMuc21hbGwubWluNS5mdHoiKQoKICAgIHByZWRpY3Rpb25zID0gW10KICAgIGZvciBsaW5lIGluIG9wZW4oc3lzLmFyZ3ZbMV0pOgogICAgICAgICMgc3RyaXAgXG4gZnJvbSBsaW5lCiAgICAgICAgbGluZSA9IGxpbmUucnN0cmlwKCJcbiIpCiAgICAgICAgcHJlZF9sYWJlbCA9IG1vZGVsLnByZWRpY3QobGluZSkKICAgICAgICBwcmVkaWN0aW9ucy5hcHBlbmQocHJlZF9sYWJlbCkKCiAgICAjIHdyaXRlIHByZWRpY3Rpb25zIHRvIGZpbGUKICAgIHdpdGggb3BlbihmIntPVVRQVVRfRElSfS9mYXN0VGV4dF9wcmVkaWN0aW9ucy50eHQiLCAidyIpIGFzIGY6CiAgICAgICAgZm9yIHByZWQgaW4gcHJlZGljdGlvbnM6CiAgICAgICAgICAgICMgV3JpdGUgcHJlZGljdGlvbiB0byBmaWxlLCBhbmQgcmVtb3ZlIF9fbGFiZWxfXyBwcmVmaXgKICAgICAgICAgICAgZi53cml0ZShwcmVkWzBdWzBdLnJlcGxhY2UoIl9fbGFiZWxfXyIsICIiKSArICJcbiIpCg==').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -747,7 +747,7 @@ Generative Content
       a.download = 'fastText.py'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-info downloadthis  " id="dnldts48437"><i class="bi bi-filetype-py"></i> Download the script </button></a></p>
+        });"><button class="btn btn-info downloadthis  " id="dnldts1819"><i class="bi bi-filetype-py"></i> Download the script </button></a></p>
 <div data-add-from="crate_1686889961000/crate_ful1t6i5wdGV/method_resources/computation_docker/main.py">
 <details>
 <summary>Code</summary>
@@ -808,7 +808,7 @@ Generative Content
 </section>
 <section id="langdetect-lpap" class="level4">
 <h4 class="anchored" data-anchor-id="langdetect-lpap">langdetect LPAP</h4>
-<p><a href="#dnldts54355" onclick="fetch('data:application/x-python;base64,ZnJvbSBsYW5nZGV0ZWN0IGltcG9ydCBEZXRlY3RvckZhY3RvcnksIGRldGVjdCwgZGV0ZWN0X2xhbmdzCmltcG9ydCBvcwppbXBvcnQgY29kZWNzIAppbXBvcnQgc3lzCgojIERpcmVjdG9yeSBjb25zdGFudHMKQkFTRV9ESVIgPSBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5hYnNwYXRoKF9fZmlsZV9fKSkKSU5QVVRfRElSID0gb3MuZW52aXJvbi5nZXQoIklOUFVUX0RJUiIsIG9zLnBhdGguam9pbihCQVNFX0RJUiwgImlucHV0IikpICAKT1VUUFVUX0RJUiA9IG9zLmVudmlyb24uZ2V0KCJPVVRQVVRfRElSIiwgb3MucGF0aC5qb2luKEJBU0VfRElSLCAib3V0cHV0IikpCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgCiAgICB3aXRoIGNvZGVjcy5vcGVuKHN5cy5hcmd2WzFdLCAiciIsIGVuY29kaW5nID0gInV0Zi04IikgYXMgZjoKICAgICAgICBsaW5lcyA9IGYucmVhZGxpbmVzKCkKCiAgICAgICMgd3JpdGUgcHJlZGljdGlvbnMgdG8gZmlsZQogICAgd2l0aCBvcGVuKGYie09VVFBVVF9ESVJ9L2xhbmdkZXRlY3RfcHJlZGljdGlvbnMudHh0IiwgInciKSBhcyBmOgogICAgICAgIGNvdW50ZXIgPSAwCiAgICAgICAgZm9yIGxpbmUgaW4gbGluZXM6CiAgICAgICAgICAgIGxpbmUgPSBsaW5lLnN0cmlwKCkgICMgUmVtb3ZlIGxlYWRpbmcvdHJhaWxpbmcgd2hpdGUgc3BhY2UgaW5jbHVkaW5nICdcbicKICAgICAgICAgICAgaWYgbGluZTogICMgT25seSBwcm9jZXNzIHRoZSBsaW5lIGlmIGl0J3Mgbm90IGVtcHR5CiAgICAgICAgICAgICAgICBwcmludChjb3VudGVyKQogICAgICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgICAgIGYud3JpdGUoZGV0ZWN0KGxpbmUpICsgIlxuIikKICAgICAgICAgICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgICAgICAgICAjIE9ubHkgd3JpdGUgZXJyb3IgaWYgbGluZSBpc24ndCBlbXB0eQogICAgICAgICAgICAgICAgICAgIGlmIGxpbmU6CiAgICAgICAgICAgICAgICAgICAgICAgIGYud3JpdGUoZiJlcnJvcjoge2xpbmV9IiArICJcbiIpCgogICAgICAgICAgICAgICAgY291bnRlciArPSAxCgogIA==').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts8192" onclick="fetch('data:application/x-python;base64,ZnJvbSBsYW5nZGV0ZWN0IGltcG9ydCBEZXRlY3RvckZhY3RvcnksIGRldGVjdCwgZGV0ZWN0X2xhbmdzCmltcG9ydCBvcwppbXBvcnQgY29kZWNzIAppbXBvcnQgc3lzCgojIERpcmVjdG9yeSBjb25zdGFudHMKQkFTRV9ESVIgPSBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5hYnNwYXRoKF9fZmlsZV9fKSkKSU5QVVRfRElSID0gb3MuZW52aXJvbi5nZXQoIklOUFVUX0RJUiIsIG9zLnBhdGguam9pbihCQVNFX0RJUiwgImlucHV0IikpICAKT1VUUFVUX0RJUiA9IG9zLmVudmlyb24uZ2V0KCJPVVRQVVRfRElSIiwgb3MucGF0aC5qb2luKEJBU0VfRElSLCAib3V0cHV0IikpCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgCiAgICB3aXRoIGNvZGVjcy5vcGVuKHN5cy5hcmd2WzFdLCAiciIsIGVuY29kaW5nID0gInV0Zi04IikgYXMgZjoKICAgICAgICBsaW5lcyA9IGYucmVhZGxpbmVzKCkKCiAgICAgICMgd3JpdGUgcHJlZGljdGlvbnMgdG8gZmlsZQogICAgd2l0aCBvcGVuKGYie09VVFBVVF9ESVJ9L2xhbmdkZXRlY3RfcHJlZGljdGlvbnMudHh0IiwgInciKSBhcyBmOgogICAgICAgIGNvdW50ZXIgPSAwCiAgICAgICAgZm9yIGxpbmUgaW4gbGluZXM6CiAgICAgICAgICAgIGxpbmUgPSBsaW5lLnN0cmlwKCkgICMgUmVtb3ZlIGxlYWRpbmcvdHJhaWxpbmcgd2hpdGUgc3BhY2UgaW5jbHVkaW5nICdcbicKICAgICAgICAgICAgaWYgbGluZTogICMgT25seSBwcm9jZXNzIHRoZSBsaW5lIGlmIGl0J3Mgbm90IGVtcHR5CiAgICAgICAgICAgICAgICBwcmludChjb3VudGVyKQogICAgICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgICAgIGYud3JpdGUoZGV0ZWN0KGxpbmUpICsgIlxuIikKICAgICAgICAgICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgICAgICAgICAjIE9ubHkgd3JpdGUgZXJyb3IgaWYgbGluZSBpc24ndCBlbXB0eQogICAgICAgICAgICAgICAgICAgIGlmIGxpbmU6CiAgICAgICAgICAgICAgICAgICAgICAgIGYud3JpdGUoZiJlcnJvcjoge2xpbmV9IiArICJcbiIpCgogICAgICAgICAgICAgICAgY291bnRlciArPSAxCgogIA==').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -816,7 +816,7 @@ Generative Content
       a.download = 'langdetect.py'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-info downloadthis  " id="dnldts54355"><i class="bi bi-filetype-py"></i> Download the script </button></a></p>
+        });"><button class="btn btn-info downloadthis  " id="dnldts8192"><i class="bi bi-filetype-py"></i> Download the script </button></a></p>
 <div data-add-from="crate_1686889961000/crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py">
 <details>
 <summary>Code</summary>
@@ -1400,7 +1400,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb9-195"><a href="#cb9-195" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-196"><a href="#cb9-196" aria-hidden="true" tabindex="-1"></a>:::</span>
 <span id="cb9-197"><a href="#cb9-197" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-198"><a href="#cb9-198" aria-hidden="true" tabindex="-1"></a>@fig-accuracies_by_language, above, was generated within the workflow, however, as the orchestration crate provides the data generated via the workflow, we can generate these figures at the document level as well.</span>
+<span id="cb9-198"><a href="#cb9-198" aria-hidden="true" tabindex="-1"></a>@fig-accuracies_by_language, above, was generated within the workflow, however, as the orchestration crate contains the data generated via the workflow, we can generate these figures at the document level as well.</span>
 <span id="cb9-199"><a href="#cb9-199" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-202"><a href="#cb9-202" aria-hidden="true" tabindex="-1"></a><span class="in">```{ojs}</span></span>
 <span id="cb9-203"><a href="#cb9-203" aria-hidden="true" tabindex="-1"></a>d3 <span class="op">=</span> <span class="pp">require</span>(<span class="st">"d3@7"</span>)</span>

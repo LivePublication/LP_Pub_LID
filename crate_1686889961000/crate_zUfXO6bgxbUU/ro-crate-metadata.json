@@ -4,8 +4,8 @@
         {
             "@id": "./",
             "@type": "Dataset",
-            "datePublished": "2023-06-16T02:44:47.254785",
-            "description": "LP artefact for action zUfXO6bgxbUU",
+            "datePublished": "2023-08-22T21:36:13.912411",
+            "description": "LP artefact for action Oxh2kVr4DdXg",
             "hasPart": [
                 {
                     "@id": "input/"
@@ -35,7 +35,7 @@
                     "@id": "method_resources/computation_docker/requirements.txt"
                 }
             ],
-            "name": "crate_zUfXO6bgxbUU"
+            "name": "action_Oxh2kVr4DdXg"
         },
         {
             "@id": "ro-crate-metadata.json",
@@ -56,7 +56,7 @@
             "username": "aell854@auckland.ac.nz"
         },
         {
-            "@id": "#zUfXO6bgxbUU",
+            "@id": "#Oxh2kVr4DdXg",
             "@type": "SoftwareApplication",
             "API_version": "1.0",
             "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
@@ -64,7 +64,7 @@
             "executed": {
                 "@id": "#25af9d3b-aeb8-4f44-9c88-3264ad82a3ae"
             },
-            "globus_auth_scope": "https://auth.globus.org/scopes/feda0005-01ad-414d-81ce-dcc5b7f61a1f/action_provider_operations",
+            "globus_auth_scope": "https://auth.globus.org/scopes/78c81851-0438-4c26-ae2b-7977b79a3701/action_provider_operations",
             "input_dir": {
                 "@id": "input/"
             },
@@ -83,8 +83,8 @@
             },
             "subtitle": "langdetect Action Provider",
             "title": "langdetect",
-            "total_time": 40.80521607398987,
-            "url": "http://130.216.217.48:8080/langdetect/run",
+            "total_time": 40.98932933807373,
+            "url": "http://130.216.217.76:8080/langdetect/run",
             "visible_to": [
                 "public"
             ]
