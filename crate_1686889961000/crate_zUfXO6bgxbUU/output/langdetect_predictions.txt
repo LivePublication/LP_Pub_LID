@@ -176,7 +176,7 @@ ur
 fr
 hi
 it
-en
+it
 ru
 sw
 hi
@@ -588,7 +588,7 @@ tr
 hi
 el
 tr
-zh-cn
+ko
 fr
 pt
 de
@@ -644,7 +644,7 @@ ar
 hi
 sw
 es
-nl
+af
 bg
 pt
 el
@@ -866,7 +866,7 @@ es
 ar
 ja
 th
-uk
+ru
 pl
 tr
 ar
@@ -918,7 +918,7 @@ tr
 pl
 hi
 bg
-af
+nl
 ja
 sw
 de
@@ -972,7 +972,7 @@ de
 es
 zh-cn
 sw
-pt
+es
 sw
 da
 vi
@@ -1470,7 +1470,7 @@ de
 vi
 ru
 en
-pt
+it
 de
 en
 tr
@@ -2095,7 +2095,7 @@ hi
 tr
 nl
 th
-sw
+so
 zh-cn
 bg
 ja
@@ -2143,7 +2143,7 @@ af
 nl
 el
 nl
-id
+tl
 fr
 hi
 ru
@@ -2157,7 +2157,7 @@ hi
 pl
 hi
 nl
-en
+fi
 es
 bg
 es
@@ -2725,7 +2725,7 @@ tr
 en
 sw
 vi
-pt
+en
 bg
 zh-cn
 vi
@@ -3303,7 +3303,7 @@ nl
 th
 pt
 pt
-af
+nl
 hi
 bg
 en
@@ -3413,7 +3413,7 @@ pl
 ru
 hi
 zh-cn
-zh-cn
+ko
 en
 hi
 pl
@@ -3664,7 +3664,7 @@ hi
 tr
 ja
 el
-it
+fr
 en
 hi
 pl
@@ -3707,7 +3707,7 @@ it
 tr
 et
 ja
-it
+ca
 fr
 ar
 fr
@@ -3800,7 +3800,7 @@ en
 en
 bg
 pt
-nl
+af
 pl
 pt
 it
@@ -4186,7 +4186,7 @@ bg
 en
 pl
 tr
-pl
+de
 sw
 tr
 tr
@@ -4223,7 +4223,7 @@ en
 ar
 th
 fr
-es
+it
 ar
 nl
 zh-cn
@@ -4324,7 +4324,7 @@ zh-cn
 nl
 nl
 vi
-hr
+et
 es
 zh-cn
 ur
@@ -4407,7 +4407,7 @@ tr
 ur
 es
 fr
-so
+id
 zh-cn
 es
 ur
@@ -4456,7 +4456,7 @@ bg
 pl
 bg
 sw
-nl
+af
 fr
 ar
 de
@@ -4768,7 +4768,7 @@ sw
 sw
 it
 es
-de
+fi
 en
 ja
 de
@@ -4901,7 +4901,7 @@ fr
 vi
 fr
 nl
-zh-cn
+ko
 ar
 th
 zh-cn
@@ -4971,7 +4971,7 @@ ja
 el
 it
 it
-nl
+af
 ja
 ja
 el
@@ -6169,7 +6169,7 @@ sw
 ru
 ar
 pt
-en
+fr
 ur
 fr
 en
@@ -6263,7 +6263,7 @@ fr
 ur
 el
 ur
-af
+nl
 el
 it
 ur
@@ -6552,7 +6552,7 @@ hi
 pl
 pt
 hi
-ko
+zh-cn
 vi
 de
 fr
@@ -6850,7 +6850,7 @@ zh-cn
 zh-cn
 hi
 pt
-nl
+de
 en
 th
 fr
@@ -6979,7 +6979,7 @@ sw
 ur
 vi
 vi
-zh-cn
+ko
 ja
 th
 ja
@@ -7039,7 +7039,7 @@ hi
 ar
 nl
 en
-it
+pt
 ru
 zh-cn
 th
@@ -7470,7 +7470,7 @@ el
 zh-cn
 bg
 ru
-sl
+it
 bg
 fr
 ja
@@ -7560,7 +7560,7 @@ it
 vi
 sw
 pt
-lv
+sl
 vi
 vi
 it
@@ -7571,7 +7571,7 @@ bg
 pl
 ar
 de
-zh-cn
+ko
 vi
 sw
 it
@@ -7762,7 +7762,7 @@ ru
 ar
 en
 ar
-en
+id
 ur
 tr
 vi
@@ -7880,7 +7880,7 @@ fr
 el
 ur
 pl
-pt
+it
 th
 fr
 bg
@@ -7911,7 +7911,7 @@ vi
 fr
 ar
 ja
-ru
+mk
 tr
 es
 vi
@@ -8014,7 +8014,7 @@ fr
 pt
 it
 ar
-de
+nl
 fr
 vi
 ja
@@ -8137,7 +8137,7 @@ nl
 bg
 es
 en
-so
+sw
 tr
 ur
 fr
@@ -8274,7 +8274,7 @@ el
 ja
 th
 sw
-da
+de
 bg
 de
 es
@@ -8719,7 +8719,7 @@ ru
 nl
 bg
 de
-pt
+es
 it
 es
 vi
@@ -8958,7 +8958,7 @@ en
 ru
 sw
 tr
-en
+af
 tr
 sw
 af
@@ -9243,7 +9243,7 @@ pl
 es
 so
 bg
-bg
+mk
 ja
 bg
 fr
@@ -9573,7 +9573,7 @@ es
 pl
 sw
 tr
-bg
+mk
 ar
 sw
 ru
@@ -9607,7 +9607,7 @@ pl
 nl
 fr
 hi
-en
+fr
 pl
 es
 pt
@@ -9953,7 +9953,7 @@ vi
 sw
 fr
 en
-en
+de
 ar
 es
 es

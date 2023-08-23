@@ -403,7 +403,7 @@ nld
 deu
 ell
 deu
-
+bih
 por
 vie
 pol
@@ -4149,7 +4149,7 @@ tur
 mal
 fra
 hin
-
+bih
 tur
 tur
 mal
@@ -4182,7 +4182,7 @@ rus
 eng
 mal
 bul
-zho
+zhs
 pol
 tur
 bar
@@ -5319,7 +5319,7 @@ urd
 hin
 hin
 mal
-zho
+zhs
 tha
 ara
 bul
@@ -6666,7 +6666,7 @@ eng
 fra
 spa
 eng
-zho
+zhs
 mal
 nld
 bul

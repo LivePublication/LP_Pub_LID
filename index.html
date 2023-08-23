@@ -739,7 +739,7 @@ Generative Content
 <p>Each LPAP contains a method directory including the docker image and associated scripts. Using these, we can attempt to generate descriptions of the method in NL. This is an early experiement into the performance/accuracy of such a method.</p>
 <section id="fasttext-lpap" class="level4">
 <h4 class="anchored" data-anchor-id="fasttext-lpap">FastText LPAP</h4>
-<p><a href="#dnldts1819" onclick="fetch('data:application/x-python;base64,aW1wb3J0IG9zCmltcG9ydCBmYXN0dGV4dAppbXBvcnQgY29kZWNzIAppbXBvcnQgc3lzCgojIERpcmVjdG9yeSBjb25zdGFudHMKQkFTRV9ESVIgPSBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5hYnNwYXRoKF9fZmlsZV9fKSkKSU5QVVRfRElSID0gb3MuZW52aXJvbi5nZXQoIklOUFVUX0RJUiIsIG9zLnBhdGguam9pbihCQVNFX0RJUiwgImlucHV0IikpICAKT1VUUFVUX0RJUiA9IG9zLmVudmlyb24uZ2V0KCJPVVRQVVRfRElSIiwgb3MucGF0aC5qb2luKEJBU0VfRElSLCAib3V0cHV0IikpCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgCiAgICB3aXRoIGNvZGVjcy5vcGVuKHN5cy5hcmd2WzFdLCAiciIsIGVuY29kaW5nID0gInV0Zi04IikgYXMgZjoKICAgICAgICBsaW5lcyA9IGYucmVhZGxpbmVzKCkKCiAgICAjTElEMiBDb25zdGFudHMKICAgIG1vZGVsID0gZmFzdHRleHQubG9hZF9tb2RlbCgibW9kZWwubGlkLnRvcDgwMC5lcG9jaDIwLm5lZzEwMC5kaW0xMDAubnMuc21hbGwubWluNS5mdHoiKQoKICAgIHByZWRpY3Rpb25zID0gW10KICAgIGZvciBsaW5lIGluIG9wZW4oc3lzLmFyZ3ZbMV0pOgogICAgICAgICMgc3RyaXAgXG4gZnJvbSBsaW5lCiAgICAgICAgbGluZSA9IGxpbmUucnN0cmlwKCJcbiIpCiAgICAgICAgcHJlZF9sYWJlbCA9IG1vZGVsLnByZWRpY3QobGluZSkKICAgICAgICBwcmVkaWN0aW9ucy5hcHBlbmQocHJlZF9sYWJlbCkKCiAgICAjIHdyaXRlIHByZWRpY3Rpb25zIHRvIGZpbGUKICAgIHdpdGggb3BlbihmIntPVVRQVVRfRElSfS9mYXN0VGV4dF9wcmVkaWN0aW9ucy50eHQiLCAidyIpIGFzIGY6CiAgICAgICAgZm9yIHByZWQgaW4gcHJlZGljdGlvbnM6CiAgICAgICAgICAgICMgV3JpdGUgcHJlZGljdGlvbiB0byBmaWxlLCBhbmQgcmVtb3ZlIF9fbGFiZWxfXyBwcmVmaXgKICAgICAgICAgICAgZi53cml0ZShwcmVkWzBdWzBdLnJlcGxhY2UoIl9fbGFiZWxfXyIsICIiKSArICJcbiIpCg==').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts7213" onclick="fetch('data:application/x-python;base64,aW1wb3J0IG9zCmltcG9ydCBmYXN0dGV4dAppbXBvcnQgY29kZWNzIAppbXBvcnQgc3lzCgojIERpcmVjdG9yeSBjb25zdGFudHMKQkFTRV9ESVIgPSBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5hYnNwYXRoKF9fZmlsZV9fKSkKSU5QVVRfRElSID0gb3MuZW52aXJvbi5nZXQoIklOUFVUX0RJUiIsIG9zLnBhdGguam9pbihCQVNFX0RJUiwgImlucHV0IikpICAKT1VUUFVUX0RJUiA9IG9zLmVudmlyb24uZ2V0KCJPVVRQVVRfRElSIiwgb3MucGF0aC5qb2luKEJBU0VfRElSLCAib3V0cHV0IikpCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgCiAgICB3aXRoIGNvZGVjcy5vcGVuKHN5cy5hcmd2WzFdLCAiciIsIGVuY29kaW5nID0gInV0Zi04IikgYXMgZjoKICAgICAgICBsaW5lcyA9IGYucmVhZGxpbmVzKCkKCiAgICAjTElEMiBDb25zdGFudHMKICAgIG1vZGVsID0gZmFzdHRleHQubG9hZF9tb2RlbCgibW9kZWwubGlkLnRvcDgwMC5lcG9jaDIwLm5lZzEwMC5kaW0xMDAubnMuc21hbGwubWluNS5mdHoiKQoKICAgIHByZWRpY3Rpb25zID0gW10KICAgIGZvciBsaW5lIGluIG9wZW4oc3lzLmFyZ3ZbMV0pOgogICAgICAgICMgc3RyaXAgXG4gZnJvbSBsaW5lCiAgICAgICAgbGluZSA9IGxpbmUucnN0cmlwKCJcbiIpCiAgICAgICAgcHJlZF9sYWJlbCA9IG1vZGVsLnByZWRpY3QobGluZSkKICAgICAgICBwcmVkaWN0aW9ucy5hcHBlbmQocHJlZF9sYWJlbCkKCiAgICAjIHdyaXRlIHByZWRpY3Rpb25zIHRvIGZpbGUKICAgIHdpdGggb3BlbihmIntPVVRQVVRfRElSfS9mYXN0VGV4dF9wcmVkaWN0aW9ucy50eHQiLCAidyIpIGFzIGY6CiAgICAgICAgZm9yIHByZWQgaW4gcHJlZGljdGlvbnM6CiAgICAgICAgICAgICMgV3JpdGUgcHJlZGljdGlvbiB0byBmaWxlLCBhbmQgcmVtb3ZlIF9fbGFiZWxfXyBwcmVmaXgKICAgICAgICAgICAgZi53cml0ZShwcmVkWzBdWzBdLnJlcGxhY2UoIl9fbGFiZWxfXyIsICIiKSArICJcbiIpCg==').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -747,7 +747,7 @@ Generative Content
       a.download = 'fastText.py'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-info downloadthis  " id="dnldts1819"><i class="bi bi-filetype-py"></i> Download the script </button></a></p>
+        });"><button class="btn btn-info downloadthis  " id="dnldts7213"><i class="bi bi-filetype-py"></i> Download the script </button></a></p>
 <div data-add-from="crate_1686889961000/crate_ful1t6i5wdGV/method_resources/computation_docker/main.py">
 <details>
 <summary>Code</summary>
@@ -808,7 +808,7 @@ Generative Content
 </section>
 <section id="langdetect-lpap" class="level4">
 <h4 class="anchored" data-anchor-id="langdetect-lpap">langdetect LPAP</h4>
-<p><a href="#dnldts8192" onclick="fetch('data:application/x-python;base64,ZnJvbSBsYW5nZGV0ZWN0IGltcG9ydCBEZXRlY3RvckZhY3RvcnksIGRldGVjdCwgZGV0ZWN0X2xhbmdzCmltcG9ydCBvcwppbXBvcnQgY29kZWNzIAppbXBvcnQgc3lzCgojIERpcmVjdG9yeSBjb25zdGFudHMKQkFTRV9ESVIgPSBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5hYnNwYXRoKF9fZmlsZV9fKSkKSU5QVVRfRElSID0gb3MuZW52aXJvbi5nZXQoIklOUFVUX0RJUiIsIG9zLnBhdGguam9pbihCQVNFX0RJUiwgImlucHV0IikpICAKT1VUUFVUX0RJUiA9IG9zLmVudmlyb24uZ2V0KCJPVVRQVVRfRElSIiwgb3MucGF0aC5qb2luKEJBU0VfRElSLCAib3V0cHV0IikpCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgCiAgICB3aXRoIGNvZGVjcy5vcGVuKHN5cy5hcmd2WzFdLCAiciIsIGVuY29kaW5nID0gInV0Zi04IikgYXMgZjoKICAgICAgICBsaW5lcyA9IGYucmVhZGxpbmVzKCkKCiAgICAgICMgd3JpdGUgcHJlZGljdGlvbnMgdG8gZmlsZQogICAgd2l0aCBvcGVuKGYie09VVFBVVF9ESVJ9L2xhbmdkZXRlY3RfcHJlZGljdGlvbnMudHh0IiwgInciKSBhcyBmOgogICAgICAgIGNvdW50ZXIgPSAwCiAgICAgICAgZm9yIGxpbmUgaW4gbGluZXM6CiAgICAgICAgICAgIGxpbmUgPSBsaW5lLnN0cmlwKCkgICMgUmVtb3ZlIGxlYWRpbmcvdHJhaWxpbmcgd2hpdGUgc3BhY2UgaW5jbHVkaW5nICdcbicKICAgICAgICAgICAgaWYgbGluZTogICMgT25seSBwcm9jZXNzIHRoZSBsaW5lIGlmIGl0J3Mgbm90IGVtcHR5CiAgICAgICAgICAgICAgICBwcmludChjb3VudGVyKQogICAgICAgICAgICAgICAgdHJ5OgogICAgICAgICAgICAgICAgICAgIGYud3JpdGUoZGV0ZWN0KGxpbmUpICsgIlxuIikKICAgICAgICAgICAgICAgIGV4Y2VwdDoKICAgICAgICAgICAgICAgICAgICAjIE9ubHkgd3JpdGUgZXJyb3IgaWYgbGluZSBpc24ndCBlbXB0eQogICAgICAgICAgICAgICAgICAgIGlmIGxpbmU6CiAgICAgICAgICAgICAgICAgICAgICAgIGYud3JpdGUoZiJlcnJvcjoge2xpbmV9IiArICJcbiIpCgogICAgICAgICAgICAgICAgY291bnRlciArPSAxCgogIA==').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts58260" onclick="fetch('data:application/x-python;base64,ZnJvbSBsYW5nZGV0ZWN0IGltcG9ydCBEZXRlY3RvckZhY3RvcnksIGRldGVjdCwgZGV0ZWN0X2xhbmdzCmltcG9ydCBvcwppbXBvcnQgY29kZWNzIAppbXBvcnQgc3lzCgojIERpcmVjdG9yeSBjb25zdGFudHMKQkFTRV9ESVIgPSBvcy5wYXRoLmRpcm5hbWUob3MucGF0aC5hYnNwYXRoKF9fZmlsZV9fKSkKSU5QVVRfRElSID0gb3MuZW52aXJvbi5nZXQoIklOUFVUX0RJUiIsIG9zLnBhdGguam9pbihCQVNFX0RJUiwgImlucHV0IikpICAKT1VUUFVUX0RJUiA9IG9zLmVudmlyb24uZ2V0KCJPVVRQVVRfRElSIiwgb3MucGF0aC5qb2luKEJBU0VfRElSLCAib3V0cHV0IikpCgppZiBfX25hbWVfXyA9PSAiX19tYWluX18iOgogICAgCiAgICAjIFJlYWQgaW5wdXQgbGluZXMKICAgIHdpdGggY29kZWNzLm9wZW4oc3lzLmFyZ3ZbMV0sICJyIiwgZW5jb2RpbmcgPSAidXRmLTgiKSBhcyBmOgogICAgICAgIGxpbmVzID0gZi5yZWFkbGluZXMoKQoKICAgICMgV3JpdGUgcHJlZGljdGlvbnMgdG8gZmlsZQogICAgd2l0aCBvcGVuKGYie09VVFBVVF9ESVJ9L2xhbmdkZXRlY3RfcHJlZGljdGlvbnMudHh0IiwgInciKSBhcyBmOgogICAgICAgIGZvciBsaW5lIGluIGxpbmVzOgogICAgICAgICAgICBsaW5lID0gbGluZS5zdHJpcCgpICAjIFJlbW92ZSBsZWFkaW5nL3RyYWlsaW5nIHdoaXRlIHNwYWNlIGluY2x1ZGluZyAnXFxuJwogICAgICAgICAgICBpZiBsaW5lOiAgIyBPbmx5IHByb2Nlc3MgdGhlIGxpbmUgaWYgaXQncyBub3QgZW1wdHkKICAgICAgICAgICAgICAgIHRyeToKICAgICAgICAgICAgICAgICAgICBkZXRlY3RlZF9sYW5ndWFnZSA9IGRldGVjdChsaW5lKQogICAgICAgICAgICAgICAgICAgIGYud3JpdGUoZGV0ZWN0ZWRfbGFuZ3VhZ2UgKyAiXG4iKQogICAgICAgICAgICAgICAgZXhjZXB0OgogICAgICAgICAgICAgICAgICAgICMgSW4gY2FzZSBvZiBhbiBleGNlcHRpb24sIHdyaXRlIGFuIGVycm9yIGxpbmUgd2l0aCB0aGUgbGluZSBjb250ZW50CiAgICAgICAgICAgICAgICAgICAgZi53cml0ZShmImVycm9yOiB7bGluZX0gXG4iKQogIA==').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -816,7 +816,7 @@ Generative Content
       a.download = 'langdetect.py'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-info downloadthis  " id="dnldts8192"><i class="bi bi-filetype-py"></i> Download the script </button></a></p>
+        });"><button class="btn btn-info downloadthis  " id="dnldts58260"><i class="bi bi-filetype-py"></i> Download the script </button></a></p>
 <div data-add-from="crate_1686889961000/crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py">
 <details>
 <summary>Code</summary>
@@ -832,26 +832,22 @@ Generative Content
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> codecs.<span class="bu">open</span>(sys.argv[<span class="dv">1</span>], <span class="st">"r"</span>, encoding <span class="op">=</span> <span class="st">"utf-8"</span>) <span class="im">as</span> f:</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        lines <span class="op">=</span> f.readlines()</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>      <span class="co"># write predictions to file</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(<span class="ss">f"</span><span class="sc">{</span>OUTPUT_DIR<span class="sc">}</span><span class="ss">/langdetect_predictions.txt"</span>, <span class="st">"w"</span>) <span class="im">as</span> f:</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>        counter <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Read input lines</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> codecs.<span class="bu">open</span>(sys.argv[<span class="dv">1</span>], <span class="st">"r"</span>, encoding <span class="op">=</span> <span class="st">"utf-8"</span>) <span class="im">as</span> f:</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>        lines <span class="op">=</span> f.readlines()</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Write predictions to file</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(<span class="ss">f"</span><span class="sc">{</span>OUTPUT_DIR<span class="sc">}</span><span class="ss">/langdetect_predictions.txt"</span>, <span class="st">"w"</span>) <span class="im">as</span> f:</span>
 <span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> line <span class="kw">in</span> lines:</span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>            line <span class="op">=</span> line.strip()  <span class="co"># Remove leading/trailing white space including '\n'</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>            line <span class="op">=</span> line.strip()  <span class="co"># Remove leading/trailing white space including '\\n'</span></span>
 <span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> line:  <span class="co"># Only process the line if it's not empty</span></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(counter)</span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>                <span class="cf">try</span>:</span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>                    f.write(detect(line) <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>                <span class="cf">try</span>:</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>                    detected_language <span class="op">=</span> detect(line)</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>                    f.write(detected_language <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
 <span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>                <span class="cf">except</span>:</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>                    <span class="co"># Only write error if line isn't empty</span></span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> line:</span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>                        f.write(<span class="ss">f"error: </span><span class="sc">{</span>line<span class="sc">}</span><span class="ss">"</span> <span class="op">+</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>                counter <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>                    <span class="co"># In case of an exception, write an error line with the line content</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>                    f.write(<span class="ss">f"error: </span><span class="sc">{</span>line<span class="sc">}</span><span class="ss"> </span><span class="ch">\n</span><span class="ss">"</span>)</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">

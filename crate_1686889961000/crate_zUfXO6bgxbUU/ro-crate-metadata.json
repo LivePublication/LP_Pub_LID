@@ -4,8 +4,8 @@
         {
             "@id": "./",
             "@type": "Dataset",
-            "datePublished": "2023-08-22T21:36:13.912411",
-            "description": "LP artefact for action Oxh2kVr4DdXg",
+            "datePublished": "2023-08-23T20:35:13.387401",
+            "description": "LP artefact for action 19Pz5fmIFdtWv",
             "hasPart": [
                 {
                     "@id": "input/"
@@ -35,7 +35,7 @@
                     "@id": "method_resources/computation_docker/requirements.txt"
                 }
             ],
-            "name": "action_Oxh2kVr4DdXg"
+            "name": "action_19Pz5fmIFdtWv"
         },
         {
             "@id": "ro-crate-metadata.json",
@@ -56,7 +56,7 @@
             "username": "aell854@auckland.ac.nz"
         },
         {
-            "@id": "#Oxh2kVr4DdXg",
+            "@id": "#19Pz5fmIFdtWv",
             "@type": "SoftwareApplication",
             "API_version": "1.0",
             "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
@@ -83,7 +83,7 @@
             },
             "subtitle": "langdetect Action Provider",
             "title": "langdetect",
-            "total_time": 40.98932933807373,
+            "total_time": 40.32520914077759,
             "url": "http://130.216.217.76:8080/langdetect/run",
             "visible_to": [
                 "public"

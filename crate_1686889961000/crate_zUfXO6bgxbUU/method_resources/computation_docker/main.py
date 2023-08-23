@@ -10,23 +10,19 @@ OUTPUT_DIR = os.environ.get("OUTPUT_DIR", os.path.join(BASE_DIR, "output"))
 
 if __name__ == "__main__":
     
+    # Read input lines
     with codecs.open(sys.argv[1], "r", encoding = "utf-8") as f:
         lines = f.readlines()
 
-      # write predictions to file
+    # Write predictions to file
     with open(f"{OUTPUT_DIR}/langdetect_predictions.txt", "w") as f:
-        counter = 0
         for line in lines:
-            line = line.strip()  # Remove leading/trailing white space including '\n'
+            line = line.strip()  # Remove leading/trailing white space including '\\n'
             if line:  # Only process the line if it's not empty
-                print(counter)
                 try:
-                    f.write(detect(line) + "\n")
+                    detected_language = detect(line)
+                    f.write(detected_language + "\n")
                 except:
-                    # Only write error if line isn't empty
-                    if line:
-                        f.write(f"error: {line}" + "\n")
-
-                counter += 1
-
+                    # In case of an exception, write an error line with the line content
+                    f.write(f"error: {line} \n")
   

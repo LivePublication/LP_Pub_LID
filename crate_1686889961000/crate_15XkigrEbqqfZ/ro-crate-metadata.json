@@ -4,8 +4,8 @@
         {
             "@id": "./",
             "@type": "Dataset",
-            "datePublished": "2023-08-22T21:37:33.835894",
-            "description": "LP artefact for action AjiFMRP9X9bo",
+            "datePublished": "2023-08-23T20:36:47.310793",
+            "description": "LP artefact for action ROLpEJgfKI6s",
             "hasPart": [
                 {
                     "@id": "input/"
@@ -56,7 +56,7 @@
                     "@id": "method_resources/computation_docker/main.py"
                 }
             ],
-            "name": "action_AjiFMRP9X9bo"
+            "name": "action_ROLpEJgfKI6s"
         },
         {
             "@id": "ro-crate-metadata.json",
@@ -77,7 +77,7 @@
             "username": "aell854@auckland.ac.nz"
         },
         {
-            "@id": "#AjiFMRP9X9bo",
+            "@id": "#ROLpEJgfKI6s",
             "@type": "SoftwareApplication",
             "API_version": "1.0",
             "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
@@ -103,7 +103,7 @@
             },
             "subtitle": "Generates statistics, figures, and tables comparing LiD accuracy to ground truth",
             "title": "statistics",
-            "total_time": 2.4457719326019287,
+            "total_time": 1.7702994346618652,
             "url": "http://130.216.217.136:8080/statistics/run",
             "visible_to": [
                 "public"
