@@ -100,3 +100,6 @@ pickle-email-*.html
 /.quarto/
 
 /.luarc.json
+
+
+orchestration_crate
