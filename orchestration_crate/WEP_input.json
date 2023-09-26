@@ -1,0 +1,119 @@
+{
+    "type": "object",
+    "required": [
+      "fastText_predictions",
+      "langDetect_ep_id",
+      "fastText_ep_id",
+      "statistics_ep_id",
+      "fastText_path",
+      "data_store_path",
+      "langdetect_path",
+      "data_store_ep_id",
+      "validation",
+      "langdetect_predictions",
+      "statistics_path",
+      "fast_text_ep_id",
+      "management_ep_id"
+    ],
+    "properties": {
+      "fastText_predictions": {
+        "type": "string",
+        "title": "fastText Predictions File Path",
+        "description": "A path to a text file"
+      },
+      "langDetect_ep_id": {
+        "type": "string",
+        "title": "Language Detection Endpoint UUID",
+        "format": "uuid",
+        "pattern": "[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}",
+        "maxLength": 36,
+        "minLength": 36,
+        "description": "A Globus endpoint UUID"
+      },
+      "fastText_ep_id": {
+        "type": "string",
+        "title": "fastText Endpoint UUID",
+        "format": "uuid",
+        "pattern": "[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}",
+        "maxLength": 36,
+        "minLength": 36,
+        "description": "A Globus endpoint UUID"
+      },
+      "statistics_ep_id": {
+        "type": "string",
+        "title": "Statistics Endpoint UUID",
+        "format": "uuid",
+        "pattern": "[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}",
+        "maxLength": 36,
+        "minLength": 36,
+        "description": "A Globus endpoint UUID"
+      },
+      "fastText_path": {
+        "type": "string",
+        "title": "fastText File Path",
+        "description": "A path to a text file"
+      },
+      "data_store_path": {
+        "type": "string",
+        "title": "Data Store Directory Path",
+        "description": "A path to a directory"
+      },
+      "data_store_ep_id": {
+        "type": "string",
+        "title": "Data Store Endpoint UUID",
+        "format": "uuid",
+        "pattern": "[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}",
+        "maxLength": 36,
+        "minLength": 36,
+        "description": "A Globus endpoint UUID"
+      },
+      "validation": {
+        "type": "string",
+        "title": "Validation File Path",
+        "description": "A path to a text file"
+      },
+      "langDetect_path": {
+        "type": "string",
+        "title": "Language Detection File Path",
+        "description": "A path to a text file"
+      },
+      "langdetect_ep_id": {
+        "type": "string",
+        "title": "Language Detection Endpoint UUID",
+        "format": "uuid",
+        "pattern": "[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}",
+        "maxLength": 36,
+        "minLength": 36,
+        "description": "A Globus endpoint UUID"
+      },
+      "langdetect_predictions": {
+        "type": "string",
+        "title": "Language Detection Predictions File Path",
+        "description": "A path to a text file"
+      },
+      "statistics_path": {
+        "type": "string",
+        "title": "Statistics Directory Path",
+        "description": "A path to a directory"
+      },
+      "fast_text_ep_id": {
+        "type": "string",
+        "title": "fastText Endpoint UUID",
+        "format": "uuid",
+        "pattern": "[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}",
+        "maxLength": 36,
+        "minLength": 36,
+        "description": "A Globus endpoint UUID"
+      },
+      "management_ep_id": {
+        "type": "string",
+        "title": "Management Endpoint UUID",
+        "format": "uuid",
+        "pattern": "[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}",
+        "maxLength": 36,
+        "minLength": 36,
+        "description": "A Globus endpoint UUID"
+      }
+    }
+  }
+  

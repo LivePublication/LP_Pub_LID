@@ -1,0 +1,153 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.1/context",
+    "@graph": [
+        {
+            "@id": "./",
+            "@type": "Dataset",
+            "datePublished": "2023-08-23T20:33:02.903866",
+            "description": "LP artefact for action 1QOTtHvEWi2UN",
+            "hasPart": [
+                {
+                    "@id": "input/"
+                },
+                {
+                    "@id": "input/input_data.txt"
+                },
+                {
+                    "@id": "output/"
+                },
+                {
+                    "@id": "output/fastText_predictions.txt"
+                },
+                {
+                    "@id": "method_resources/"
+                },
+                {
+                    "@id": "method_resources/computation_docker/"
+                },
+                {
+                    "@id": "method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz"
+                },
+                {
+                    "@id": "method_resources/computation_docker/Dockerfile"
+                },
+                {
+                    "@id": "method_resources/computation_docker/main.py"
+                }
+            ],
+            "name": "action_1QOTtHvEWi2UN"
+        },
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "about": {
+                "@id": "./"
+            },
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.1"
+            }
+        },
+        {
+            "@id": "#25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "@type": "Person",
+            "affiliation": "The University of Auckland",
+            "email": "ellermaugustus@gmail.com",
+            "name": "Gus Ellerm",
+            "username": "aell854@auckland.ac.nz"
+        },
+        {
+            "@id": "#1QOTtHvEWi2UN",
+            "@type": "SoftwareApplication",
+            "API_version": "1.0",
+            "creator_id": "urn:globus:auth:identity:25af9d3b-aeb8-4f44-9c88-3264ad82a3ae",
+            "description": "Executes fastText v0.9.2 on text data, and produces a list of categorisations (LID) for each line.",
+            "executed": {
+                "@id": "#25af9d3b-aeb8-4f44-9c88-3264ad82a3ae"
+            },
+            "globus_auth_scope": "https://auth.globus.org/scopes/d201c60a-703a-4a4e-8f03-02450b368d0e/action_provider_operations",
+            "input_dir": {
+                "@id": "input/"
+            },
+            "keywords": [
+                "fasText",
+                "LID",
+                "Model"
+            ],
+            "method": {
+                "@id": "method_resources/"
+            },
+            "output_dir": {
+                "@id": "output/"
+            },
+            "subtitle": "fastText v0.9.2",
+            "title": "fastText",
+            "total_time": 10.32785153388977,
+            "url": "http://130.216.216.248:8080/fastText/run",
+            "visible_to": [
+                "public"
+            ]
+        },
+        {
+            "@id": "input/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "input/input_data.txt"
+                }
+            ]
+        },
+        {
+            "@id": "input/input_data.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "output/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "output/fastText_predictions.txt"
+                }
+            ]
+        },
+        {
+            "@id": "output/fastText_predictions.txt",
+            "@type": "File"
+        },
+        {
+            "@id": "method_resources/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "method_resources/computation_docker/"
+                }
+            ]
+        },
+        {
+            "@id": "method_resources/computation_docker/",
+            "@type": "Dataset",
+            "hasPart": [
+                {
+                    "@id": "method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz"
+                },
+                {
+                    "@id": "method_resources/computation_docker/Dockerfile"
+                },
+                {
+                    "@id": "method_resources/computation_docker/main.py"
+                }
+            ]
+        },
+        {
+            "@id": "method_resources/computation_docker/model.lid.top800.epoch20.neg100.dim100.ns.small.min5.ftz",
+            "@type": "File"
+        },
+        {
+            "@id": "method_resources/computation_docker/Dockerfile",
+            "@type": "File"
+        },
+        {
+            "@id": "method_resources/computation_docker/main.py",
+            "@type": "File"
+        }
+    ]
+}
