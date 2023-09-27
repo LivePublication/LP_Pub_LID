@@ -59,8 +59,8 @@ There are many plausable methods for how variable content can be implemented. At
 <!-- Load in variables & provide reactive components -->
 ```{ojs}
 //| code-overflow: wrap
-fastText_stats = FileAttachment("orchestration_crate/crate_15XkigrEbqqfZ/output/fastText_stats.json").json() 
-langdetect_stats = FileAttachment("orchestration_crate/crate_15XkigrEbqqfZ/output/langdetect_stats.json").json() 
+fastText_stats = FileAttachment("orchestration_crate/statistics_lpap/output/fastText_stats.json").json() 
+langdetect_stats = FileAttachment("orchestration_crate/statistics_lpap/output/langdetect_stats.json").json() 
 fastText_acc_actual = fastText_stats["overall_accuracy"] 
 langdetect_acc_actual = langdetect_stats["overall_accuracy"] 
 
@@ -179,7 +179,7 @@ When comparing the two models on specific languages, FastText notably outperform
 
 Figures and other visualisations can either be generated during the execution of a workflow, or implemented at the document level through code blocks. An example of both approaches is provided below. 
 
-[![Accuracy by language](orchestration_crate/crate_15XkigrEbqqfZ/output/accuracy_by_language.png){#fig-accuracies_by_language}](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/accuracy_by_language.png)
+[![Accuracy by language](orchestration_crate/statistics_lpap/output/accuracy_by_language.png){#fig-accuracies_by_language}](http://130.216.217.137:8080/#crate_15XkigrEbqqfZ/output/accuracy_by_language.png)
 
 ::: {.column-margin}
 
@@ -207,7 +207,7 @@ This figure was generated within the Quarto document using data collected from t
 //| code-overflow: wrap
 
 visualisation = {
-  d3.csv("orchestration_crate/crate_15XkigrEbqqfZ/output/accuracy_by_language.csv").then(data => {
+  d3.csv("orchestration_crate/statistics_lpap/output/accuracy_by_language.csv").then(data => {
     const container = d3.select("#d3-visualization");
     const margin = { top: 40, right: 0, bottom: 10, left: 25 };  
     const svgWidth = container.node().getBoundingClientRect().width;
@@ -458,9 +458,9 @@ Each LPAP contains a method directory including the docker image and associated 
 
 #### FastText LPAP
 
-{{< downloadthis orchestration_crate/crate_ful1t6i5wdGV/method_resources/computation_docker/main.py dname="fastText" label="Download the script" icon="filetype-py" type="info" >}}
+{{< downloadthis orchestration_crate/fastText_lpap/method_resources/computation_docker/main.py dname="fastText" label="Download the script" icon="filetype-py" type="info" >}}
 
-::: {add-from=orchestration_crate/crate_ful1t6i5wdGV/method_resources/computation_docker/main.py}
+::: {add-from=orchestration_crate/fastText_lpap/method_resources/computation_docker/main.py}
 ```{.py}
 ```
 :::
@@ -483,9 +483,9 @@ In the context of the workflow, this script follows the DS_fastText_Transfer sta
 
 #### langdetect LPAP
 
-{{< downloadthis orchestration_crate/crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py dname="langdetect" label="Download the script" icon="filetype-py" type="info" >}}
+{{< downloadthis orchestration_crate/langdetect_lpap/method_resources/computation_docker/main.py dname="langdetect" label="Download the script" icon="filetype-py" type="info" >}}
 
-::: {add-from=orchestration_crate/crate_zUfXO6bgxbUU/method_resources/computation_docker/main.py}
+::: {add-from=orchestration_crate/langdetect_lpap/method_resources/computation_docker/main.py}
 ```{.py}
 ```
 :::
