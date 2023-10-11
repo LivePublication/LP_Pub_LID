@@ -4,6 +4,8 @@
 
 Welcome to our LivePublication demonstration! The landscape of scientific research is ever-evolving, and with it, the way we share and consume scientific knowledge needs to progress. Traditional scientific publishing, with its static format, often struggles to effectively convey the dynamic nature of modern computational research. This article represents initial steps toward enabling and standardising methods of integrating distributed scientific workflows with top level narrative text, building a pipeline from workflow execution, to publication outputs. 
 
+Version: Live
+
 ::: {.column-margin}
 
 <a href="" style="color: green;">Green links</a> indicate links to the underpining orchestration crate.
